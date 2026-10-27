@@ -1,0 +1,5 @@
+# GitHub Pages dizin listesi vermez; yasal sayfa herkese açık ve indekslenebilir.
+User-agent: *
+Allow: /
+
+Sitemap: https://denizaydogdu.github.io/wishsay-legal/sitemap.xml

@@ -1,0 +1,1563 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WishSay — Privacy, content rules, support and account deletion</title>
+<meta name="description" content="WishSay privacy notice under KVKK and GDPR, content rules, support/FAQ and account deletion steps on one page.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FFF9F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1030" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://denizaydogdu.github.io/wishsay-legal/en/">
+<link rel="alternate" hreflang="tr" href="https://denizaydogdu.github.io/wishsay-legal/">
+<link rel="alternate" hreflang="en" href="https://denizaydogdu.github.io/wishsay-legal/en/">
+<link rel="alternate" hreflang="x-default" href="https://denizaydogdu.github.io/wishsay-legal/">
+<link rel="icon" href="/wishsay-legal/img/icon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="/wishsay-legal/img/icon-180.png">
+<style>
+/* WishSay yasal sayfası — W-077. Ağ fontu, izleme ve istemci betiği yok. */
+/* WOFF2'ler uygulamadaki TTF'lerden yalnız sitede geçen karakterlere indirgenir
+   (scripts/make-fonts.sh); TTF baytları uygulamayla aynı kalır. */
+
+@font-face {
+  font-family: "Fredoka";
+  src: url("/wishsay-legal/fonts/Fredoka-SemiBold.woff2") format("woff2"),
+       url("/wishsay-legal/fonts/Fredoka-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fredoka";
+  src: url("/wishsay-legal/fonts/Fredoka-Bold.woff2") format("woff2"),
+       url("/wishsay-legal/fonts/Fredoka-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/wishsay-legal/fonts/Nunito-Regular.woff2") format("woff2"),
+       url("/wishsay-legal/fonts/Nunito-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/wishsay-legal/fonts/Nunito-SemiBold.woff2") format("woff2"),
+       url("/wishsay-legal/fonts/Nunito-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/wishsay-legal/fonts/Nunito-ExtraBold.woff2") format("woff2"),
+       url("/wishsay-legal/fonts/Nunito-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+  --ink: #1f1b2e;
+  --muted: #6f6257;
+  --bg: #fff9f0;
+  --dot: #eadfce;
+  --surface: #ffffff;
+  --surface-solid: #ffffff;
+  --tint: #fff3df;
+  --border: #1f1b2e;
+  --border-strong: #1f1b2e;
+  --primary: #9be58a;
+  --on-primary: #1f1b2e;
+  --selected: #c9a7ff;
+  --link: #67419c;
+  --link-hover: #4c287f;
+  --amber-bg: #fff4d6;
+  --amber-line: #d33a22;
+  --small-shadow: 3px 3px 0 #1f1b2e;
+  --radius: 18px;
+  --wrap: 1120px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f1f2ff;
+    --muted: #9aa0d6;
+    --bg: #0e1030;
+    --dot: transparent;
+    --surface: rgb(255 255 255 / 7%);
+    --surface-solid: #191b46;
+    --tint: rgb(255 255 255 / 4%);
+    --border: rgb(255 255 255 / 16%);
+    --border-strong: rgb(255 255 255 / 40%);
+    --primary: #c6ff3d;
+    --on-primary: #0e1030;
+    --selected: #c6ff3d;
+    --link: #3de0ff;
+    --link-hover: #8cebff;
+    --amber-bg: #33280f;
+    --amber-line: #ff6b6b;
+    --small-shadow: 0 4px 12px rgb(255 61 154 / 22%);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.15px);
+  background-size: 18px 18px;
+  color: var(--ink);
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image:
+      radial-gradient(circle at 12% 4%, rgb(255 61 154 / 12%), transparent 20rem),
+      radial-gradient(circle at 88% 10%, rgb(61 224 255 / 10%), transparent 22rem),
+      radial-gradient(circle at 50% 96%, rgb(198 255 61 / 7%), transparent 24rem);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.5em;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 1.4rem + 2.6vw, 3.2rem);
+}
+
+h2 {
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 2rem);
+  margin-top: 0;
+  scroll-margin-top: 84px;
+}
+
+h3 {
+  font-size: 1.12rem;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+ul,
+ol {
+  margin: 0 0 1em;
+  padding-left: 1.25em;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  background: var(--surface);
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  z-index: 10;
+}
+
+.skip:focus {
+  left: 12px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 0.86rem;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(16px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 64px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.brand img {
+  border-radius: 9px;
+  border: 1px solid var(--border-strong);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.site-nav {
+  display: flex;
+  gap: 18px;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--ink);
+}
+
+.lang {
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.82rem;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 600;
+  background: var(--surface);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- page head ---------- */
+
+.page {
+  max-width: 900px;
+  padding-block: clamp(28px, 4vw, 52px) clamp(40px, 5vw, 64px);
+}
+
+.legal-page {
+  max-width: 860px;
+}
+
+.page-head {
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--link);
+  margin-bottom: 14px;
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1rem + 0.35vw, 1.22rem);
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.toc {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.toc a {
+  display: block;
+  padding: 12px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--small-shadow);
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.toc a:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+/* ---------- sections ---------- */
+
+.legal-section,
+.page-section {
+  padding-block: clamp(30px, 4vw, 48px);
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 64px;
+}
+
+.section-lang {
+  margin: 0 0 6px;
+  text-align: right;
+  font-size: 0.86rem;
+}
+
+.section-lang a {
+  text-decoration: none;
+}
+
+.back {
+  margin: 26px 0 0;
+  font-size: 0.86rem;
+}
+
+.back a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.back a:hover {
+  color: var(--ink);
+}
+
+/* ---------- legal documents ---------- */
+
+.legal {
+  max-width: 760px;
+}
+
+.legal h2 {
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 2rem);
+  margin-bottom: 0.6em;
+}
+
+.legal h3 {
+  font-size: 1.2rem;
+  margin-top: 1.8em;
+}
+
+.legal h4 {
+  font-size: 1.02rem;
+  margin-top: 1.4em;
+}
+
+.legal p,
+.legal li {
+  font-size: 1rem;
+}
+
+.legal ul,
+.legal ol {
+  padding-left: 1.3em;
+}
+
+.legal li {
+  margin-bottom: 0.45em;
+}
+
+.legal hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2em 0;
+}
+
+.legal blockquote {
+  margin: 1.5em 0;
+  padding: 2px 0 2px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--muted);
+}
+
+.legal blockquote.draft {
+  background: var(--amber-bg);
+  border-left: 5px solid var(--amber-line);
+  border-radius: 0 12px 12px 0;
+  padding: 14px 18px;
+  color: var(--ink);
+}
+
+.legal blockquote.draft p {
+  margin: 0;
+}
+
+.legal .table-wrap {
+  overflow-x: auto;
+  margin: 1.5em 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+}
+
+.legal table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 560px;
+  font-size: 0.9rem;
+}
+
+.legal th,
+.legal td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal th {
+  background: var(--tint);
+  font-size: 0.85rem;
+}
+
+.legal tr:last-child td {
+  border-bottom: 0;
+}
+
+/* ---------- support / deletion ---------- */
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: clamp(20px, 3vw, 28px);
+  margin-block: 20px;
+  box-shadow: var(--small-shadow);
+}
+
+.big-mail {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.faq {
+  display: grid;
+  gap: 10px;
+}
+
+.faq details {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  padding: 4px 18px;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding-block: 12px;
+}
+
+.faq details p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.callout {
+  background: var(--amber-bg);
+  border-left: 5px solid var(--amber-line);
+  border-radius: 0 16px 16px 0;
+  padding: 20px 22px;
+  margin-top: 30px;
+}
+
+.callout h3 {
+  font-size: 1.15rem;
+}
+
+.callout p {
+  margin: 0;
+}
+
+.callout-inline {
+  background: var(--tint);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  padding: 14px 18px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.ordered {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.ordered li {
+  margin-bottom: 8px;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--link);
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 0.98rem;
+  text-decoration: none;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: var(--surface);
+  border-color: var(--border-strong);
+  color: var(--ink);
+  box-shadow: var(--small-shadow);
+}
+
+.btn-secondary:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding-block: 40px;
+  margin-top: 24px;
+  background: color-mix(in srgb, var(--surface-solid) 82%, transparent);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.footer-grid h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.footer-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 0.93rem;
+}
+
+.footer-grid a {
+  text-decoration: none;
+}
+
+.brand-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.brand-line img {
+  border-radius: 6px;
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 1px 9px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 820px) {
+  .site-nav {
+    display: none;
+  }
+
+  .toc {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  body {
+    font-size: 16px;
+  }
+
+  .toc {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal table {
+    min-width: 480px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .toc,
+  .section-lang,
+  .back {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .legal .table-wrap {
+    overflow: visible;
+  }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/wishsay-legal/en/">
+      <img src="/wishsay-legal/img/icon-64.png" alt="" width="28" height="28">
+      <span>WishSay</span>
+    </a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#privacy">Privacy</a>
+      <a href="#content-policy">Content rules</a>
+      <a href="#support">Support</a>
+      <a href="#account-deletion">Delete my account</a>
+    </nav>
+    <a class="lang" href="/wishsay-legal/" hreflang="tr" lang="tr">TR</a>
+  </div>
+</header>
+<main id="main">
+<div class="wrap page legal-page">
+  <header class="page-head">
+    <p class="eyebrow">WishSay · Legal</p>
+    <h1>Privacy, content rules and support</h1>
+    <p class="lead">Privacy, content rules, support and account deletion information required by the stores, on one page. The privacy and content texts stay drafts until legal review is complete.</p>
+    <nav class="toc" aria-label="On this page">
+      <a href="#privacy">Privacy</a>
+      <a href="#content-policy">Content rules</a>
+      <a href="#support">Support</a>
+      <a href="#account-deletion">Delete my account</a>
+    </nav>
+  </header>
+
+  <section class="legal-section" id="privacy">
+<p class="section-lang"><a href="/wishsay-legal/#privacy" hreflang="tr" lang="tr" aria-label="This section in Turkish">Türkçe</a></p>
+    <article class="legal">
+<blockquote class="draft">
+<p><strong>DRAFT — requires legal review before publication</strong></p>
+</blockquote>
+<h2>WishSay Privacy Policy</h2>
+<p><em>Last updated: 10 October 2026</em></p>
+<p>This policy explains what personal data WishSay collects, why, who can see it and what rights you have. It is
+written to meet the Turkish Personal Data Protection Law No. 6698 (&quot;KVKK&quot;) and the EU General Data Protection
+Regulation (&quot;GDPR&quot;). Under KVKK, this text also serves as our information notice (aydınlatma metni) under
+Article 10. [LEGAL REVIEW: confirm whether a separate KVKK information notice is required]</p>
+<h3>1. Data controller</h3>
+<p><strong>Velzon Bilişim Teknolojileri Ticaret Limited Şirketi</strong>
+Yeşiltepe Mah. İsmet İnönü-2 Blv. A.Üniv. Rektörlük ve Bilgisayar Araştırma Merkezi No: 2, 26210 Tepebaşı / Eskişehir, Türkiye
+Trade Registry No: 57212 · MERSIS No: 924113500200001 · Tax ID: 9241135002
+Email: <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong>
+[VERBİS REGISTRATION — to be confirmed if required]
+[EU REPRESENTATIVE UNDER GDPR ART. 27 — to be confirmed if required]</p>
+<h3>2. What data we collect and why</h3>
+<p>We only collect what we need to run WishSay. We do <strong>not</strong> ask for your real name, phone number or location.
+Adding images to a post is entirely optional (see &quot;Post images&quot; below).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Examples</th>
+<th>Why we need it</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Account data</strong></td>
+<td>Email address, password (stored only as a BCrypt hash, never in plain text), handle (username), language (Turkish/English), the date you confirmed you are 13 or older, account creation date, the date your email address was verified (the verification code is kept for at most 15 minutes, only as a one-way digest, and deleted once used)</td>
+<td>To create and secure your account, let you log in, show the app in your language, and check the minimum age</td>
+</tr>
+<tr>
+<td><strong>Settings</strong></td>
+<td>&quot;Allow tagging&quot;, &quot;post anonymously by default&quot;, account role (user, moderator or legal)</td>
+<td>To apply your choices and give moderators their tools</td>
+</tr>
+<tr>
+<td><strong>Your posts</strong></td>
+<td>Text of each expectation (up to 500 characters), the language of the text (detected automatically on our server, see below), whether it is anonymous, its anonymous alias (e.g. &quot;Anonim #4F2&quot;), status, creation and edit times, number of likes. <strong>The author of every post is always recorded, including anonymous posts</strong></td>
+<td>To show your posts on the board and to moderate them</td>
+</tr>
+<tr>
+<td><strong>Your post images</strong></td>
+<td>Up to 4 images you choose to add to a post (re-encoded with location and camera data removed, plus a small preview), an optional description (up to 200 characters), SHA-256 fingerprints of the uploaded file and of the stored image, sizes, the automated screening score, moderation status, upload and deletion times. The upload itself is logged with IP address and source port like every activity</td>
+<td>To show the image with your post, to protect users from inappropriate images, and to answer requests from competent authorities</td>
+</tr>
+<tr>
+<td><strong>Your comments</strong></td>
+<td>Text of each comment and reply (up to 500 characters), the language of the text (detected automatically), the post it belongs to, which comment it answers, whether it is anonymous, its comment alias (e.g. &quot;Anonim #4C6&quot;, see section 4), status (visible, deleted by you, removed by the post owner, hidden), creation and edit times, number of likes. <strong>The author of every comment is always recorded, including anonymous comments.</strong> For posts: whether comments are open</td>
+<td>To show comments and replies under posts, to let post owners manage comments on their posts, and to moderate them</td>
+</tr>
+<tr>
+<td><strong>Interactions</strong></td>
+<td>Likes you give (on posts and comments), tags (who tagged whom, and whether it was approved, declined or later withdrawn), reports you file on posts or comments (reason and optional note), users you block and authors whose anonymous content you hid through an anonymous post</td>
+<td>To run likes, tagging, reporting and blocking</td>
+</tr>
+<tr>
+<td><strong>Outcomes, celebrations and bookmarks</strong></td>
+<td>Whether you marked your post &quot;fulfilled&quot; or &quot;let go&quot;, when, and your optional note (up to 280 characters); the fulfilled posts you celebrated; the posts you bookmarked and when. Bookmarks are not written to the activity records</td>
+<td>To show the mark and the number of celebrations, to notify people who liked or are tagged in a post that it was fulfilled, and to keep your saved posts for you</td>
+</tr>
+<tr>
+<td><strong>Searches</strong></td>
+<td><strong>Not stored.</strong> What you type into search is used only to answer that search and is not saved, logged or linked to your account</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Notifications</strong></td>
+<td>In-app notifications such as tag requests and approvals, comments on your posts and replies to your comments, and whether you have read them. A notification about an anonymous comment contains only its alias</td>
+<td>To tell you about activity that concerns you</td>
+</tr>
+<tr>
+<td><strong>Session data</strong></td>
+<td>A hashed (SHA-256) form of your refresh token, with its creation, expiry and revocation times</td>
+<td>To keep you logged in securely and to detect stolen sessions</td>
+</tr>
+<tr>
+<td><strong>Activity records (audit log)</strong></td>
+<td>For every write action on WishSay: the user who did it, the type of action and what it was done to, IP address, source port number, device/app information (User-Agent), request ID and the exact server time (UTC, to the microsecond); plus details that depend on the action (see below)</td>
+<td>To meet legal obligations and respond to requests from competent authorities such as courts and public prosecutors; security and abuse prevention</td>
+</tr>
+<tr>
+<td><strong>Consent records</strong></td>
+<td>Your declaration that you are 13 or older, your acceptance of the Content Policy, your acknowledgement of this Privacy Policy, your giving or withdrawing explicit consent for sensitive information about yourself (see below), and your giving or withdrawing permission to be tagged. Each is stored as a separate record with the relevant policy version, time (UTC), IP address, source port, User-Agent and request ID</td>
+<td>To be able to prove what you agreed to, under which version of the text, when and from where</td>
+</tr>
+</tbody></table></div>
+<p><strong>What you write is up to you.</strong> Please be careful with sensitive information such as health, religion or belief,
+or sex life, about yourself or others, and with anything identifying a real person: posts can be seen by every
+user, and named posts show your handle. The app reminds you of this when you write a post or a comment. Our Content
+Policy forbids sharing other people&#39;s personal information.</p>
+<p><strong>Removing information about you.</strong> If a post or comment contains your personal or sensitive information, you can
+ask for it to be removed: report it with the reason &quot;Contains my personal / sensitive information&quot; (these reports
+are flagged for moderators to handle first), or write to <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong>. This works whether or not you have an
+account, and whether you or someone else wrote it.</p>
+<p><strong>Language of a text and &quot;Translate&quot;:</strong> When you write a post or comment, or edit its text, the language it is
+written in is detected automatically <strong>on our own server</strong> with a language identification library (Lingua). The
+text is not sent to any third party or external service for this. If the language cannot be determined reliably
+(very short text, only emoji, mixed languages) it is stored as &quot;undetermined&quot;. It is only used to offer the
+&quot;Translate&quot; button for the right language and to show texts in languages other than Turkish and English to
+moderators for review. The language of older posts and comments has been re-detected once in the same way.</p>
+<p><strong>Post images.</strong> When you upload an image we process it <strong>on our own server</strong> and never send it to a third party:</p>
+<ul>
+<li><strong>All hidden metadata is removed</strong> that phones add to photos: where the photo was taken (GPS location), date and
+time, device model, camera settings and similar (EXIF, XMP and others). The image is rebuilt from its pixels only,
+scaled down so its longest side is at most 2048 pixels, and a small preview is made. The original file you
+uploaded is not kept. <strong>What is visible in the picture</strong> (faces, number plates, documents, your house number) is
+not removed: be careful what you share.</li>
+<li>Every image is <strong>automatically screened for inappropriate content (nudity, sexual content)</strong> by an open-source AI
+model running on our server. The model only produces a probability score; if it reaches a set threshold, the image
+is not deleted and no automated decision is made about you: it is only visible to you and to moderators until a
+moderator reviews it. The post itself is still published. The moderator approves or rejects the image; a rejected
+image is deleted and you are notified. The model can be wrong; a harmless image being held for review does not
+create a negative record about you.</li>
+<li>Images are shown to everyone who can see your post through short-lived (15-minute) signed links that contain
+nothing that identifies you. An image on an anonymous post is anonymous too, but its content may still reveal who
+you are.</li>
+<li>Images that are not added to a post within 24 hours of uploading are deleted automatically.</li>
+</ul>
+<p><strong>What we don&#39;t do:</strong> WishSay has no ads, no third-party analytics or tracking tools, and does not send push
+notifications. We do not sell your data.</p>
+<h4>Explicit consent for sensitive information</h4>
+<p>If you share information about yourself such as your health, religion or belief, or sex life in your posts and
+comments, this is a special category of personal data under KVKK Article 6 (GDPR Article 9). The legal basis for
+showing it to other users is <strong>your explicit consent</strong>. When you sign up you give it with a separate checkbox for
+this text; the box is unchecked at first and you cannot sign up without ticking it:</p>
+<blockquote>
+<p>&quot;I give my explicit consent that sensitive information about myself that I share (such as health, religion or sex
+life) will be visible to other users.&quot;</p>
+</blockquote>
+<p><strong>How it is recorded:</strong> each time you give or withdraw this consent, a separate consent record is created: whether
+it was given or withdrawn, the current version of the Content Policy, the time (UTC), IP address, source port,
+device/app information (User-Agent) and request ID. These records cannot be changed and are kept like the other
+consent records (see section 6).</p>
+<p><strong>How to withdraw it:</strong> at any time, turn off <strong>Settings &gt; Sensitive data consent</strong> in the app, or write to
+<strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong>. If you have not given it (for example because you signed up before this feature) or have
+withdrawn it, the app asks you with the same text when you want to write a post or comment; you can give it again
+whenever you like.</p>
+<p><strong>What withdrawing means:</strong> without this consent you cannot write new posts or comments or edit the text of your
+existing ones. Everything else keeps working, such as reading, liking, reporting, managing tags and deleting your own
+content. Withdrawing does not remove what you have already posted: your existing posts and comments stay visible. If
+you want them removed, delete them in the app or write to <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong>. Withdrawing does not affect the
+lawfulness of the processing based on your consent before you withdrew it.</p>
+<p>This consent only covers information <strong>about yourself</strong>. Sharing someone else&#39;s sensitive information in a way that
+identifies them is forbidden by the Content Policy.</p>
+<h4>What the activity records contain</h4>
+<p>For each of the following actions, the information above (user, action, IP address, source port, User-Agent,
+request ID and UTC time) is recorded:</p>
+<ul>
+<li><strong>Registration:</strong> your email address, handle, language, settings, the policy versions you accepted and that you
+gave explicit consent for sensitive information.</li>
+<li><strong>Giving and withdrawing the explicit consent for sensitive information</strong> later on (with the type of consent and
+the policy version).</li>
+<li><strong>Logging in, failed login attempts, session refresh and logout.</strong> For a failed attempt, the email address that
+was entered and the reason for the failure are recorded, even if that address does not belong to an account.
+Passwords are never recorded. Requests refused because of too many attempts in a short time are recorded too (once
+per IP address or email address).</li>
+<li><strong>Email verification:</strong> that a verification code was sent, and successful and failed verification attempts (the
+email address entered and the reason; the code itself is never recorded). If someone tries to open a new account
+with your email address, that attempt and the requested handle are recorded and you get an email about it.</li>
+<li><strong>Settings changes:</strong> the old and new values of your language, &quot;allow tagging&quot; and &quot;post anonymously by default&quot;
+settings.</li>
+<li><strong>Posts:</strong> the text posted, whether it is anonymous, its anonymous alias, language and the people tagged; when a
+post is edited, the text <strong>before and after</strong> the edit; when it is deleted, the text before deletion.</li>
+<li><strong>Comments:</strong> the text, the post, whether it is anonymous, its alias, whether you are the post&#39;s author, and
+whether the server made the comment anonymous or named for you (see section 4); when a comment is edited, the
+text before and after; when it is deleted by you or removed by the post owner, the text before that; turning
+comments on a post off or on; and being refused because of too many comments in a short time.</li>
+<li><strong>Liking and unliking (posts and comments), reports</strong> (reason and note), <strong>approving and declining tags, blocking and unblocking, and
+marking notifications as read.</strong> Repeated requests that change nothing (e.g. liking the same post a second time)
+are not recorded.</li>
+<li><strong>Moderation:</strong> a moderator hiding or restoring a post or a comment.</li>
+<li><strong>Tags:</strong> approving, declining and withdrawing a tag.</li>
+<li><strong>Account deletion:</strong> when you request it, your email address, handle, language, account role, and account
+creation and age-confirmation dates, and the date the account will be deleted; when you restore it within 30
+days, the restore; when the deletion is completed, how much data was erased (no personal data).</li>
+<li><strong>Legal exports:</strong> every export of these records by authorised personnel is itself recorded, together with the
+query used.</li>
+</ul>
+<p>We also store the source port because mobile carriers share one IP address between many users at the same time;
+the IP address alone may not be enough to match an action to the right person. These records are kept only for
+write actions; viewing the board or reading posts is not recorded in them.</p>
+<p>[SERVER LOGS KEPT SEPARATELY BY THE HOSTING INFRASTRUCTURE (e.g. reverse proxy access logs) — to be confirmed once
+the hosting setup is final]</p>
+<h3>3. Legal bases</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>KVKK (Art. 5)</th>
+<th>GDPR (Art. 6)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Creating and running your account, showing your posts, likes, tags, notifications</td>
+<td>5(2)(c): necessary for the performance of a contract</td>
+<td>6(1)(b): performance of a contract</td>
+</tr>
+<tr>
+<td>Security, session protection, preventing abuse, moderation, word filtering, handling reports and blocks</td>
+<td>5(2)(f): legitimate interest, provided it does not harm your fundamental rights and freedoms</td>
+<td>6(1)(f): legitimate interests</td>
+</tr>
+<tr>
+<td>Meeting legal obligations and responding to requests from courts, public prosecutors and other competent authorities (including under Turkish Law No. 5651); keeping activity records and consent records for this purpose</td>
+<td>5(2)(ç): legal obligation</td>
+<td>6(1)(c): legal obligation</td>
+</tr>
+<tr>
+<td>Keeping activity records for security and abuse prevention (e.g. failed login attempts, detecting stolen sessions)</td>
+<td>5(2)(f): legitimate interest</td>
+<td>6(1)(f): legitimate interests</td>
+</tr>
+<tr>
+<td>Showing special categories of personal data about yourself that you share (such as health, religion or belief, or sex life) to other users in your posts and comments (see section 2, &quot;Explicit consent for sensitive information&quot;)</td>
+<td>Art. 6(2): explicit consent</td>
+<td>9(2)(a) and 6(1)(a): explicit consent</td>
+</tr>
+<tr>
+<td>Proving your consents and acceptances (which version of a text you agreed to, when and from where)</td>
+<td>5(2)(ç): legal obligation; 5(2)(e): establishing, exercising or protecting a right</td>
+<td>6(1)(c) and Art. 5(2) accountability; 6(1)(f)</td>
+</tr>
+<tr>
+<td>Establishing, exercising or defending legal claims</td>
+<td>5(2)(e)</td>
+<td>6(1)(f)</td>
+</tr>
+</tbody></table></div>
+<p>[LEGAL REVIEW: WishSay&#39;s status under Law No. 5651 (e.g. hosting provider, &quot;yer sağlayıcı&quot;) and the scope and
+duration of the resulting traffic-data retention obligation; whether the legal bases above are correct for the
+activity and consent records — to be confirmed]</p>
+<h3>4. Who can see what</h3>
+<p>WishSay is only available to logged-in users.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Other users</th>
+<th>Moderators</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Your email address</td>
+<td>Never</td>
+<td><strong>No.</strong> It never appears in any moderation screen. Only the &quot;legal&quot; role sees it in an export made on a lawful request, and that export itself is written to the audit log</td>
+</tr>
+<tr>
+<td>Your handle</td>
+<td>On your named (non-anonymous) posts, on tags you approved (until you withdraw them), and in tag requests you send</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Author of an <strong>anonymous</strong> post</td>
+<td><strong>No.</strong> They see only the alias, e.g. &quot;Anonim #4F2&quot;</td>
+<td><strong>No.</strong> Moderators see only the alias too; where needed they apply sanctions without seeing who it is. Only authorised personnel with the &quot;legal&quot; role can see the real author, on a lawful request from an authority</td>
+</tr>
+<tr>
+<td>Author of an <strong>anonymous</strong> comment</td>
+<td><strong>No.</strong> They see only the comment alias, also in reply labels (&quot;↳ Anonim #4C6&quot;) and notifications</td>
+<td><strong>No.</strong> As for anonymous posts: moderators see only the alias; only the &quot;legal&quot; role can see the real author, on a lawful request</td>
+</tr>
+<tr>
+<td>Your handle on a <strong>named</strong> comment</td>
+<td>Yes, to everyone who can see the post</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Your comments</td>
+<td>Visible comments on posts they can see, but not if you blocked them or they blocked you. Deleted, removed and hidden comments show no text and no author; a deleted comment with replies stays as a &quot;[deleted]&quot; placeholder</td>
+<td>Yes, reported ones including hidden ones</td>
+</tr>
+<tr>
+<td>Your posts</td>
+<td>Only published posts, and not by people you blocked or who blocked you</td>
+<td>Yes, including hidden ones</td>
+</tr>
+<tr>
+<td>Your post images</td>
+<td>Everyone who can see the post. An image waiting for review is only shown to you</td>
+<td>Yes, including images waiting for review and their screening score</td>
+</tr>
+<tr>
+<td>Who liked a post</td>
+<td>No, only the total number of likes</td>
+<td><strong>No.</strong> Who liked a post is never shown in any screen; a legal export contains only the total count</td>
+</tr>
+<tr>
+<td>Who celebrated a fulfilled post</td>
+<td>No, only the total number of celebrations. The author is told that someone celebrated, not who</td>
+<td><strong>No.</strong> Who celebrated is never shown in any screen; a legal export contains only the total count</td>
+</tr>
+<tr>
+<td>Your bookmarks</td>
+<td><strong>Never.</strong> Nobody can see what you saved or how many people saved a post, and the author is not told</td>
+<td><strong>No.</strong> Your bookmarks do not appear in moderation screens or in a legal export</td>
+</tr>
+<tr>
+<td>Your profile page (opened by tapping your @handle)</td>
+<td>Your handle, the month and year you joined, and <strong>only your named posts</strong> with their number and how many of them are fulfilled. Your anonymous posts are never listed or counted there, also not when you look at your own profile. Not shown to people you blocked or who blocked you</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Who reported a post or comment</td>
+<td>No</td>
+<td>The reason and note of each report</td>
+</tr>
+<tr>
+<td>Who you blocked</td>
+<td>No. When you &quot;block the author&quot; of an anonymous post, only that person&#39;s <strong>anonymous</strong> posts and comments are hidden from you; their profile, named posts and place in search do not change, and they do not notice anything. So the block does not reveal who wrote the anonymous post</td>
+<td><strong>No.</strong> The block list does not appear in moderation screens or in a legal export</td>
+</tr>
+<tr>
+<td>Your activity and consent records (IP address, port, User-Agent, times)</td>
+<td>Never</td>
+<td><strong>No.</strong> In the app, only authorised personnel with a dedicated &quot;legal&quot; role can see these records</td>
+</tr>
+</tbody></table></div>
+<p><strong>&quot;Anonymous&quot; means anonymous to other users, not to WishSay or to the authorities.</strong> We always store who wrote
+each post. This lets moderators act on harmful content without seeing who wrote it (e.g. by suspending the account)
+and lets us respond to lawful requests from authorities. Moderators do not see the author of anonymous content; only
+authorised personnel with the &quot;legal&quot; role can make that link, on a lawful request. If
+an authority such as a court or public prosecutor makes a lawful request, the account that wrote an anonymous post
+can be disclosed to it, together with that account&#39;s email address and handle and the IP address, source port and
+time at which the post was created and edited. The same applies to anonymous comments. Even if the account has been deleted, this link can be made for as
+long as the activity records are kept (see sections 6 and 8).</p>
+<p><strong>Comment aliases.</strong> On each post, an anonymous commenter is shown with an alias such as &quot;Anonim #4C6&quot;. The alias is
+computed from the post and your account with a secret key that only WishSay has, so it stays the same for all your
+anonymous comments on that post, but it is different on every other post: other users cannot tell that two aliases
+on two posts belong to the same person. If you are the author of an <strong>anonymous post</strong>, your comments on that post
+always appear under the post&#39;s own alias with an &quot;author&quot; badge, never under your handle, even if you ask for a
+named comment; the author of a named post always comments under their handle. Comments that you mark as named show
+your handle. If you comment named and anonymously on the same post, other people may be able to guess from what you
+write that both are yours.</p>
+<p><strong>Who can access activity and consent records?</strong> In the app, exporting these records is available only to
+authorised personnel who have been given a dedicated &quot;legal&quot; role; no other user, including moderators, can access
+them. Every export is itself written to the activity records, with who ran it and the query used. We disclose these
+records to authorities only on a lawful request. We assess a request only when we receive it in writing from a
+competent authority (a court, a public prosecutor or law enforcement); we verify that it comes from that authority
+and what it covers, and we refuse it if it is not lawful. Every response we give, and which records we shared, is
+written to the activity records. If someone&#39;s life or safety is in serious and imminent danger, we may inform the
+relevant emergency service without waiting for a request; our legal officer approves that disclosure and it is
+written to the audit records.</p>
+<p>People with technical access to our systems (for example administrators of the database) can access stored data
+when necessary to run, secure or fix the service. Such access is limited to authorised technical staff: everyone
+signs in with their own account and key-based authentication, shared passwords are not used, and server and database
+passwords are kept only as secrets (environment variables), never in code or in the source repository. Accesses are
+logged.</p>
+<p>We may share data with courts, public prosecutors, law enforcement or other competent authorities when the law
+requires it, or when there is a serious risk to someone&#39;s life or safety.</p>
+<h3>5. Hosting and data transfers</h3>
+<p>Your data is stored on servers provided by <strong>[HOSTING PROVIDER]</strong> in <strong>[HOSTING COUNTRY / REGION]</strong>.
+[IF DATA IS STORED OR ACCESSED OUTSIDE TURKEY OR THE EEA: transfer mechanism under KVKK Art. 9 and GDPR Chapter V
+— to be decided]
+Post images are stored on the same production server, in an S3-compatible object store that we run ourselves
+(MinIO); the server&#39;s location and the legal mechanism for transfers abroad are the ones stated in this section
+[to be finalised with W-066]. Images are not sent to any cloud image or content-screening service.
+We do not share your data with advertisers or analytics companies.
+[OTHER PROCESSORS — an email delivery service (SMTP provider) is used to send verification codes; its name and
+location will be listed with W-034. It only receives your email address and an email that contains nothing but the
+code.]</p>
+<h4>On-device translation</h4>
+<p>The &quot;Translate&quot; feature translates post and comment text on your device only, using Google ML Kit; the text being translated is never sent to us, to Google or to any other third party. The first time you translate a language, its language model (about 30 MB) is downloaded from Google&#39;s servers; during that download Google receives your IP address and standard connection information. You can delete downloaded models, and limit downloads to Wi-Fi, under Settings &gt; Translation models. Translations are provided by Google and their accuracy is not guaranteed.</p>
+<h3>6. Retention</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Data</th>
+<th>How long</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Active account data, posts, comments and interactions</td>
+<td>While your account is active. A post you delete, or a comment you delete or the post owner removes, is no longer shown; its text (for posts also the outcome note and image descriptions) is erased automatically 30 days after the deletion. The copy in the activity records is kept for those records&#39; period (730 days) for legal purposes</td>
+</tr>
+<tr>
+<td>Post images</td>
+<td>As long as the post exists. The image files are removed from storage at once when you delete the post, when a moderator rejects the image, when it is not added to a post within 24 hours, and when the deletion of your account is completed. No file of a deleted image is kept; only its fingerprint (SHA-256), storage key, sizes, screening score and moderation decision are kept for legal purposes for 730 days (2 years)</td>
+</tr>
+<tr>
+<td>Refresh tokens</td>
+<td>Valid for 30 days; the records are deleted automatically 30 days after they expired or were revoked</td>
+</tr>
+<tr>
+<td>Your account after you ask to delete it</td>
+<td>30 days, during which you can restore it; then the deletion is completed automatically (see section 8)</td>
+</tr>
+<tr>
+<td>Registrations whose email address is not verified</td>
+<td>24 hours from registration. If the email address is not verified within that time, the account and everything linked to it (likes, bookmarks, blocks, notifications, sessions, the verification code) are deleted completely and automatically; the email address and handle become available again. If someone registers again with the same email address, the old unverified registration is deleted at once. The activity records and consent records of that registration are kept for 730 days (2 years) from the date of deletion</td>
+</tr>
+<tr>
+<td>Data kept after the deletion is completed (see section 8; except activity and consent records)</td>
+<td>The content-free account record and post/comment placeholders are kept without a time limit; they no longer identify you and they keep reply threads meaningful. Reports you filed are kept as moderation records without your identity (see the next row)</td>
+</tr>
+<tr>
+<td>Reports and moderation records</td>
+<td>730 days (2 years). After that the report records are deleted; the moderation decision itself stays in the activity records (for the same period)</td>
+</tr>
+<tr>
+<td>Activity records (audit log)</td>
+<td>Each record for 730 days (2 years) from the moment it was created. Kept for this period even if you delete your account</td>
+</tr>
+<tr>
+<td>Consent records</td>
+<td>While your account is active, and after you delete your account for 730 days (2 years) from the date of deletion</td>
+</tr>
+<tr>
+<td>Server logs of the hosting infrastructure (if any)</td>
+<td>Reverse proxy access logs are kept for 2 years and used only for security, troubleshooting and responding to lawful requests</td>
+</tr>
+</tbody></table></div>
+<p>When a retention period ends, we delete, destroy or anonymise the data. Activity and consent records, the texts of
+deleted posts and comments and old session records are deleted by an automatic job that runs every day once their
+period has ended. For activity records, this does not depend on
+whether your account is still open. Your consent records, however, are not deleted while your account is active,
+because we must be able to prove what you agreed to for as long as we process your data; their period starts on
+the date the deletion of your account is completed (at the end of the 30-day restore period). [KVKK DATA RETENTION AND DESTRUCTION POLICY — to be prepared if required]</p>
+<h3>7. Your rights</h3>
+<p><strong>Under KVKK Article 11</strong> you have the right to:</p>
+<ul>
+<li>learn whether your personal data is processed;</li>
+<li>request information about it if it is;</li>
+<li>learn the purpose of processing and whether it is used for that purpose;</li>
+<li>know the third parties in Turkey or abroad to whom it is transferred;</li>
+<li>request correction if it is incomplete or inaccurate;</li>
+<li>request deletion or destruction under the conditions in KVKK Article 7;</li>
+<li>request that third parties to whom the data was transferred are notified of a correction or deletion;</li>
+<li>object to a result against you that arises solely from automated analysis of your data;</li>
+<li>claim compensation if you suffer damage because of unlawful processing.</li>
+</ul>
+<p><strong>Under the GDPR</strong> you have the right of access, rectification, erasure, restriction of processing, data
+portability, and to object to processing based on legitimate interests. You can also lodge a complaint with your
+local data protection authority.</p>
+<p><strong>How to use your rights:</strong></p>
+<ul>
+<li>In the app you can see your profile and posts, change your language and settings, edit or delete your posts,
+withdraw a tag you approved (&quot;Remove my tag&quot;), withdraw or give again your explicit consent for sensitive
+information (Settings &gt; Sensitive data consent), and delete your account.</li>
+<li>To have content about you removed, use the report reason &quot;Contains my personal / sensitive information&quot; or
+write to us (see section 2).</li>
+<li>For anything else, contact <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong> or write to <strong>Yeşiltepe Mah. İsmet İnönü-2 Blv. A.Üniv. Rektörlük ve Bilgisayar Araştırma Merkezi No: 2, 26210 Tepebaşı / Eskişehir, Türkiye</strong>. We may need to
+confirm your identity. We will reply within 30 days at the latest, as required by KVKK. [APPLICATION METHOD UNDER
+THE KVKK COMMUNIQUÉ ON APPLICATION PROCEDURES — to be confirmed]</li>
+<li>If you are not satisfied with our answer, you can complain to the Turkish Personal Data Protection Authority
+(KVKK) or, in the EU/EEA, to your local data protection authority.</li>
+</ul>
+<h3>8. Deleting your account</h3>
+<p>You can delete your account at any time in the app. Deletion happens in two steps.</p>
+<p><strong>Right away, when you ask:</strong></p>
+<ul>
+<li>All of your sessions are ended immediately on all devices.</li>
+<li>Your posts (with their images) and comments disappear for everyone, and your likes, tags and the notifications others received about
+you are no longer shown. Where others replied to one of your comments, an empty &quot;[deleted]&quot; placeholder remains so
+the replies still make sense.</li>
+<li>Tag requests waiting for your approval are declined.</li>
+<li>Your @handle is hidden where others mention it in posts, outcome notes and comments (shown as
+&quot;@[etiket kaldırıldı]&quot;) and cannot be found through search.</li>
+<li>Your email address and handle are kept for 30 days, so nobody else can register them meanwhile.</li>
+</ul>
+<p><strong>Within 30 days you can change your mind:</strong> log in with the same email address and password and choose to restore
+your account. Everything comes back as it was.</p>
+<p><strong>After 30 days the deletion is completed automatically:</strong></p>
+<ul>
+<li>The email address and handle in your account record are replaced with meaningless values, so they no longer
+identify you. Both become free for someone else to register. (The originals in the activity and consent records
+are not deleted; see below.) Mentions of your @handle in texts written before the deletion stay hidden; for that,
+your former handle is kept separately. If someone else registers the handle later, the old mentions are not shown
+as theirs.</li>
+<li>Your password is replaced; the account can no longer be logged into or restored.</li>
+<li>The text of your posts and comments is erased. The files of all images you uploaded are deleted from storage
+and their descriptions are erased (image fingerprints and storage keys stay for the period in section 6).</li>
+<li>Your likes, tags (both the ones you are in and the ones on your posts), notifications, blocks (people you blocked
+and people who blocked you) and session records are deleted.</li>
+<li>Reports you filed are kept as moderation records, but no longer linked to you.</li>
+</ul>
+<p><strong>What is kept:</strong> your account record remains with an internal ID, the anonymised email and handle, your language
+and settings, the age-confirmation and account dates, and the dates of the deletion request and of its completion;
+your posts and comments remain only as empty placeholders. They no longer identify you, so they are kept without a
+time limit.</p>
+<p><strong>Activity and consent records are not deleted when you delete your account.</strong> Because of our legal obligations,
+the records of actions taken with your account (see section 2) and your consent records are kept after deletion:
+activity records for 730 days (2 years) from the moment
+each record was created, and consent records for the same period from the date the deletion was completed. These records still identify you: they contain the <strong>email address and handle</strong> your account had at
+registration and at the moment of deletion, the text of your posts and comments (including before and after edits), IP
+addresses, source ports, device information and times. So although the information in your account record is
+anonymised, for the duration of the retention period your account and your posts can be linked to you on a lawful
+request from the authorities. Only the authorised personnel described in section 4 can access these records, and
+they are deleted automatically when the period ends.</p>
+<p>If you want any of the other data above erased as well, contact <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong>. Activity and consent records,
+however, cannot be erased before their retention period ends, because of our legal obligation. [LEGAL REVIEW:
+response to erasure requests under KVKK Art. 7 / GDPR Art. 17(3)(b)]</p>
+<h3>9. Children</h3>
+<p>WishSay is only for people aged <strong>13 or older</strong>. When you sign up you must confirm that you are at least 13. We do
+not knowingly collect data from children under 13. If we learn that an account belongs to someone under 13, we
+will delete it. If you are a parent and believe your child under 13 uses WishSay, contact us.</p>
+<h3>10. Security</h3>
+<p>What we currently do:</p>
+<ul>
+<li>Passwords are stored only as BCrypt hashes, never in plain text.</li>
+<li>Access tokens expire after 15 minutes. Refresh tokens expire after 30 days, can be used only once, and are
+stored only as SHA-256 hashes.</li>
+<li>If an already-used refresh token is presented again, all of that user&#39;s sessions are ended, to protect against
+stolen sessions.</li>
+<li>When an account is deleted, its existing tokens stop working immediately.</li>
+<li>Posts and comments are checked by an automatic word filter, comments are rate-limited (at most 30 in 10 minutes
+per account), and posts, reports, likes, celebrations, tag requests and searches have per-account limits too (the
+search counters live only in the server&#39;s memory and are not stored). Only reports from accounts that are at least
+24 hours old count towards automatically hiding a post. Moderator tools are restricted to moderator accounts.</li>
+<li>Activity records and consent records are append-only: the database rejects any change to or deletion of these
+records (the only exception is the automatic job that deletes records whose retention period has ended). Activity
+records are also chained together: each record carries a hash (SHA-256) that includes the hash of the previous
+record. This does not make tampering impossible, but if a record is later changed or removed from the middle of
+the chain, this can be detected. The chain is re-verified, from the oldest stored record to the newest, on every
+legal export. The newest link of the chain is also written daily to a file kept outside the database, which can
+only be signed with a secret key held on the server. So even somebody with full access to the database who rewrites
+the past and recomputes the chain is exposed by the signed record in that file. Consent records are not part of
+this chain; only the ban on changes and deletions applies to them.</li>
+<li>Exporting activity and consent records is available only to accounts with a dedicated &quot;legal&quot; role; moderators
+cannot access these records.</li>
+</ul>
+<p>[TRANSPORT ENCRYPTION (HTTPS), BACKUPS AND OTHER MEASURES — to be described once the production setup is final]</p>
+<p>No system is completely secure. If a breach affects your data, we will notify you and the authorities as required
+by law.</p>
+<h3>11. Contact</h3>
+<p><strong>Velzon Bilişim Teknolojileri Ticaret Limited Şirketi</strong>
+Yeşiltepe Mah. İsmet İnönü-2 Blv. A.Üniv. Rektörlük ve Bilgisayar Araştırma Merkezi No: 2, 26210 Tepebaşı / Eskişehir, Türkiye
+Email: <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong></p>
+<h3>12. Changes to this policy</h3>
+<p>We may update this policy, for example when we add new features. We will show the date of the latest version at
+the top. If the changes are significant, we will let you know in the app before they take effect.</p>
+    </article>
+    <p class="back"><a href="#main">Back to top</a></p>
+  </section>
+
+  <section class="legal-section" id="content-policy">
+<p class="section-lang"><a href="/wishsay-legal/#content-policy" hreflang="tr" lang="tr" aria-label="This section in Turkish">Türkçe</a></p>
+    <article class="legal">
+<blockquote class="draft">
+<p><strong>DRAFT — requires legal review before publication</strong></p>
+</blockquote>
+<h2>WishSay Content Policy</h2>
+<p><em>Last updated: 10 October 2026</em></p>
+<p>WishSay is a place to share short &quot;expectations&quot;: what you hope for, look forward to, or expect from life, the
+world or yourself. Posts appear on a shared 3D board. To keep the board a good place for everyone, including teens,
+please follow these rules.</p>
+<h3>1. What&#39;s welcome</h3>
+<ul>
+<li>Hopes, wishes and expectations: &quot;I expect to pass my exams&quot;, &quot;I hope this summer is calmer&quot;.</li>
+<li>Honest feelings, including sad or frustrated ones, as long as they don&#39;t target or hurt someone.</li>
+<li>Kind, funny or thoughtful posts in Turkish or English.</li>
+<li>Tagging a friend in a post they&#39;ve agreed to (see section 3).</li>
+</ul>
+<h3>2. What&#39;s not allowed</h3>
+<ul>
+<li><strong>Harassment and bullying:</strong> insulting, mocking, humiliating or ganging up on someone.</li>
+<li><strong>Threats:</strong> threatening to hurt anyone, or wishing that harm comes to a specific person.</li>
+<li><strong>Hate speech:</strong> attacking people for their ethnicity, nationality, religion, gender, sexual orientation,
+disability, or similar characteristics.</li>
+<li><strong>Sexual content:</strong> sexually explicit or suggestive posts.</li>
+<li><strong>Anything that sexualises minors.</strong> Zero tolerance. We remove it and may report it to the authorities.</li>
+<li><strong>Doxxing and personal information:</strong> sharing someone&#39;s real full name, address, phone number, school,
+workplace, social media accounts or other private details, including your own.</li>
+<li><strong>Other people&#39;s sensitive information:</strong> writing about someone else&#39;s health, religion or belief, sex life or
+similar sensitive matters in a way that can identify them.</li>
+<li><strong>Encouraging self-harm or suicide:</strong> promoting, instructing or egging someone on. Talking about how you feel
+is okay; see section 8 for help.</li>
+<li><strong>Violence:</strong> glorifying, promoting or describing violence in a way that celebrates it.</li>
+<li><strong>Spam:</strong> ads, repeated posts, links to sell things, or flooding the board.</li>
+<li><strong>Impersonation:</strong> pretending to be another person, brand or WishSay staff.</li>
+<li><strong>Pressuring or shaming a real person:</strong> using an expectation to put pressure on, guilt, or publicly shame
+someone (&quot;I expect @x to apologise to me in front of everyone&quot;, &quot;I expect [name] to finally admit she lied&quot;).
+Expectations are about your hopes, not a tool to pressure other people.</li>
+</ul>
+<p><strong>Images.</strong> You can add up to 4 images to a post (comments cannot have images). All of the rules above apply to
+images too. In addition, the following are not allowed:</p>
+<ul>
+<li><strong>Nudity and sexual content:</strong> naked or partly naked bodies, sexually suggestive poses or pictures, including
+drawings, AI-generated and &quot;artistic&quot; ones.</li>
+<li><strong>Violence and gore:</strong> injuries, blood, torture, dead bodies or cruelty to animals; images that glorify violence.</li>
+<li><strong>Other people&#39;s photos without their consent:</strong> a photo in which another person&#39;s face or identity can be made
+out, unless they clearly agreed to it being shared. Don&#39;t share photos of children.</li>
+<li><strong>Personal documents:</strong> ID cards, passports, driving licences, bank cards, bills, prescriptions, medical reports,
+screenshots of private chats, or any picture in which an address, phone number, number plate or similar personal
+information can be read; your own documents included.</li>
+<li><strong>Content that isn&#39;t yours to share:</strong> photos, logos or works you have no rights to.</li>
+</ul>
+<p>Every uploaded image is automatically screened for nudity and sexual content by an AI model running on our server.
+An image that looks suspicious is only visible to you until a moderator reviews it; your post is still published.
+Moderators reject and delete unsuitable images and you are notified. Hidden metadata such as location and camera
+details is removed from every image automatically, but what is visible in the picture is not.</p>
+<p>These rules apply to posts and to comments and replies alike. Posting or commenting anonymously does not change
+them. You are anonymous only to other users: WishSay keeps the author of every post and every comment and can
+disclose it to authorities acting on a lawful request. Moderators do not see who wrote anonymous content; where
+needed they apply sanctions without knowing who it is.</p>
+<p><strong>Sensitive information about yourself.</strong> Think twice before sharing your own health, religion or belief, sex life
+or similar sensitive matters: every user can see posts, and a named post shows your handle. The app shows a short
+reminder when you write a post or a comment. If a post or comment contains your personal or sensitive information,
+you can ask us to remove it: report it with the reason &quot;Contains my personal / sensitive information&quot;, or write to
+<strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong>.</p>
+<p><strong>Explicit consent for sensitive information.</strong> To share this kind of information about yourself, you need to give
+your explicit consent that it will be visible to other users. You give it with a separate checkbox when you sign up.
+Without it you cannot write new posts or comments or edit existing ones; the app asks you for it. You can withdraw it
+or give it again at any time under <strong>Settings &gt; Sensitive data consent</strong>. Withdrawing does not remove what you have
+already shared; you can delete it or write to us. How the consent is recorded is explained in the Privacy Policy.</p>
+<h3>3. Tagging etiquette</h3>
+<ul>
+<li>You can only tag people who have turned on &quot;allow tagging&quot; in their settings.</li>
+<li>A tagged post is published only after <strong>every</strong> tagged person approves it. If anyone declines, the post isn&#39;t
+published. You won&#39;t be told who declined.</li>
+<li>Anonymous posts can&#39;t tag anyone. If you want to mention someone, you have to post under your handle.</li>
+<li>Only tag people who would be happy to see the post. Don&#39;t use tagging to pressure, embarrass or call someone out.</li>
+<li>Don&#39;t send the same tag request over and over to someone who declined.</li>
+<li>If you don&#39;t want to be tagged at all, keep &quot;allow tagging&quot; off (it&#39;s off by default).</li>
+<li><strong>You can change your mind.</strong> You can withdraw a tag you approved at any time (&quot;Remove my tag&quot;). The tag is
+removed, your handle in the post is shown as &quot;@[etiket kaldırıldı]&quot; (&quot;tag removed&quot;), and the post itself stays
+up. The author is told that a tag was withdrawn, and you will not be asked to approve that post again. If you also
+want the post gone, report it.</li>
+</ul>
+<h3>4. Comments and replies</h3>
+<ul>
+<li>You can comment on posts you can see, and reply to comments. Replies to a reply appear in the same thread, marked
+with who they answer. A comment can be up to 500 characters.</li>
+<li>Each comment can be anonymous or show your handle; the default follows your &quot;post anonymously by default&quot;
+setting. Anonymous commenters appear with an alias such as &quot;Anonim #4C6&quot;, which stays the same on that post but
+is different on other posts.</li>
+<li>The author of an anonymous post always comments on it anonymously, under the post&#39;s alias, with an &quot;author&quot; badge.</li>
+<li>Keep comments about the post. Don&#39;t use them to harass the author or other commenters, to guess or reveal who an
+anonymous author is, or to continue a conversation with someone who blocked you.</li>
+<li><strong>Post owners can moderate their own posts:</strong> they can remove anyone&#39;s comment on their post and can turn
+comments off (and on again) at any time. While comments are off, no new comments or edits can be added, and
+existing comments stay visible. Removed comments show as &quot;[removed]&quot; if someone had replied to them.</li>
+<li>You can edit or delete your own comments. Deleted comments show as &quot;[deleted]&quot; if someone had replied to them.</li>
+<li>To prevent spam, you can write at most 30 comments in 10 minutes.</li>
+</ul>
+<h3>5. Reporting</h3>
+<ul>
+<li>Tap report on any post or comment and choose a reason: spam, harassment, hate, sexual content, self-harm, violence,
+&quot;contains my personal / sensitive information&quot; or other. You can add a short note. Reports with the personal /
+sensitive information reason are flagged for moderators to handle first.</li>
+<li>The person you report is not told who reported them.</li>
+<li>When 3 different people report the same post or comment, it is hidden automatically until a moderator reviews
+it. Only reports from accounts that are at least 24 hours old count towards this number; reports from newer
+accounts still reach the moderators.</li>
+<li>Moderators review reports and decide whether the post or comment stays hidden or comes back. A report on a post
+also covers its images: moderators can remove an image and keep the post.</li>
+<li>You can also <strong>block</strong> a user. Their posts and comments disappear from your board and yours disappear from theirs,
+and you cannot reply to each other&#39;s comments.</li>
+<li>If you &quot;block the author&quot; of an <strong>anonymous</strong> post, only that person&#39;s <strong>anonymous</strong> posts and comments are hidden
+from you. Their profile, named posts and place in search do not change, and they do not notice anything, so the
+block does not reveal who the author is.</li>
+</ul>
+<p>Please don&#39;t report posts or comments just because you disagree with them. False or mass reports are themselves a violation.</p>
+<h3>6. What happens if the rules are broken</h3>
+<ul>
+<li><strong>Automatic filter:</strong> some words are blocked automatically, and a post or comment containing them can&#39;t be
+published.</li>
+<li><strong>Hiding:</strong> a post or comment can be hidden by reports or by a moderator. Hidden content is no longer shown.</li>
+<li><strong>Removal by the post owner:</strong> the owner of a post can remove comments on it (see section 4).</li>
+<li><strong>Account action:</strong> for serious or repeated violations we first hide the content and remind you of the rules. If
+it happens again, your account is <strong>suspended for 7 days</strong>; the notification states the reason and when the
+suspension ends. If you carry on after that, or the violation is serious (threats, hate speech, harassment, sexual
+content), your account is <strong>closed permanently</strong>.</li>
+<li><strong>Legal reports:</strong> where the law requires it, or where someone may be in danger, we may share information with
+the competent authorities. See the Privacy Policy.</li>
+</ul>
+<h3>7. Appeals</h3>
+<p>If you think your post or comment was hidden by mistake, or you disagree with an action on your account, write to
+<strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong> with your handle and a short explanation. A moderator will look at it again. A post
+or comment that is restored after review won&#39;t be hidden again by the same reports. A comment removed by the post
+owner is the owner&#39;s decision about their own post and is not reviewed by moderators unless it breaks these rules.
+We reply to appeals within <strong>7 days</strong> at the latest.</p>
+<h3>8. If you&#39;re struggling</h3>
+<p>If you&#39;re thinking about hurting yourself, or someone else is in danger, please don&#39;t stay alone with it:</p>
+<ul>
+<li><strong>If anyone is in immediate danger, call your local emergency services</strong> (in Turkey, the emergency number is 112).</li>
+<li>Talk to someone you trust: a family member, friend, teacher or school counsellor.</li>
+<li>If you&#39;re a university student, you can go to your campus counselling service.</li>
+<li>Outside Turkey, you can find verified helplines in your country at <strong>findahelpline.com</strong>.</li>
+</ul>
+<p>WishSay is not a crisis service, and moderators can&#39;t provide emergency help.</p>
+<h3>9. Changes</h3>
+<p>We may update this policy. If we make important changes, we&#39;ll let you know in the app.</p>
+<p>Questions? <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong></p>
+    </article>
+    <p class="back"><a href="#main">Back to top</a></p>
+  </section>
+
+<section class="page-section" id="support">
+<p class="section-lang"><a href="/wishsay-legal/#support" hreflang="tr" lang="tr" aria-label="This section in Turkish">Türkçe</a></p>
+  <h2>Support</h2>
+  <p class="lead">Write to us about a problem or an idea: info@velzon.tr. For account matters, please write from your registered address.</p>
+
+  <div class="panel">
+    <h3>Get in touch</h3>
+    <p class="big-mail"><a href="mailto:info@velzon.tr">info@velzon.tr</a></p>
+    <p>When reporting a bug, include a screenshot, device model and app version if you can. We answer requests under Turkish data protection law (KVKK) within 30 days at the latest.</p>
+  </div>
+
+  <h3>Frequently asked</h3>
+  <div class="faq">
+    <details open>
+      <summary>How do I delete my account?</summary>
+      <p>In the app: Settings → Account → Delete my account. You can restore it within 30 days; after that it is deleted permanently. <a href="#account-deletion">Steps and data</a></p>
+    </details>
+    <details>
+      <summary>Is anonymous sharing really anonymous?</summary>
+      <p>Your name is not shown on anonymous posts or comments; an alias is used. Moderators do not see the real identity either; only the legal role can, in response to a lawful request. <a href="#privacy">Privacy notice</a></p>
+    </details>
+    <details>
+      <summary>I do not want to be tagged.</summary>
+      <p>Settings → “Allow others to tag me”, switch it off. You can also report someone who tags you in a post.</p>
+    </details>
+    <details>
+      <summary>Translation does not work.</summary>
+      <p>The language model is downloaded on first use. Once it finishes, translation runs on your device; try again on Wi-Fi.</p>
+    </details>
+    <details>
+      <summary>I am not getting notifications.</summary>
+      <p>Notifications currently appear in the app; phone notifications will arrive with the release.</p>
+    </details>
+    <details>
+      <summary>When will my report be resolved?</summary>
+      <p>We let you know the outcome by notification. You can appeal the decision within 7 days. <a href="#content-policy">Content policy</a></p>
+    </details>
+    <details>
+      <summary>My account was suspended.</summary>
+      <p>The suspension notification states the reason and the appeal address. We answer appeals within 7 days.</p>
+    </details>
+  </div>
+
+  <div class="callout">
+    <h3>If someone is in danger</h3>
+    <p>WishSay is not a crisis service; moderators cannot provide emergency help. If anyone is in immediate danger, call your local emergency services (in Turkey, 112). University students can turn to their campus psychological counselling centre. Outside Turkey, you can find verified helplines in your country at findahelpline.com.</p>
+  </div>
+  <p class="back"><a href="#main">Back to top</a></p>
+</section>
+
+<section class="page-section" id="account-deletion">
+<p class="section-lang"><a href="/wishsay-legal/#account-deletion" hreflang="tr" lang="tr" aria-label="This section in Turkish">Türkçe</a></p>
+  <h2>Delete your account</h2>
+  <p class="lead">You can delete your account in two ways: in the app or by email. Both have the same result.</p>
+
+  <div class="split">
+    <div class="panel">
+      <h3>In the app</h3>
+      <ol class="ordered">
+        <li>Open Settings.</li>
+        <li>Go to Account.</li>
+        <li>Tap “Delete my account” and confirm.</li>
+        <li>We email you about the deletion request.</li>
+      </ol>
+    </div>
+    <div class="panel">
+      <h3>By email</h3>
+      <p>Write to info@velzon.tr from your registered address with the subject “Account deletion request”. We may need to verify your identity.</p>
+      <p><a class="btn btn-secondary" href="mailto:info@velzon.tr?subject=Account%20deletion%20request">info@velzon.tr</a></p>
+    </div>
+  </div>
+
+  <h3>What happens</h3>
+  <ul class="check-list">
+    <li>Your account closes immediately and your sessions end.</li>
+    <li>If you restore it within 30 days, everything comes back.</li>
+    <li>After 30 days your email address, aliases and content (post and comment texts, images, likes, bookmarks) are deleted. Content-emptied placeholders remain so reply threads stay readable; they do not identify you.</li>
+    <li>Audit records are kept for 2 years (730 days) under legal obligations, and consent records for 2 years after deletion.</li>
+    <li>Reports and moderation records are kept for 730 days; when that period ends the report records are deleted.</li>
+  </ul>
+  <p>Details and retention periods: <a href="#privacy">Privacy notice §6</a></p>
+  <p class="callout-inline">To restore your account, sign in with the same email within 30 days.</p>
+  <p class="back"><a href="#main">Back to top</a></p>
+</section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="brand-line"><img src="/wishsay-legal/img/icon-64.png" alt="" width="22" height="22"> WishSay</p>
+      <p>A quiet place to share your wishes.</p>
+      <p class="muted small">Velzon Bilişim Teknolojileri Ticaret Limited Şirketi · Eskişehir, Türkiye</p>
+    </div>
+    <nav aria-label="Sections">
+      <h2>Sections</h2>
+      <ul>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#content-policy">Content rules</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="#account-deletion">Delete my account</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Contact</h2>
+      <p><a href="mailto:info@velzon.tr">info@velzon.tr</a></p>
+      <p class="muted small">No ads, no tracking, no cookies.</p>
+      <p class="small"><span class="pill">13+</span> © 2026 Velzon</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,1572 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WishSay — Gizlilik, içerik kuralları, destek ve hesap silme</title>
+<meta name="description" content="WishSay gizlilik politikası ve KVKK/GDPR aydınlatma metni, içerik kuralları, destek/SSS ve hesap silme adımları tek sayfada.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FFF9F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1030" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://denizaydogdu.github.io/wishsay-legal/">
+<link rel="alternate" hreflang="tr" href="https://denizaydogdu.github.io/wishsay-legal/">
+<link rel="alternate" hreflang="en" href="https://denizaydogdu.github.io/wishsay-legal/en/">
+<link rel="alternate" hreflang="x-default" href="https://denizaydogdu.github.io/wishsay-legal/">
+<link rel="icon" href="/wishsay-legal/img/icon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="/wishsay-legal/img/icon-180.png">
+<style>
+/* WishSay yasal sayfası — W-077. Ağ fontu, izleme ve istemci betiği yok. */
+/* WOFF2'ler uygulamadaki TTF'lerden yalnız sitede geçen karakterlere indirgenir
+   (scripts/make-fonts.sh); TTF baytları uygulamayla aynı kalır. */
+
+@font-face {
+  font-family: "Fredoka";
+  src: url("/wishsay-legal/fonts/Fredoka-SemiBold.woff2") format("woff2"),
+       url("/wishsay-legal/fonts/Fredoka-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fredoka";
+  src: url("/wishsay-legal/fonts/Fredoka-Bold.woff2") format("woff2"),
+       url("/wishsay-legal/fonts/Fredoka-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/wishsay-legal/fonts/Nunito-Regular.woff2") format("woff2"),
+       url("/wishsay-legal/fonts/Nunito-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/wishsay-legal/fonts/Nunito-SemiBold.woff2") format("woff2"),
+       url("/wishsay-legal/fonts/Nunito-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/wishsay-legal/fonts/Nunito-ExtraBold.woff2") format("woff2"),
+       url("/wishsay-legal/fonts/Nunito-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+  --ink: #1f1b2e;
+  --muted: #6f6257;
+  --bg: #fff9f0;
+  --dot: #eadfce;
+  --surface: #ffffff;
+  --surface-solid: #ffffff;
+  --tint: #fff3df;
+  --border: #1f1b2e;
+  --border-strong: #1f1b2e;
+  --primary: #9be58a;
+  --on-primary: #1f1b2e;
+  --selected: #c9a7ff;
+  --link: #67419c;
+  --link-hover: #4c287f;
+  --amber-bg: #fff4d6;
+  --amber-line: #d33a22;
+  --small-shadow: 3px 3px 0 #1f1b2e;
+  --radius: 18px;
+  --wrap: 1120px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f1f2ff;
+    --muted: #9aa0d6;
+    --bg: #0e1030;
+    --dot: transparent;
+    --surface: rgb(255 255 255 / 7%);
+    --surface-solid: #191b46;
+    --tint: rgb(255 255 255 / 4%);
+    --border: rgb(255 255 255 / 16%);
+    --border-strong: rgb(255 255 255 / 40%);
+    --primary: #c6ff3d;
+    --on-primary: #0e1030;
+    --selected: #c6ff3d;
+    --link: #3de0ff;
+    --link-hover: #8cebff;
+    --amber-bg: #33280f;
+    --amber-line: #ff6b6b;
+    --small-shadow: 0 4px 12px rgb(255 61 154 / 22%);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.15px);
+  background-size: 18px 18px;
+  color: var(--ink);
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image:
+      radial-gradient(circle at 12% 4%, rgb(255 61 154 / 12%), transparent 20rem),
+      radial-gradient(circle at 88% 10%, rgb(61 224 255 / 10%), transparent 22rem),
+      radial-gradient(circle at 50% 96%, rgb(198 255 61 / 7%), transparent 24rem);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.5em;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 1.4rem + 2.6vw, 3.2rem);
+}
+
+h2 {
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 2rem);
+  margin-top: 0;
+  scroll-margin-top: 84px;
+}
+
+h3 {
+  font-size: 1.12rem;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+ul,
+ol {
+  margin: 0 0 1em;
+  padding-left: 1.25em;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  background: var(--surface);
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  z-index: 10;
+}
+
+.skip:focus {
+  left: 12px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 0.86rem;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(16px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 64px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.brand img {
+  border-radius: 9px;
+  border: 1px solid var(--border-strong);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.site-nav {
+  display: flex;
+  gap: 18px;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--ink);
+}
+
+.lang {
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.82rem;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 600;
+  background: var(--surface);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- page head ---------- */
+
+.page {
+  max-width: 900px;
+  padding-block: clamp(28px, 4vw, 52px) clamp(40px, 5vw, 64px);
+}
+
+.legal-page {
+  max-width: 860px;
+}
+
+.page-head {
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--link);
+  margin-bottom: 14px;
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1rem + 0.35vw, 1.22rem);
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.toc {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.toc a {
+  display: block;
+  padding: 12px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--small-shadow);
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.toc a:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+/* ---------- sections ---------- */
+
+.legal-section,
+.page-section {
+  padding-block: clamp(30px, 4vw, 48px);
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 64px;
+}
+
+.section-lang {
+  margin: 0 0 6px;
+  text-align: right;
+  font-size: 0.86rem;
+}
+
+.section-lang a {
+  text-decoration: none;
+}
+
+.back {
+  margin: 26px 0 0;
+  font-size: 0.86rem;
+}
+
+.back a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.back a:hover {
+  color: var(--ink);
+}
+
+/* ---------- legal documents ---------- */
+
+.legal {
+  max-width: 760px;
+}
+
+.legal h2 {
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 2rem);
+  margin-bottom: 0.6em;
+}
+
+.legal h3 {
+  font-size: 1.2rem;
+  margin-top: 1.8em;
+}
+
+.legal h4 {
+  font-size: 1.02rem;
+  margin-top: 1.4em;
+}
+
+.legal p,
+.legal li {
+  font-size: 1rem;
+}
+
+.legal ul,
+.legal ol {
+  padding-left: 1.3em;
+}
+
+.legal li {
+  margin-bottom: 0.45em;
+}
+
+.legal hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2em 0;
+}
+
+.legal blockquote {
+  margin: 1.5em 0;
+  padding: 2px 0 2px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--muted);
+}
+
+.legal blockquote.draft {
+  background: var(--amber-bg);
+  border-left: 5px solid var(--amber-line);
+  border-radius: 0 12px 12px 0;
+  padding: 14px 18px;
+  color: var(--ink);
+}
+
+.legal blockquote.draft p {
+  margin: 0;
+}
+
+.legal .table-wrap {
+  overflow-x: auto;
+  margin: 1.5em 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+}
+
+.legal table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 560px;
+  font-size: 0.9rem;
+}
+
+.legal th,
+.legal td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal th {
+  background: var(--tint);
+  font-size: 0.85rem;
+}
+
+.legal tr:last-child td {
+  border-bottom: 0;
+}
+
+/* ---------- support / deletion ---------- */
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: clamp(20px, 3vw, 28px);
+  margin-block: 20px;
+  box-shadow: var(--small-shadow);
+}
+
+.big-mail {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.faq {
+  display: grid;
+  gap: 10px;
+}
+
+.faq details {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  padding: 4px 18px;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding-block: 12px;
+}
+
+.faq details p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.callout {
+  background: var(--amber-bg);
+  border-left: 5px solid var(--amber-line);
+  border-radius: 0 16px 16px 0;
+  padding: 20px 22px;
+  margin-top: 30px;
+}
+
+.callout h3 {
+  font-size: 1.15rem;
+}
+
+.callout p {
+  margin: 0;
+}
+
+.callout-inline {
+  background: var(--tint);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  padding: 14px 18px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.ordered {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.ordered li {
+  margin-bottom: 8px;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--link);
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 0.98rem;
+  text-decoration: none;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: var(--surface);
+  border-color: var(--border-strong);
+  color: var(--ink);
+  box-shadow: var(--small-shadow);
+}
+
+.btn-secondary:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding-block: 40px;
+  margin-top: 24px;
+  background: color-mix(in srgb, var(--surface-solid) 82%, transparent);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.footer-grid h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.footer-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 0.93rem;
+}
+
+.footer-grid a {
+  text-decoration: none;
+}
+
+.brand-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.brand-line img {
+  border-radius: 6px;
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 1px 9px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 820px) {
+  .site-nav {
+    display: none;
+  }
+
+  .toc {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  body {
+    font-size: 16px;
+  }
+
+  .toc {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal table {
+    min-width: 480px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .toc,
+  .section-lang,
+  .back {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .legal .table-wrap {
+    overflow: visible;
+  }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/wishsay-legal/">
+      <img src="/wishsay-legal/img/icon-64.png" alt="" width="28" height="28">
+      <span>WishSay</span>
+    </a>
+    <nav class="site-nav" aria-label="Bölümler">
+      <a href="#privacy">Gizlilik</a>
+      <a href="#content-policy">İçerik kuralları</a>
+      <a href="#support">Destek</a>
+      <a href="#account-deletion">Hesabımı sil</a>
+    </nav>
+    <a class="lang" href="/wishsay-legal/en/" hreflang="en" lang="en">EN</a>
+  </div>
+</header>
+<main id="main">
+<div class="wrap page legal-page">
+  <header class="page-head">
+    <p class="eyebrow">WishSay · Yasal</p>
+    <h1>Gizlilik, içerik kuralları ve destek</h1>
+    <p class="lead">Mağazaların istediği gizlilik, içerik kuralları, destek ve hesap silme bilgileri tek sayfada. Gizlilik ve içerik metinleri hukuki inceleme bitene kadar taslaktır.</p>
+    <nav class="toc" aria-label="Bu sayfada">
+      <a href="#privacy">Gizlilik</a>
+      <a href="#content-policy">İçerik kuralları</a>
+      <a href="#support">Destek</a>
+      <a href="#account-deletion">Hesabımı sil</a>
+    </nav>
+  </header>
+
+  <section class="legal-section" id="privacy">
+<p class="section-lang"><a href="/wishsay-legal/en/#privacy" hreflang="en" lang="en" aria-label="Bu bölümün İngilizcesi">English</a></p>
+    <article class="legal">
+<blockquote class="draft">
+<p><strong>TASLAK — yayından önce hukuki inceleme gereklidir</strong></p>
+</blockquote>
+<h2>WishSay Gizlilik Politikası ve Aydınlatma Metni</h2>
+<p><em>Son güncelleme: 10 Ekim 2026</em></p>
+<p>Bu metin, WishSay&#39;in hangi kişisel verileri hangi amaçla topladığını, bunları kimlerin görebildiğini ve hangi
+haklara sahip olduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu (&quot;KVKK&quot;) ve AB Genel Veri Koruma
+Tüzüğü (&quot;GDPR&quot;) dikkate alınarak hazırlanmıştır ve KVKK&#39;nın 10. maddesi kapsamındaki aydınlatma metni yerine
+geçer. [HUKUKİ İNCELEME: ayrı bir KVKK aydınlatma metni gerekip gerekmediği teyit edilecek]</p>
+<h3>1. Veri sorumlusu</h3>
+<p><strong>Velzon Bilişim Teknolojileri Ticaret Limited Şirketi</strong>
+Yeşiltepe Mah. İsmet İnönü-2 Blv. A.Üniv. Rektörlük ve Bilgisayar Araştırma Merkezi No: 2, 26210 Tepebaşı / Eskişehir
+Ticaret Sicil No: 57212 · MERSİS No: 924113500200001 · Vergi No: 9241135002
+E-posta: <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong>
+[VERBİS KAYDI — gerekip gerekmediği teyit edilecek]
+[GDPR MADDE 27 KAPSAMINDA AB TEMSİLCİSİ — gerekip gerekmediği teyit edilecek]</p>
+<h3>2. Hangi verileri neden topluyoruz?</h3>
+<p>Yalnızca WishSay&#39;i çalıştırmak için gereken verileri topluyoruz. Gerçek adını, telefon numaranı veya konumunu
+<strong>istemiyoruz</strong>. Bir gönderiye resim eklemek tamamen isteğe bağlıdır (aşağıda &quot;Gönderi resimleri&quot;).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Veri</th>
+<th>Örnekler</th>
+<th>Neden gerekli?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Hesap bilgileri</strong></td>
+<td>E-posta adresi, şifre (açık hâliyle asla saklanmaz, yalnızca BCrypt özeti tutulur), kullanıcı adı, dil (Türkçe/İngilizce), 13 yaşından büyük olduğunu onayladığın tarih, hesabın açılış tarihi, e-posta adresinin doğrulandığı tarih (doğrulama kodu en fazla 15 dakika, yalnızca geri çevrilemez bir özet olarak tutulur ve kullanılınca silinir)</td>
+<td>Hesabını açmak ve korumak, giriş yapmanı sağlamak, uygulamayı kendi dilinde göstermek ve yaş sınırını kontrol etmek</td>
+</tr>
+<tr>
+<td><strong>Ayarlar</strong></td>
+<td>&quot;Etiketlenmeye izin ver&quot;, &quot;varsayılan olarak anonim paylaş&quot;, hesap rolü (kullanıcı, moderatör veya hukuk)</td>
+<td>Tercihlerini uygulamak ve moderatörlere araçlarını sunmak</td>
+</tr>
+<tr>
+<td><strong>Gönderilerin</strong></td>
+<td>Her beklentinin metni (en fazla 500 karakter), metnin dili (sunucumuzda otomatik tespit edilir, bkz. aşağıda), anonim olup olmadığı, anonim takma adı (ör. &quot;Anonim #4F2&quot;), durumu, oluşturulma ve düzenlenme zamanı, beğeni sayısı. <strong>Anonim olanlar dahil her gönderinin yazarı her zaman kaydedilir</strong></td>
+<td>Gönderilerini panoda göstermek ve denetlemek</td>
+</tr>
+<tr>
+<td><strong>Gönderi resimlerin</strong></td>
+<td>İsteğe bağlı olarak bir gönderiye eklediğin en fazla 4 resim (konum ve kamera bilgisi silinmiş, yeniden kodlanmış hâli ve küçük önizlemesi), isteğe bağlı açıklama metni (en fazla 200 karakter), yüklediğin dosyanın ve saklanan resmin SHA-256 özeti, boyutları, otomatik uygunsuzluk taraması puanı, moderasyon durumu, yükleme ve silinme zamanları. Yüklemenin kendisi de IP adresi ve kaynak portla işlem kaydına yazılır</td>
+<td>Resmi gönderinle birlikte göstermek, uygunsuz görsellere karşı denetlemek ve yetkili makamların taleplerine yanıt verebilmek</td>
+</tr>
+<tr>
+<td><strong>Yorumların</strong></td>
+<td>Her yorumun ve cevabın metni (en fazla 500 karakter), metnin dili (otomatik tespit edilir), ait olduğu gönderi, hangi yoruma cevap olduğu, anonim olup olmadığı, yorum takma adı (ör. &quot;Anonim #4C6&quot;, bkz. 4. bölüm), durumu (görünür, senin sildiğin, gönderi sahibinin kaldırdığı, gizlenmiş), oluşturulma ve düzenlenme zamanı, beğeni sayısı. <strong>Anonim olanlar dahil her yorumun yazarı her zaman kaydedilir.</strong> Gönderiler için: yorumların açık olup olmadığı</td>
+<td>Yorumları ve cevapları gönderilerin altında göstermek, gönderi sahiplerinin kendi gönderilerindeki yorumları yönetmesini sağlamak ve yorumları denetlemek</td>
+</tr>
+<tr>
+<td><strong>Etkileşimler</strong></td>
+<td>Verdiğin beğeniler (gönderilere ve yorumlara), etiketler (kimin kimi etiketlediği; onaylanıp onaylanmadığı, sonradan geri çekilip çekilmediği), gönderi veya yorumlar hakkında yaptığın şikâyetler (sebep ve isteğe bağlı not), engellediğin kullanıcılar ve anonim bir gönderi üzerinden anonim içeriklerini gizlediğin yazarlar</td>
+<td>Beğeni, etiketleme, şikâyet ve engelleme özelliklerini çalıştırmak</td>
+</tr>
+<tr>
+<td><strong>Sonuçlar, kutlamalar ve kaydettiklerin</strong></td>
+<td>Gönderini &quot;gerçekleşti&quot; ya da &quot;vazgeçtim&quot; olarak işaretleyip işaretlemediğin, ne zaman ve isteğe bağlı notun (en fazla 280 karakter); kutladığın gerçekleşen gönderiler; kaydettiğin gönderiler ve ne zaman kaydettiğin. Kaydetmeler işlem kayıtlarına yazılmaz</td>
+<td>İşareti ve kutlama sayısını göstermek, gönderiyi beğenenlere ve etiketlenenlere gerçekleştiğini bildirmek ve kaydettiğin gönderileri senin için saklamak</td>
+</tr>
+<tr>
+<td><strong>Aramalar</strong></td>
+<td><strong>Saklanmaz.</strong> Aramaya yazdığın metin yalnızca o aramayı yanıtlamak için kullanılır; kaydedilmez, kayda geçmez ve hesabınla ilişkilendirilmez</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Bildirimler</strong></td>
+<td>Etiket isteği ve onayı, gönderine gelen yorumlar ve yorumuna gelen cevaplar gibi uygulama içi bildirimler, okunup okunmadıkları. Anonim bir yorumla ilgili bildirim yalnızca takma adı içerir</td>
+<td>Seni ilgilendiren gelişmeleri haber vermek</td>
+</tr>
+<tr>
+<td><strong>Oturum verileri</strong></td>
+<td>Yenileme anahtarının (refresh token) SHA-256 özeti; oluşturulma, geçerlilik sonu ve iptal zamanları</td>
+<td>Oturumunu güvenle açık tutmak ve çalınan oturumları tespit etmek</td>
+</tr>
+<tr>
+<td><strong>İşlem kayıtları (denetim kaydı)</strong></td>
+<td>WishSay&#39;de yapılan her yazma işlemi için: işlemi yapan kullanıcı, işlemin türü ve neye yapıldığı, IP adresi, kaynak port numarası, cihaz/uygulama bilgisi (User-Agent), istek kimliği ve sunucunun o anki saati (UTC, mikrosaniye hassasiyetinde); ayrıca işleme göre değişen ayrıntılar (bkz. aşağıda)</td>
+<td>Yasal yükümlülükleri yerine getirmek ve mahkeme ile savcılık gibi yetkili makamların taleplerine yanıt vermek; güvenlik ve kötüye kullanımın önlenmesi</td>
+</tr>
+<tr>
+<td><strong>Onay kayıtları</strong></td>
+<td>13 yaşından büyük olduğunu beyan etmen, İçerik Politikası&#39;nı kabul etmen, bu Aydınlatma Metni&#39;ni okuduğunu onaylaman, kendinle ilgili hassas bilgilerin görünmesine açık rıza vermen ve bu rızayı geri alman (bkz. aşağıda), etiketlenme izni vermen ve bu izni geri çekmen. Her biri ilgili politika sürümü, zaman (UTC), IP adresi, kaynak port, User-Agent ve istek kimliğiyle ayrı bir kayıt olarak saklanır</td>
+<td>Neyi, hangi metin sürümüne göre, ne zaman ve nereden onayladığını ispat edebilmek</td>
+</tr>
+</tbody></table></div>
+<p><strong>Ne yazacağın sana kalmış.</strong> Kendinle ya da başkalarıyla ilgili sağlık, din veya inanç, cinsel yaşam gibi hassas
+bilgileri ve gerçek bir kişiyi tanıtan bilgileri paylaşırken dikkatli ol: gönderileri tüm kullanıcılar görebilir,
+isimli gönderilerde kullanıcı adın da görünür. Uygulama, gönderi ve yorum yazarken bunu sana hatırlatır. İçerik
+Politikamız başkalarının kişisel bilgilerini paylaşmayı yasaklar.</p>
+<p><strong>Seninle ilgili bilgilerin kaldırılması.</strong> Bir gönderi veya yorum senin kişisel ya da hassas bilgilerini
+içeriyorsa kaldırılmasını isteyebilirsin: içeriği &quot;Kişisel/hassas bilgilerimi içeriyor&quot; sebebiyle şikâyet et (bu
+şikâyetler moderatörlere öncelikli olarak gösterilir) ya da <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong> adresine yaz. Hesabın olsun olmasın,
+içeriği sen ya da başkası yazmış olsun, bu yol açıktır.</p>
+<p><strong>Metnin dili ve &quot;Çevir&quot;:</strong> Bir gönderi veya yorum yazdığında ya da metnini düzenlediğinde, metnin hangi dilde
+yazıldığı <strong>kendi sunucumuzda</strong>, bir dil tanıma kütüphanesiyle (Lingua) otomatik olarak tespit edilir. Bunun için
+metin hiçbir üçüncü tarafa veya dış hizmete gönderilmez. Dil kesin anlaşılamazsa (çok kısa metin, yalnızca emoji,
+karışık dil) &quot;belirsiz&quot; olarak kaydedilir. Bu bilgi yalnızca &quot;Çevir&quot; düğmesini doğru dilde göstermek ve Türkçe ile
+İngilizce dışındaki metinleri moderatörlerin incelemesine sunmak için kullanılır. Eski gönderi ve yorumların dili de
+bir kez aynı yöntemle yeniden tespit edilmiştir.</p>
+<p><strong>Gönderi resimleri.</strong> Bir resim yüklediğinde onu <strong>kendi sunucumuzda</strong> işleriz ve hiçbir üçüncü tarafa
+göndermeyiz:</p>
+<ul>
+<li>Telefonların fotoğraflara gizlice eklediği <strong>tüm üst veriler silinir</strong>: çekim yeri (GPS konumu), tarih ve saat,
+cihaz modeli, kamera ayarları ve benzeri bilgiler (EXIF, XMP ve diğerleri). Resim yalnızca piksellerinden yeniden
+oluşturulur; en uzun kenarı en fazla 2048 piksel olacak şekilde küçültülür ve ayrıca küçük bir önizleme üretilir.
+Yüklediğin özgün dosya saklanmaz. <strong>Resmin içinde görünen şeyler</strong> (yüzler, plakalar, belgeler, ev adresin
+gibi) ise silinmez: ne paylaştığına dikkat et.</li>
+<li>Her resim, sunucumuzda çalışan açık kaynaklı bir yapay zekâ modeliyle <strong>otomatik olarak uygunsuz içerik (çıplaklık,
+cinsellik) açısından taranır</strong>. Model yalnızca bir olasılık puanı üretir; bu puan belirli bir eşiği aşarsa resim
+silinmez ve hakkında otomatik bir karar verilmez, bir moderatör inceleyene kadar yalnızca sana ve moderatörlere
+görünür. Gönderinin kendisi yine yayımlanır. Moderatör resmi onaylar ya da reddeder; reddedilen resim silinir ve
+sana bildirilir. Model hata yapabilir; zararsız bir resmin incelemeye düşmesi senin hakkında olumsuz bir kayıt
+oluşturmaz.</li>
+<li>Resimler gönderini görebilen herkese, kısa süre (15 dakika) geçerli imzalı bağlantılarla gösterilir; bağlantılar
+seni tanımlayan bir bilgi içermez. Anonim bir gönderideki resim de anonimdir; ancak resmin içeriği seni ele
+verebilir.</li>
+<li>Yüklenip 24 saat içinde bir gönderiye eklenmeyen resimler otomatik olarak silinir.</li>
+</ul>
+<p><strong>Yapmadıklarımız:</strong> WishSay&#39;de reklam yoktur, üçüncü taraf analiz veya takip aracı kullanılmaz, anlık (push)
+bildirim gönderilmez. Verilerini satmayız.</p>
+<h4>Hassas bilgiler için açık rıza</h4>
+<p>Gönderi ve yorumlarında kendinle ilgili sağlık, din veya inanç, cinsel yaşam gibi bilgiler paylaşırsan bunlar KVKK&#39;nın
+6. maddesindeki özel nitelikli kişisel verilerdir (GDPR md. 9). Bu bilgilerin diğer kullanıcılara gösterilmesinin
+hukuki sebebi <strong>açık rızandır</strong>. Kayıt olurken ayrı bir onay kutusuyla şu metne açık rıza verirsin; kutu başta
+işaretsizdir ve işaretlemeden kayıt olunamaz:</p>
+<blockquote>
+<p>&quot;Kendim hakkında paylaştığım sağlık, din, cinsel yaşam gibi hassas bilgilerin diğer kullanıcılara görüneceğini
+bilerek açık rıza veriyorum.&quot;</p>
+</blockquote>
+<p><strong>Nasıl kaydedilir?</strong> Rızanı verdiğinde ve geri aldığında ayrı bir onay kaydı oluşturulur: rızanın verildiği mi geri
+mi alındığı, İçerik Politikası&#39;nın o anki sürümü, zaman (UTC), IP adresi, kaynak port, cihaz/uygulama bilgisi
+(User-Agent) ve istek kimliği. Bu kayıtlar değiştirilemez ve diğer onay kayıtlarıyla aynı süre saklanır (bkz. 6.
+bölüm).</p>
+<p><strong>Nasıl geri alırsın?</strong> İstediğin zaman uygulamada <strong>Ayarlar &gt; Hassas veri onayı</strong> anahtarını kapatarak ya da
+<strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong> adresine yazarak rızanı geri alabilirsin. Rızanı daha önce vermemişsen (ör. hesabını bu özellikten
+önce açtıysan) ya da geri aldıysan, gönderi veya yorum yazmak istediğinde sana aynı metinle sorulur; dilediğin zaman
+yeniden verebilirsin.</p>
+<p><strong>Geri almak ne anlama gelir?</strong> Rızan yokken yeni gönderi ve yorum yazamaz, mevcut gönderi ve yorumlarının metnini
+düzenleyemezsin. Okumak, beğenmek, şikâyet etmek, etiketleri yönetmek ve kendi içeriğini silmek gibi diğer her şey
+çalışmaya devam eder. Rızanı geri alman, daha önce paylaştığın gönderi ve yorumları kendiliğinden kaldırmaz: bunlar
+görünmeye devam eder. Kaldırılmalarını istiyorsan onları uygulamadan silebilir ya da <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong> adresine
+yazabilirsin. Geri alma, o ana kadar rızana dayanarak yapılan işlemenin hukuka uygunluğunu etkilemez.</p>
+<p>Bu rıza yalnızca <strong>kendinle ilgili</strong> bilgiler içindir. Başka birinin hassas bilgilerini onu tanıtacak şekilde
+paylaşmak İçerik Politikası&#39;na göre yasaktır.</p>
+<h4>İşlem kayıtlarında neler tutulur?</h4>
+<p>Aşağıdaki işlemlerin her biri için yukarıdaki bilgiler (kullanıcı, işlem, IP adresi, kaynak port, User-Agent, istek
+kimliği ve UTC saati) kaydedilir:</p>
+<ul>
+<li><strong>Kayıt olma:</strong> e-posta adresin, kullanıcı adın, dilin, ayarların, kabul ettiğin politika sürümleri ve hassas
+bilgiler için açık rıza verdiğin.</li>
+<li><strong>Hassas bilgiler için açık rızayı</strong> sonradan verme ve geri alma (rıza türü ve politika sürümüyle).</li>
+<li><strong>Giriş yapma, başarısız giriş denemeleri, oturum yenileme ve çıkış.</strong> Başarısız denemede girilen e-posta adresi
+ve başarısızlık sebebi kaydedilir; bu adres bir hesaba ait olmasa bile. Şifre hiçbir zaman kaydedilmez. Kısa sürede
+çok fazla deneme yapıldığı için geri çevrilen istekler de (her IP adresi veya e-posta için bir kez) kaydedilir.</li>
+<li><strong>E-posta doğrulama:</strong> doğrulama kodunun gönderilmesi, başarılı ve başarısız doğrulama denemeleri (girilen e-posta
+adresi ve sebebi; kodun kendisi hiçbir zaman kaydedilmez). Biri senin e-posta adresinle yeni hesap açmaya
+çalışırsa bu deneme ve istenen kullanıcı adı kaydedilir, sana da bir bilgilendirme e-postası gönderilir.</li>
+<li><strong>Ayar değişiklikleri:</strong> dil, &quot;etiketlenmeye izin ver&quot; ve &quot;varsayılan olarak anonim paylaş&quot; ayarlarının eski ve
+yeni değerleri.</li>
+<li><strong>Gönderiler:</strong> paylaşılan metin, anonim olup olmadığı, anonim takma adı, dili ve etiketlenen kişiler; bir gönderi
+düzenlendiğinde metnin <strong>önceki ve sonraki</strong> hâli; silindiğinde silinmeden önceki metni.</li>
+<li><strong>Yorumlar:</strong> metin, gönderi, anonim olup olmadığı, takma adı, gönderinin yazarı olup olmadığın ve yorumun sunucu
+tarafından senin için anonim ya da isimli yapılıp yapılmadığı (bkz. 4. bölüm); bir yorum düzenlendiğinde metnin
+önceki ve sonraki hâli; senin silmen veya gönderi sahibinin kaldırması durumunda o andan önceki metni; bir
+gönderide yorumların kapatılması veya açılması; kısa sürede çok fazla yorum yazıldığı için reddedilme.</li>
+<li><strong>Beğeni verme ve geri alma (gönderi ve yorumlar), şikâyetler</strong> (sebep ve not), <strong>etiket onaylama ve reddetme, engelleme ve engeli
+kaldırma, bildirimleri okundu işaretleme.</strong> Hiçbir şeyi değiştirmeyen tekrarlı istekler (ör. aynı gönderiyi ikinci
+kez beğenmek) kaydedilmez.</li>
+<li><strong>Moderasyon:</strong> bir moderatörün bir gönderiyi veya yorumu gizlemesi ya da geri getirmesi.</li>
+<li><strong>Etiketler:</strong> bir etiketi onaylama, reddetme ve geri çekme.</li>
+<li><strong>Hesap silme:</strong> silme talebinde e-posta adresin, kullanıcı adın, dilin, hesap rolün, hesap açılış ve yaş onayı
+tarihlerin ve hesabın silineceği tarih; 30 gün içinde geri yüklersen geri yükleme; silme tamamlandığında ne
+kadar verinin silindiği (kişisel veri içermez).</li>
+<li><strong>Hukuki dışa aktarım:</strong> bu kayıtların yetkili personel tarafından her dışa aktarılması da, yapılan sorguyla
+birlikte kaydedilir.</li>
+</ul>
+<p>Kaynak port numarasını da saklamamızın sebebi, mobil operatörlerin aynı IP adresini çok sayıda kullanıcıya aynı anda
+paylaştırmasıdır; bir işlemi doğru kişiyle eşleştirmek için IP adresi tek başına yetmeyebilir. Bu kayıtlar yalnızca
+yazma işlemleri için tutulur; panoya bakmak veya gönderi okumak gibi işlemler bu kayda yazılmaz.</p>
+<p>[BARINDIRMA ALTYAPISININ AYRICA TUTTUĞU SUNUCU KAYITLARI (ör. ters vekil sunucu erişim kayıtları) — barındırma
+yapısı netleşince teyit edilecek]</p>
+<h3>3. Hukuki sebepler</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Amaç</th>
+<th>KVKK (md. 5)</th>
+<th>GDPR (md. 6)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hesabını açmak ve yürütmek; gönderilerini, beğenileri, etiketleri ve bildirimleri sunmak</td>
+<td>5/2-c: sözleşmenin kurulması veya ifasıyla doğrudan ilgili olması</td>
+<td>6(1)(b): sözleşmenin ifası</td>
+</tr>
+<tr>
+<td>Güvenlik, oturum koruması, kötüye kullanımın önlenmesi, moderasyon, kelime filtresi, şikâyet ve engellemelerin işlenmesi</td>
+<td>5/2-f: temel hak ve özgürlüklerine zarar vermemek kaydıyla meşru menfaat</td>
+<td>6(1)(f): meşru menfaat</td>
+</tr>
+<tr>
+<td>Yasal yükümlülükleri yerine getirmek; mahkeme, savcılık ve diğer yetkili makamların taleplerine yanıt vermek (5651 sayılı Kanun dahil); bunun için işlem kayıtlarını ve onay kayıtlarını tutmak</td>
+<td>5/2-ç: hukuki yükümlülük</td>
+<td>6(1)(c): hukuki yükümlülük</td>
+</tr>
+<tr>
+<td>Güvenlik ve kötüye kullanımın önlenmesi amacıyla işlem kayıtlarını tutmak (ör. başarısız giriş denemeleri, çalınan oturumların tespiti)</td>
+<td>5/2-f: meşru menfaat</td>
+<td>6(1)(f): meşru menfaat</td>
+</tr>
+<tr>
+<td>Kendinle ilgili paylaştığın özel nitelikli kişisel verileri (sağlık, din veya inanç, cinsel yaşam gibi) gönderi ve yorumlarında diğer kullanıcılara göstermek (bkz. 2. bölüm, &quot;Hassas bilgiler için açık rıza&quot;)</td>
+<td>md. 6/2: açık rıza</td>
+<td>9(2)(a) ve 6(1)(a): açık rıza</td>
+</tr>
+<tr>
+<td>Onay ve kabullerini ispat etmek (hangi metin sürümünü, ne zaman ve nereden onayladığın)</td>
+<td>5/2-ç: hukuki yükümlülük; 5/2-e: bir hakkın tesisi, kullanılması veya korunması</td>
+<td>6(1)(c) ve md. 5(2) hesap verebilirlik; 6(1)(f)</td>
+</tr>
+<tr>
+<td>Bir hakkın tesisi, kullanılması veya korunması</td>
+<td>5/2-e</td>
+<td>6(1)(f)</td>
+</tr>
+</tbody></table></div>
+<p>[HUKUKİ İNCELEME: WishSay&#39;in 5651 sayılı Kanun kapsamındaki sıfatı (ör. yer sağlayıcı) ve bundan doğan trafik
+bilgisi saklama yükümlülüğünün kapsamı ve süresi; işlem ve onay kayıtları için yukarıdaki hukuki sebeplerin doğru
+olup olmadığı teyit edilecek]</p>
+<h3>4. Kim neyi görebilir?</h3>
+<p>WishSay&#39;i yalnızca giriş yapmış kullanıcılar kullanabilir.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Diğer kullanıcılar</th>
+<th>Moderatörler</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>E-posta adresin</td>
+<td>Hiçbir zaman</td>
+<td><strong>Hayır.</strong> E-posta adresi hiçbir moderasyon ekranında görünmez. Yalnızca &quot;hukuk&quot; rolündeki yetkili personel, hukuka uygun bir talep üzerine yapılan dışa aktarımda görür; o dışa aktarım da denetim kaydına yazılır</td>
+</tr>
+<tr>
+<td>Kullanıcı adın</td>
+<td>İsimli (anonim olmayan) gönderilerinde, onayladığın etiketlerde (geri çekene kadar) ve gönderdiğin etiket isteklerinde</td>
+<td>Evet</td>
+</tr>
+<tr>
+<td><strong>Anonim</strong> bir gönderinin yazarı</td>
+<td><strong>Hayır.</strong> Yalnızca &quot;Anonim #4F2&quot; gibi takma adı görürler</td>
+<td><strong>Hayır.</strong> Moderatörler de yalnızca takma adı görür; gerekirse yaptırımı kim olduğunu görmeden uygularlar. Gerçek kimliği yalnızca &quot;hukuk&quot; rolündeki yetkili personel, yetkili bir makamın hukuka uygun talebi üzerine görebilir</td>
+</tr>
+<tr>
+<td><strong>Anonim</strong> bir yorumun yazarı</td>
+<td><strong>Hayır.</strong> Yalnızca yorum takma adını görürler; cevap etiketlerinde (&quot;↳ Anonim #4C6&quot;) ve bildirimlerde de</td>
+<td><strong>Hayır.</strong> Anonim gönderilerde olduğu gibi: moderatörler yalnızca takma adı görür, gerçek kimliği yalnızca &quot;hukuk&quot; rolü hukuka uygun bir talep üzerine görebilir</td>
+</tr>
+<tr>
+<td><strong>İsimli</strong> bir yorumda kullanıcı adın</td>
+<td>Evet, gönderiyi görebilen herkes</td>
+<td>Evet</td>
+</tr>
+<tr>
+<td>Yorumların</td>
+<td>Görebildikleri gönderilerdeki görünür yorumlar; engellediğin ya da seni engelleyen kişiler göremez. Silinen, kaldırılan ve gizlenen yorumlarda metin ve yazar gösterilmez; cevabı olan silinmiş yorum &quot;[silindi]&quot; yer tutucusu olarak kalır</td>
+<td>Evet, şikâyet edilenler, gizlenmiş olanlar dahil</td>
+</tr>
+<tr>
+<td>Gönderilerin</td>
+<td>Yalnızca yayımlanmış olanlar; engellediğin ya da seni engelleyen kişiler göremez</td>
+<td>Evet, gizlenmiş olanlar dahil</td>
+</tr>
+<tr>
+<td>Gönderi resimlerin</td>
+<td>Gönderiyi görebilen herkes. İncelemeyi bekleyen bir resmi yalnızca sen görürsün</td>
+<td>Evet, incelemeyi bekleyenler ve uygunsuzluk puanı dahil</td>
+</tr>
+<tr>
+<td>Bir gönderiyi kimin beğendiği</td>
+<td>Hayır, yalnızca toplam beğeni sayısı</td>
+<td><strong>Hayır.</strong> Kimin beğendiği hiçbir ekranda gösterilmez; hukuki dışa aktarımda da yalnızca toplam sayı yer alır</td>
+</tr>
+<tr>
+<td>Gerçekleşen bir gönderiyi kimin kutladığı</td>
+<td>Hayır, yalnızca toplam kutlama sayısı. Yazara birinin kutladığı bildirilir, kim olduğu bildirilmez</td>
+<td><strong>Hayır.</strong> Kimin kutladığı hiçbir ekranda gösterilmez; hukuki dışa aktarımda da yalnızca toplam sayı yer alır</td>
+</tr>
+<tr>
+<td>Kaydettiklerin</td>
+<td><strong>Asla.</strong> Kimse neyi kaydettiğini ya da bir gönderiyi kaç kişinin kaydettiğini göremez; yazara bildirilmez</td>
+<td><strong>Hayır.</strong> Kaydettiklerin moderasyon ekranlarında ve hukuki dışa aktarımda görünmez</td>
+</tr>
+<tr>
+<td>Profil sayfan (@kullanıcı adına dokununca açılır)</td>
+<td>Kullanıcı adın, katıldığın ay ve yıl ve <strong>yalnızca isimli gönderilerin</strong>, sayıları ve kaçının gerçekleştiği. Anonim gönderilerin orada hiçbir zaman listelenmez ve sayılmaz; kendi profiline baktığında da. Engellediğin ya da seni engelleyen kişilere gösterilmez</td>
+<td>Evet</td>
+</tr>
+<tr>
+<td>Bir gönderiyi veya yorumu kimin şikâyet ettiği</td>
+<td>Hayır</td>
+<td>Her şikâyetin sebebi ve notu</td>
+</tr>
+<tr>
+<td>Kimi engellediğin</td>
+<td>Hayır. Anonim bir gönderide &quot;yazarı engelle&quot; dediğinde yalnızca o kişinin <strong>anonim</strong> gönderileri ve yorumları senden gizlenir; profili, isimli gönderileri ve aramadaki yeri değişmez, kendisi de bir şey fark etmez. Böylece engelleme, anonim gönderiyi kimin yazdığını ele vermez</td>
+<td><strong>Hayır.</strong> Engelleme listesi moderasyon ekranlarında ve hukuki dışa aktarımda görünmez</td>
+</tr>
+<tr>
+<td>İşlem ve onay kayıtların (IP adresi, port, User-Agent, saatler)</td>
+<td>Hiçbir zaman</td>
+<td><strong>Hayır.</strong> Bu kayıtları uygulamada yalnızca özel &quot;hukuk&quot; rolüne sahip yetkili personel görebilir</td>
+</tr>
+</tbody></table></div>
+<p><strong>&quot;Anonim&quot;, diğer kullanıcılara karşı anonim demektir; WishSay&#39;e ve yetkili makamlara karşı değil.</strong> Her gönderiyi
+kimin yazdığını her zaman saklarız. Bu sayede moderatörler zararlı içeriğe, yazarın kim olduğunu görmeden müdahale
+edebilir (ör. hesabı askıya alma) ve yetkili makamların hukuka uygun taleplerine yanıt verebiliriz. Moderatörler
+anonim içeriğin yazarını görmez; bu bağlantıyı yalnızca &quot;hukuk&quot; rolündeki yetkili personel, hukuka uygun bir talep
+üzerine kurabilir. Mahkeme veya savcılık gibi bir makamdan hukuka uygun bir talep
+gelirse, anonim bir gönderiyi yazan hesap, o hesabın e-posta adresi ve kullanıcı adı, gönderiyi paylaştığı ve
+düzenlediği andaki IP adresi, kaynak portu ve saatiyle birlikte o makama verilebilir. Aynısı anonim yorumlar için de
+geçerlidir. Hesap silinmiş olsa bile bu
+bağlantı, işlem kayıtlarının saklama süresi boyunca kurulabilir (bkz. 6. ve 8. bölümler).</p>
+<p><strong>Yorum takma adları.</strong> Her gönderide anonim yorum yapan kişi &quot;Anonim #4C6&quot; gibi bir takma adla gösterilir. Takma ad,
+gönderiden ve hesabından, yalnızca WishSay&#39;in bildiği gizli bir anahtarla hesaplanır. Bu yüzden o gönderideki tüm
+anonim yorumlarında aynı kalır, ama başka her gönderide farklıdır: diğer kullanıcılar iki farklı gönderideki iki
+takma adın aynı kişiye ait olduğunu anlayamaz. <strong>Anonim bir gönderinin</strong> yazarıysan, o gönderideki yorumların her
+zaman gönderinin kendi takma adıyla ve &quot;yazar&quot; etiketiyle görünür, isimli yorum istesen bile kullanıcı adınla asla
+görünmez; isimli bir gönderinin yazarı ise her zaman kullanıcı adıyla yorum yapar. İsimli olarak işaretlediğin
+yorumlarda kullanıcı adın görünür. Aynı gönderide hem isimli hem anonim yorum yaparsan, yazdıklarından ikisinin de
+sana ait olduğu tahmin edilebilir.</p>
+<p><strong>İşlem ve onay kayıtlarına kim erişebilir?</strong> Bu kayıtların dışa aktarımı, uygulamada yalnızca özel bir &quot;hukuk&quot;
+rolü verilmiş yetkili personele açıktır; moderatörler dahil diğer hiçbir kullanıcı bu kayıtlara erişemez. Her dışa
+aktarımın kendisi de, kimin hangi sorguyu yaptığıyla birlikte işlem kaydına yazılır. Bu kayıtları yalnızca hukuka
+uygun bir talep olduğunda yetkili makamlara veririz. Talebi yalnızca yetkili bir makamdan (mahkeme, savcılık,
+kolluk) yazılı olarak aldığımızda değerlendiririz; talebin o makamdan geldiğini ve kapsamını doğrularız, hukuka uygun
+değilse reddederiz. Verdiğimiz her yanıtı ve hangi kayıtları paylaştığımızı işlem kaydına yazarız. Birinin hayatına
+veya güvenliğine yönelik ciddi ve yakın bir tehlike varsa, talep beklemeden ilgili acil birime bilgi verebiliriz; bu
+paylaşımı hukuk sorumlumuz onaylar ve denetime yazarız.</p>
+<p>Sistemlerimize teknik erişimi olan kişiler (ör. veritabanı yöneticileri), hizmeti çalıştırmak, korumak veya bir
+sorunu gidermek için gerektiğinde saklanan verilere erişebilir. Bu erişim yalnızca yetkili teknik personelle
+sınırlıdır: herkes kendi hesabıyla ve anahtar tabanlı oturumla bağlanır, paylaşılan şifre kullanılmaz; sunucu ve
+veritabanı parolaları yalnızca sır olarak (ortam değişkeni) tutulur, kodda veya kaynak deposunda bulunmaz;
+erişimler kaydedilir.</p>
+<p>Kanunun gerektirdiği durumlarda ya da birinin hayatı veya güvenliği için ciddi bir risk olduğunda verileri
+mahkemeler, savcılıklar, kolluk kuvvetleri veya diğer yetkili makamlarla paylaşabiliriz.</p>
+<h3>5. Barındırma ve veri aktarımı</h3>
+<p>Verilerin <strong>[BARINDIRMA SAĞLAYICISI]</strong> tarafından sağlanan, <strong>[BARINDIRMA ÜLKESİ / BÖLGESİ]</strong> konumundaki
+sunucularda saklanır.
+[VERİLER TÜRKİYE VEYA AEA DIŞINDA SAKLANIYOR YA DA ERİŞİLİYORSA: KVKK md. 9 ve GDPR V. Bölüm kapsamındaki aktarım
+mekanizması — karar verilecek]
+Gönderi resimleri de aynı canlı sunucuda, kendi işlettiğimiz S3 uyumlu bir nesne deposunda (MinIO) saklanır;
+sunucunun konumu ve yurt dışı aktarım için kullanılan hukuki araç bu bölümde belirtilen yerdir [W-066 ile
+netleşecek]. Resimler bir bulut görsel hizmetine veya içerik tarama hizmetine gönderilmez.
+Verilerini reklamcılarla veya analiz şirketleriyle paylaşmayız.
+[DİĞER VERİ İŞLEYENLER — e-posta gönderim hizmeti (SMTP sağlayıcısı) doğrulama kodlarını göndermek için kullanılıyor;
+sağlayıcının adı ve konumu W-034 ile listelenecek. Bu hizmete yalnızca e-posta adresin ve içinde yalnızca kodun
+bulunduğu e-posta iletilir.]</p>
+<h4>Cihaz içi çeviri</h4>
+<p>Uygulamadaki &quot;Çevir&quot; özelliği, gönderi ve yorum metinlerini Google ML Kit ile yalnızca cihazınızda çevirir; çevrilen metin ne bize ne Google&#39;a ne de başka bir üçüncü tarafa gönderilir. Bir dili ilk kez çevirdiğinizde ilgili dil modeli (yaklaşık 30 MB) Google sunucularından indirilir; bu indirme sırasında IP adresiniz ve standart bağlantı bilgileri Google&#39;a ulaşır. İndirilen modelleri Ayarlar &gt; Çeviri modelleri bölümünden silebilir, indirmeyi yalnızca Wi-Fi ile sınırlayabilirsiniz. Çeviriler Google tarafından sağlanır ve doğruluğu garanti edilmez.</p>
+<h3>6. Saklama süreleri</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Veri</th>
+<th>Süre</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Etkin hesap verileri, gönderiler, yorumlar ve etkileşimler</td>
+<td>Hesabın açık olduğu sürece. Sildiğin bir gönderi ya da sildiğin veya gönderi sahibinin kaldırdığı bir yorum artık gösterilmez; metni (gönderilerde gerçekleşti notu ve resim açıklamaları dahil) silinmeden 30 gün sonra otomatik olarak boşaltılır. İşlem kayıtlarındaki kopyası, o kayıtların süresi boyunca (730 gün) yasal amaçlarla saklanır</td>
+</tr>
+<tr>
+<td>Gönderi resimleri</td>
+<td>Gönderi durdukça. Gönderiyi sildiğinde, bir moderatör resmi reddettiğinde, 24 saat içinde bir gönderiye eklenmediğinde ve hesabının silinmesi tamamlandığında resim dosyaları depodan hemen silinir. Silinen bir resmin dosyası tutulmaz; yalnızca özeti (SHA-256), depolama anahtarı, boyutları, tarama puanı ve moderasyon kararı yasal amaçlarla 730 gün (2 yıl) saklanır</td>
+</tr>
+<tr>
+<td>Yenileme anahtarları</td>
+<td>30 gün geçerlidir; kayıtları süresi dolduktan ya da iptal edildikten 30 gün sonra otomatik olarak silinir</td>
+</tr>
+<tr>
+<td>Silinmesini istediğin hesabın</td>
+<td>30 gün; bu sürede geri yükleyebilirsin. Ardından silme otomatik olarak tamamlanır (bkz. 8. bölüm)</td>
+</tr>
+<tr>
+<td>E-posta adresi doğrulanmayan kayıtlar</td>
+<td>Kayıttan itibaren 24 saat. Bu sürede e-posta adresi doğrulanmazsa hesap ve ona bağlı her şey (beğeniler, kaydetmeler, engellemeler, bildirimler, oturumlar, doğrulama kodu) otomatik olarak tamamen silinir; e-posta adresi ve kullanıcı adı yeniden kullanılabilir hâle gelir. Aynı e-posta adresiyle yeniden kayıt olunursa doğrulanmamış eski kayıt hemen silinir. Bu kayda ait işlem kayıtları ve onay kayıtları, silinme tarihinden itibaren 730 gün (2 yıl) saklanır</td>
+</tr>
+<tr>
+<td>Silme tamamlandıktan sonra tutulan veriler (bkz. 8. bölüm; işlem ve onay kayıtları hariç)</td>
+<td>İçeriği boşaltılmış hesap kaydı ile gönderi ve yorum yer tutucuları süresiz saklanır; bunlar seni tanımlamaz ve cevap zincirlerinin anlamlı kalmasını sağlar. Yaptığın şikâyetler, kimliğin olmadan moderasyon kaydı olarak kalır (bkz. bir alt satır)</td>
+</tr>
+<tr>
+<td>Şikâyet ve moderasyon kayıtları</td>
+<td>730 gün (2 yıl). Süre dolunca şikâyet kayıtları silinir; moderasyon kararının kendisi işlem kaydında kalır (aynı süre)</td>
+</tr>
+<tr>
+<td>İşlem kayıtları (denetim kaydı)</td>
+<td>Her kayıt, oluşturulduğu andan itibaren 730 gün (2 yıl). Hesabın silinse de bu süre boyunca saklanır</td>
+</tr>
+<tr>
+<td>Onay kayıtları</td>
+<td>Hesabın açık olduğu sürece ve hesabın silindikten sonra, silinme tarihinden itibaren 730 gün (2 yıl)</td>
+</tr>
+<tr>
+<td>Barındırma altyapısının sunucu kayıtları (varsa)</td>
+<td>Ters vekil sunucu erişim kayıtları 2 yıl. Yalnızca güvenlik, hata giderme ve hukuka uygun taleplere yanıt için kullanılır</td>
+</tr>
+</tbody></table></div>
+<p>Saklama süresi dolan veriler silinir, yok edilir veya anonim hâle getirilir. İşlem ve onay kayıtları, silinen
+gönderi ve yorum metinleri ve eski oturum kayıtları, süresi dolunca her gün çalışan otomatik bir işle silinir. İşlem kayıtlarının süresi, hesabının hâlâ açık olup olmamasından
+bağımsızdır. Onay kayıtların ise hesabın açık olduğu sürece silinmez, çünkü verilerini işlemeye devam ettiğimiz
+sürece neyi onayladığını ispat edebilmemiz gerekir; süreleri hesabının silinmesinin tamamlandığı tarihte (30 günlük
+geri yükleme süresinin sonunda) başlar. [KVKK KİŞİSEL VERİ SAKLAMA VE İMHA POLİTİKASI — gerekiyorsa hazırlanacak]</p>
+<h3>7. Hakların</h3>
+<p><strong>KVKK&#39;nın 11. maddesi uyarınca</strong> şu haklara sahipsin:</p>
+<ul>
+<li>kişisel verilerinin işlenip işlenmediğini öğrenme;</li>
+<li>işlenmişse buna ilişkin bilgi talep etme;</li>
+<li>işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme;</li>
+<li>yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme;</li>
+<li>eksik veya yanlış işlenmişse düzeltilmesini isteme;</li>
+<li>KVKK&#39;nın 7. maddesindeki şartlar çerçevesinde silinmesini veya yok edilmesini isteme;</li>
+<li>düzeltme veya silme işlemlerinin, verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme;</li>
+<li>işlenen verilerin münhasıran otomatik sistemlerle analiz edilmesi sonucu aleyhine bir sonuç çıkmasına itiraz
+etme;</li>
+<li>kanuna aykırı işleme nedeniyle zarara uğraman hâlinde zararın giderilmesini talep etme.</li>
+</ul>
+<p><strong>GDPR kapsamında</strong> erişim, düzeltme, silme, işlemeyi kısıtlama, veri taşınabilirliği ve meşru menfaate dayanan
+işlemeye itiraz haklarına sahipsin. Ayrıca bulunduğun yerdeki veri koruma otoritesine şikâyette bulunabilirsin.</p>
+<p><strong>Haklarını nasıl kullanırsın?</strong></p>
+<ul>
+<li>Uygulama içinden profilini ve gönderilerini görebilir, dilini ve ayarlarını değiştirebilir, gönderilerini
+düzenleyip silebilir, onayladığın bir etiketi geri çekebilir (&quot;Etiketimi kaldır&quot;), hassas bilgiler için verdiğin
+açık rızayı geri alabilir ya da yeniden verebilir (Ayarlar &gt; Hassas veri onayı) ve hesabını silebilirsin.</li>
+<li>Seninle ilgili bir içeriğin kaldırılması için &quot;Kişisel/hassas bilgilerimi içeriyor&quot; şikâyet sebebini kullanabilir
+ya da bize yazabilirsin (bkz. 2. bölüm).</li>
+<li>Diğer talepler için <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong> adresine yazabilir veya <strong>Yeşiltepe Mah. İsmet İnönü-2 Blv. A.Üniv. Rektörlük ve Bilgisayar Araştırma Merkezi No: 2, 26210 Tepebaşı / Eskişehir</strong> adresine
+başvurabilirsin. Kimliğini doğrulamamız gerekebilir. KVKK&#39;nın öngördüğü şekilde en geç 30 gün içinde yanıt
+veririz. [VERİ SORUMLUSUNA BAŞVURU USUL VE ESASLARI HAKKINDA TEBLİĞ&#39;E GÖRE BAŞVURU YÖNTEMİ — teyit edilecek]</li>
+<li>Yanıtımızdan memnun kalmazsan Kişisel Verileri Koruma Kurumu&#39;na, AB/AEA&#39;da ise bulunduğun yerdeki veri koruma
+otoritesine şikâyette bulunabilirsin.</li>
+</ul>
+<h3>8. Hesabını silme</h3>
+<p>Hesabını istediğin zaman uygulama içinden silebilirsin. Silme iki adımda gerçekleşir.</p>
+<p><strong>Silmek istediğin anda:</strong></p>
+<ul>
+<li>Tüm cihazlardaki oturumların anında sonlandırılır.</li>
+<li>Gönderilerin ve yorumların (gönderilerindeki resimler dahil) herkesten gizlenir; beğenilerin, etiketlerin ve başkalarına seninle ilgili giden
+bildirimler artık gösterilmez. Başkalarının cevap verdiği yorumlarının yerinde, cevapların anlamlı kalması için
+boş bir &quot;[silindi]&quot; yer tutucusu kalır.</li>
+<li>Onayını bekleyen etiket istekleri reddedilir.</li>
+<li>Başkalarının gönderilerinde, gerçekleşti notlarında ve yorumlarında geçen @kullanıcı adın gizlenir
+(&quot;@[etiket kaldırıldı]&quot; olarak gösterilir) ve aramada bulunmaz.</li>
+<li>E-posta adresin ve kullanıcı adın 30 gün boyunca korunur; bu sürede başkası onlarla kayıt olamaz.</li>
+</ul>
+<p><strong>30 gün içinde fikrini değiştirebilirsin:</strong> aynı e-posta adresi ve şifreyle giriş yapıp hesabını geri yüklemeyi
+seçmen yeterli. Her şey eskisi gibi geri gelir.</p>
+<p><strong>30 gün sonra silme otomatik olarak tamamlanır:</strong></p>
+<ul>
+<li>Hesap kaydındaki e-posta adresin ve kullanıcı adın, seni artık tanımlamayan anlamsız değerlerle değiştirilir.
+İkisi de başkaları tarafından yeniden alınabilir hâle gelir. (İşlem ve onay kayıtlarındaki asılları silinmez;
+aşağıya bak.) Silmeden önce yazılmış metinlerde geçen @kullanıcı adın gizli kalır; bunun için eski kullanıcı adın
+ayrıca saklanır. Kullanıcı adını sonradan başkası alırsa eski bahsetmeler ona ait gösterilmez.</li>
+<li>Şifren değiştirilir; hesaba artık giriş yapılamaz ve hesap geri yüklenemez.</li>
+<li>Gönderilerinin ve yorumlarının metni silinir. Yüklediğin tüm resimlerin dosyaları depodan silinir ve açıklama
+metinleri boşaltılır (resim özetleri ve depolama anahtarları 6. bölümdeki süre boyunca kalır).</li>
+<li>Beğenilerin, etiketlerin (etiketlendiklerin ve gönderilerindeki etiketler), bildirimlerin, engelleme kayıtların
+(senin engellediklerin ve seni engelleyenler) ve oturum kayıtların silinir.</li>
+<li>Yaptığın şikâyetler moderasyon kaydı olarak kalır, ancak artık sana bağlanmaz.</li>
+</ul>
+<p><strong>Saklanmaya devam edenler:</strong> Hesap kaydın; bir iç kimlik numarası, anonim hâle getirilmiş e-posta ve kullanıcı adı,
+dil ve ayarların, yaş onayı ve hesap tarihleri ile silme talebinin ve silmenin tamamlandığı tarihlerle birlikte kalır;
+gönderilerin ve yorumların yalnızca boş yer tutucular olarak kalır. Bunlar artık seni tanımlamadığı için süresiz
+saklanır.</p>
+<p><strong>İşlem ve onay kayıtları hesap silinince silinmez.</strong> Hesabınla yaptığın işlemlerin kayıtları (bkz. 2. bölüm) ve onay
+kayıtların, yasal yükümlülüğümüz nedeniyle hesabın silindikten sonra da saklanır: işlem kayıtları her kaydın
+oluşturulduğu andan itibaren, onay kayıtları ise hesabının silinmesinin tamamlandığı tarihten itibaren
+730 gün (2 yıl) boyunca. Bu kayıtlar seni
+tanımlamaya devam eder: kayıt olurken ve silme anında hesabın sahip olduğu <strong>e-posta adresi ve kullanıcı adı</strong>,
+gönderilerinin ve yorumlarının metinleri (düzenlemelerden önceki ve sonraki hâlleri dahil), IP adresleri, kaynak portlar, cihaz
+bilgileri ve saatler bu kayıtlarda yer alır. Yani hesap kaydındaki bilgilerin anonim hâle getirilse de, saklama
+süresi boyunca hesabın ve gönderilerin, yetkili makamların hukuka uygun talebi üzerine sana bağlanabilir. Bu kayıtlara
+yalnızca 4. bölümde anlatılan yetkili personel erişebilir; süre dolunca otomatik olarak silinirler.</p>
+<p>Yukarıdaki diğer verilerin de silinmesini istiyorsan <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong> adresine yaz. İşlem ve onay kayıtları ise
+yasal yükümlülük gereği saklama süresi dolmadan silinemez. [HUKUKİ İNCELEME: KVKK md. 7 / GDPR md. 17(3)(b)
+kapsamında silme taleplerine verilecek yanıt]</p>
+<h3>9. Çocuklar</h3>
+<p>WishSay yalnızca <strong>13 yaş ve üzeri</strong> kişiler içindir. Kayıt olurken en az 13 yaşında olduğunu onaylaman gerekir.
+13 yaşından küçük çocuklardan bilerek veri toplamayız. Bir hesabın 13 yaşından küçük birine ait olduğunu
+öğrenirsek o hesabı sileriz. 13 yaşından küçük çocuğunun WishSay kullandığını düşünen bir ebeveynsen bize ulaş.</p>
+<h3>10. Güvenlik</h3>
+<p>Şu anda aldığımız önlemler:</p>
+<ul>
+<li>Şifreler açık hâliyle asla saklanmaz; yalnızca BCrypt özetleri tutulur.</li>
+<li>Erişim anahtarları (access token) 15 dakikada geçersiz olur. Yenileme anahtarları 30 gün geçerlidir, yalnızca
+bir kez kullanılabilir ve yalnızca SHA-256 özetleri saklanır.</li>
+<li>Daha önce kullanılmış bir yenileme anahtarı tekrar gönderilirse, çalınan oturumlara karşı o kullanıcının tüm
+oturumları sonlandırılır.</li>
+<li>Bir hesap silindiğinde, o hesabın mevcut anahtarları anında geçersiz olur.</li>
+<li>Gönderiler ve yorumlar otomatik bir kelime filtresinden geçer; yorumlarda hız sınırı vardır (hesap başına 10
+dakikada en fazla 30 yorum); gönderi, şikâyet, beğeni, kutlama, etiket isteği ve aramada da hesap başına sınırlar
+vardır (arama sayaçları yalnızca sunucunun belleğinde tutulur, kaydedilmez). Bir gönderiyi otomatik olarak gizleyen
+şikâyet sayısına yalnızca en az 24 saatlik hesapların şikâyetleri katılır. Moderatör araçları yalnızca moderatör
+hesaplarına açıktır.</li>
+<li>İşlem kayıtları ve onay kayıtları yalnızca eklemeye açıktır: veritabanı, bu kayıtların değiştirilmesini ve
+silinmesini reddeder (tek istisna, saklama süresi dolan kayıtları silen otomatik iştir). İşlem kayıtları ayrıca
+birbirine zincirlenmiştir: her kayıt, bir önceki kaydın özetini (SHA-256) içeren bir özet taşır. Bu, kayıtların
+değiştirilmesini imkânsız kılmaz; ancak bir kayıt sonradan değiştirilir veya aradan silinirse bunun tespit
+edilebilmesini sağlar. Zincir her hukuki dışa aktarımda, saklanan en eski kayıttan en yenisine kadar yeniden
+doğrulanır. Zincirin en son kaydı ayrıca, veritabanının dışında tutulan ve yalnızca sunucudaki gizli bir
+anahtarla imzalanabilen bir dosyaya günlük olarak yazılır; böylece veritabanına tam erişimi olan biri geçmişi
+değiştirip zinciri yeniden hesaplasa bile bu, dosyadaki imzalı kayıtla ortaya çıkar. Onay kayıtları bu zincire
+dahil değildir; onlar için yalnızca değiştirme ve silme yasağı geçerlidir.</li>
+<li>İşlem ve onay kayıtlarının dışa aktarımı yalnızca özel &quot;hukuk&quot; rolüne sahip hesaplara açıktır; moderatörler bu
+kayıtlara erişemez.</li>
+</ul>
+<p>[İLETİM ŞİFRELEMESİ (HTTPS), YEDEKLEME VE DİĞER ÖNLEMLER — canlı ortam yapısı netleşince açıklanacak]</p>
+<p>Hiçbir sistem tamamen güvenli değildir. Verilerini etkileyen bir ihlal olursa, kanunun gerektirdiği şekilde seni
+ve yetkili makamları bilgilendiririz.</p>
+<h3>11. İletişim</h3>
+<p><strong>Velzon Bilişim Teknolojileri Ticaret Limited Şirketi</strong>
+Yeşiltepe Mah. İsmet İnönü-2 Blv. A.Üniv. Rektörlük ve Bilgisayar Araştırma Merkezi No: 2, 26210 Tepebaşı / Eskişehir
+E-posta: <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong></p>
+<h3>12. Politikadaki değişiklikler</h3>
+<p>Bu politikayı, örneğin yeni özellikler eklediğimizde güncelleyebiliriz. En güncel sürümün tarihini en üstte
+gösteririz. Önemli değişikliklerde, yürürlüğe girmeden önce uygulama içinden haber veririz.</p>
+    </article>
+    <p class="back"><a href="#main">Başa dön</a></p>
+  </section>
+
+  <section class="legal-section" id="content-policy">
+<p class="section-lang"><a href="/wishsay-legal/en/#content-policy" hreflang="en" lang="en" aria-label="Bu bölümün İngilizcesi">English</a></p>
+    <article class="legal">
+<blockquote class="draft">
+<p><strong>TASLAK — yayından önce hukuki inceleme gereklidir</strong></p>
+</blockquote>
+<h2>WishSay İçerik Politikası</h2>
+<p><em>Son güncelleme: 10 Ekim 2026</em></p>
+<p>WishSay, kısa &quot;beklentiler&quot; paylaştığın bir yer: hayattan, dünyadan ya da kendinden neler umduğunu, neyi
+beklediğini yazıyorsun. Gönderiler herkesin gördüğü 3B bir panoda yer alıyor. Pano, gençler dahil herkes için iyi
+bir yer olarak kalsın diye lütfen aşağıdaki kurallara uy.</p>
+<h3>1. Neler paylaşılabilir?</h3>
+<ul>
+<li>Umutlar, dilekler, beklentiler: &quot;Sınavlarımı geçmeyi bekliyorum&quot;, &quot;Bu yaz daha sakin geçsin istiyorum&quot;.</li>
+<li>Kimseyi hedef almadığı ve incitmediği sürece içten duygular; üzgün ya da kızgın olanlar da dahil.</li>
+<li>Türkçe veya İngilizce; nazik, eğlenceli ya da düşündürücü gönderiler.</li>
+<li>Bir arkadaşını, onun da onayladığı bir gönderide etiketlemek (bkz. 3. bölüm).</li>
+</ul>
+<h3>2. Neler yasak?</h3>
+<ul>
+<li><strong>Taciz ve zorbalık:</strong> Birine hakaret etmek, onunla dalga geçmek, onu küçük düşürmek ya da birine toplu
+saldırmak.</li>
+<li><strong>Tehdit:</strong> Birine zarar vermekle tehdit etmek veya belirli bir kişinin başına kötü bir şey gelmesini dilemek.</li>
+<li><strong>Nefret söylemi:</strong> İnsanlara etnik kökenleri, milliyetleri, dinleri, cinsiyetleri, cinsel yönelimleri, engellilik
+durumları veya benzeri özellikleri yüzünden saldırmak.</li>
+<li><strong>Cinsel içerik:</strong> Açık ya da imalı cinsel gönderiler.</li>
+<li><strong>Çocukları cinselleştiren her türlü içerik.</strong> Buna hiçbir tolerans yok. Kaldırırız ve yetkili makamlara
+bildirebiliriz.</li>
+<li><strong>İfşa ve kişisel bilgi paylaşımı:</strong> Birinin gerçek adını soyadını, adresini, telefonunu, okulunu, iş yerini,
+sosyal medya hesaplarını veya başka özel bilgilerini paylaşmak. Kendi bilgilerin için de geçerli.</li>
+<li><strong>Başkasının hassas bilgileri:</strong> Başka birinin sağlığı, dini veya inancı, cinsel yaşamı gibi hassas konularını,
+onu tanıtacak şekilde yazmak.</li>
+<li><strong>Kendine zarar vermeye özendirmek:</strong> Kendine zarar vermeyi veya intiharı övmek, yöntem anlatmak, birini buna
+kışkırtmak. Nasıl hissettiğini anlatmak serbest; yardım için 8. bölüme bak.</li>
+<li><strong>Şiddet:</strong> Şiddeti yüceltmek, teşvik etmek ya da över biçimde anlatmak.</li>
+<li><strong>Spam:</strong> Reklam, aynı gönderiyi tekrar tekrar atmak, satış bağlantıları, panoyu doldurmak.</li>
+<li><strong>Başkası gibi davranmak:</strong> Başka bir kişi, marka ya da WishSay ekibi gibi görünmeye çalışmak.</li>
+<li><strong>Gerçek bir kişiye baskı yapmak veya onu teşhir etmek:</strong> Bir beklentiyi birini sıkıştırmak, suçlu hissettirmek
+ya da herkesin önünde utandırmak için kullanmak (&quot;@x&#39;in herkesin önünde benden özür dilemesini bekliyorum&quot;,
+&quot;[isim]&#39;in sonunda yalan söylediğini itiraf etmesini bekliyorum&quot;). Beklentiler senin umutların içindir, başkalarına
+baskı aracı değildir.</li>
+</ul>
+<p><strong>Resimler.</strong> Bir gönderiye en fazla 4 resim ekleyebilirsin (yorumlara resim eklenemez). Yukarıdaki kuralların hepsi
+resimler için de geçerlidir. Ayrıca şunlar yasaktır:</p>
+<ul>
+<li><strong>Çıplaklık ve cinsel içerik:</strong> çıplak ya da yarı çıplak bedenler, cinsel imalı pozlar veya görüntüler; çizim,
+yapay zekâ üretimi ve sanatsal amaçlı olanlar dahil.</li>
+<li><strong>Şiddet ve kan:</strong> yaralanma, kan, işkence, ölü veya hayvana şiddet görüntüleri; şiddeti öven resimler.</li>
+<li><strong>Başkalarının fotoğrafları, izinleri olmadan:</strong> yüzü ya da kimliği seçilebilen başka birinin fotoğrafını, o kişinin
+açık izni olmadan paylaşmak. Çocukların fotoğraflarını paylaşma.</li>
+<li><strong>Kişisel belgeler:</strong> kimlik kartı, pasaport, ehliyet, banka kartı, fatura, reçete, sağlık raporu, ekran
+görüntüsüyle mesajlaşmalar veya adres, telefon, plaka gibi kişisel bilgilerin okunabildiği her türlü görüntü;
+kendi belgelerin de dahil.</li>
+<li><strong>Başkasına ait içerik:</strong> hakkın olmayan fotoğraf, logo veya eserler.</li>
+</ul>
+<p>Yüklenen her resim, sunucumuzda çalışan bir yapay zekâ modeliyle otomatik olarak çıplaklık ve cinsel içerik
+açısından taranır. Şüpheli bulunan resim bir moderatör inceleyene kadar yalnızca sana görünür; gönderin yine
+yayımlanır. Moderatör uygun olmayan resmi reddeder ve siler, sana da bildirim gelir. Konum ve kamera bilgileri gibi
+gizli üst veriler her resimden otomatik olarak silinir, ama resmin içinde görünenler silinmez.</p>
+<p>Bu kurallar gönderiler için olduğu gibi yorumlar ve cevaplar için de geçerlidir. Anonim paylaşmak veya anonim
+yorum yapmak bu kuralları değiştirmez. Anonimlik yalnızca diğer kullanıcılara karşıdır: WishSay her gönderinin ve
+her yorumun yazarını saklar ve hukuka uygun bir talepte bulunan yetkili makamlara açıklayabilir. Moderatörler anonim
+içeriğin yazarını görmez; gerekirse yaptırımı kim olduğunu bilmeden uygular.</p>
+<p><strong>Kendinle ilgili hassas bilgiler.</strong> Sağlık, din veya inanç, cinsel yaşam gibi hassas bilgilerini paylaşmadan önce
+iki kez düşün: gönderileri tüm kullanıcılar görebilir, isimli gönderilerde kullanıcı adın da görünür. Uygulama,
+gönderi ve yorum yazarken kısa bir hatırlatma gösterir. Bir gönderi veya yorum senin kişisel ya da hassas
+bilgilerini içeriyorsa kaldırılmasını isteyebilirsin: &quot;Kişisel/hassas bilgilerimi içeriyor&quot; sebebiyle şikâyet et
+ya da <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong> adresine yaz.</p>
+<p><strong>Hassas bilgiler için açık rıza.</strong> Kendinle ilgili bu tür bilgileri paylaşabilmen için, bunların diğer kullanıcılara
+görüneceğine açık rıza vermen gerekir. Bu rızayı kayıt olurken ayrı bir onay kutusuyla verirsin. Rızan yoksa yeni
+gönderi ve yorum yazamaz, mevcut olanları düzenleyemezsin; uygulama sana rızayı sorar. Rızanı istediğin zaman
+<strong>Ayarlar &gt; Hassas veri onayı</strong>ndan geri alabilir ya da yeniden verebilirsin. Geri almak, daha önce paylaştıklarını
+kendiliğinden kaldırmaz; onları silebilir ya da bize yazabilirsin. Rızanın nasıl kaydedildiği Gizlilik
+Politikası&#39;nda anlatılır.</p>
+<h3>3. Etiketleme kuralları</h3>
+<ul>
+<li>Yalnızca ayarlarında &quot;etiketlenmeye izin ver&quot; seçeneğini açmış kişileri etiketleyebilirsin.</li>
+<li>Etiketli bir gönderi, etiketlenen <strong>herkes</strong> onaylayınca yayımlanır. Biri reddederse gönderi yayımlanmaz. Kimin
+reddettiği sana söylenmez.</li>
+<li>Anonim gönderide kimse etiketlenemez. Birinden bahsetmek istiyorsan kullanıcı adınla paylaşman gerekir.</li>
+<li>Yalnızca gönderiyi görünce sevinecek kişileri etiketle. Etiketi birine baskı yapmak, onu mahcup etmek ya da hesap
+sormak için kullanma.</li>
+<li>Reddeden birine aynı etiket isteğini tekrar tekrar gönderme.</li>
+<li>Hiç etiketlenmek istemiyorsan &quot;etiketlenmeye izin ver&quot; seçeneğini kapalı tut (varsayılan olarak kapalıdır).</li>
+<li><strong>Fikrini değiştirebilirsin.</strong> Onayladığın bir etiketi istediğin zaman geri çekebilirsin (&quot;Etiketimi kaldır&quot;).
+Etiket kalkar, gönderideki kullanıcı adın &quot;@[etiket kaldırıldı]&quot; olarak görünür ve gönderi yayında kalır. Yazara
+bir etiketin geri çekildiği bildirilir; o gönderi için senden bir daha onay istenmez. Gönderinin de kaldırılmasını
+istiyorsan ayrıca şikâyet edebilirsin.</li>
+</ul>
+<h3>4. Yorumlar ve cevaplar</h3>
+<ul>
+<li>Görebildiğin gönderilere yorum yazabilir, yorumlara cevap verebilirsin. Bir cevaba verilen cevap aynı başlığın
+altında, kime cevap verildiği belirtilerek görünür. Bir yorum en fazla 500 karakter olabilir.</li>
+<li>Her yorum anonim olabilir ya da kullanıcı adını gösterebilir; varsayılanı &quot;varsayılan olarak anonim paylaş&quot;
+ayarına göre belirlenir. Anonim yorum yapanlar &quot;Anonim #4C6&quot; gibi bir takma adla görünür; bu takma ad o gönderide
+aynı kalır, başka gönderilerde farklıdır.</li>
+<li>Anonim bir gönderinin yazarı, o gönderiye her zaman anonim olarak, gönderinin takma adıyla ve &quot;yazar&quot; etiketiyle
+yorum yapar.</li>
+<li>Yorumlar gönderiyle ilgili olsun. Yorumları yazarı veya diğer yorumcuları taciz etmek, anonim bir yazarın kim
+olduğunu tahmin etmek ya da ifşa etmek, seni engellemiş biriyle konuşmayı sürdürmek için kullanma.</li>
+<li><strong>Gönderi sahipleri kendi gönderilerini yönetebilir:</strong> gönderilerindeki herhangi bir yorumu kaldırabilir ve
+yorumları istedikleri zaman kapatıp yeniden açabilirler. Yorumlar kapalıyken yeni yorum yazılamaz ve yorumlar
+düzenlenemez; mevcut yorumlar görünmeye devam eder. Kaldırılan bir yoruma cevap verilmişse yerinde &quot;[kaldırıldı]&quot;
+yazar.</li>
+<li>Kendi yorumlarını düzenleyebilir veya silebilirsin. Silinen bir yoruma cevap verilmişse yerinde &quot;[silindi]&quot; yazar.</li>
+<li>Spamı önlemek için 10 dakikada en fazla 30 yorum yazabilirsin.</li>
+</ul>
+<h3>5. Şikâyet etme</h3>
+<ul>
+<li>Herhangi bir gönderiyi veya yorumu şikâyet edip bir sebep seçebilirsin: spam, taciz, nefret, cinsel içerik, kendine zarar
+verme, şiddet, &quot;kişisel/hassas bilgilerimi içeriyor&quot; veya diğer. İstersen kısa bir not da ekleyebilirsin.
+Kişisel/hassas bilgi sebebiyle yapılan şikâyetler moderatörlere öncelikli olarak gösterilir.</li>
+<li>Şikâyet ettiğin kişiye, onu kimin şikâyet ettiği söylenmez.</li>
+<li>Aynı gönderiyi veya yorumu 3 farklı kişi şikâyet edince, bir moderatör inceleyene kadar otomatik olarak gizlenir.
+Bu sayıya yalnızca en az 24 saatlik hesapların şikâyetleri katılır; daha yeni hesapların şikâyetleri de
+moderatörlere ulaşır.</li>
+<li>Moderatörler şikâyetleri inceler ve gönderinin ya da yorumun gizli kalmasına veya geri gelmesine karar verir.
+Bir gönderi hakkındaki şikâyet resimlerini de kapsar: moderatörler gönderiyi bırakıp yalnızca bir resmi
+kaldırabilir.</li>
+<li>Bir kullanıcıyı <strong>engelleyebilirsin</strong> de. Onun gönderileri ve yorumları senin panondan, seninkiler de onunkinden
+kaybolur; birbirinizin yorumlarına cevap veremezsiniz.</li>
+<li><strong>Anonim</strong> bir gönderide &quot;yazarı engelle&quot; dersen yalnızca o kişinin <strong>anonim</strong> gönderileri ve yorumları senden
+gizlenir. Profili, isimli gönderileri ve aramadaki yeri değişmez, kendisi de bir şey fark etmez; böylece engelleme,
+yazarın kim olduğunu açığa çıkarmaz.</li>
+</ul>
+<p>Lütfen bir gönderiyi veya yorumu sadece fikrine katılmadığın için şikâyet etme. Asılsız ya da toplu şikâyetler de kural
+ihlalidir.</p>
+<h3>6. Kurallar çiğnenirse ne olur?</h3>
+<ul>
+<li><strong>Otomatik filtre:</strong> Bazı kelimeler otomatik olarak engellenir; bu kelimeleri içeren bir gönderi veya yorum
+yayımlanamaz.</li>
+<li><strong>Gizleme:</strong> Bir gönderi veya yorum şikâyetlerle ya da bir moderatör tarafından gizlenebilir. Gizlenen içerik artık
+görünmez.</li>
+<li><strong>Gönderi sahibinin kaldırması:</strong> Bir gönderinin sahibi, gönderisindeki yorumları kaldırabilir (bkz. 4. bölüm).</li>
+<li><strong>Hesaba yönelik önlem:</strong> Ağır veya tekrarlanan ihlallerde önce içerik gizlenir ve sana kural hatırlatılır.
+Tekrarında hesabın <strong>7 gün askıya alınır</strong>; bildirimde gerekçe ve askıya almanın biteceği tarih yazar. Buna rağmen
+devam edersen ya da ihlal ağırsa (tehdit, nefret söylemi, taciz, cinsel içerik) hesabın <strong>kalıcı olarak kapatılır</strong>.</li>
+<li><strong>Yasal bildirim:</strong> Kanunun gerektirdiği durumlarda ya da birinin tehlikede olabileceği durumlarda bilgileri yetkili
+makamlarla paylaşabiliriz. Ayrıntılar Gizlilik Politikası&#39;nda.</li>
+</ul>
+<h3>7. İtiraz</h3>
+<p>Gönderinin veya yorumunun yanlışlıkla gizlendiğini düşünüyorsan veya hesabınla ilgili bir karara katılmıyorsan kullanıcı adını ve
+kısa bir açıklamayı <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong> adresine yaz. Bir moderatör durumu yeniden inceler. İnceleme sonunda
+geri getirilen bir gönderi veya yorum, aynı şikâyetler yüzünden yeniden gizlenmez. Gönderi sahibinin kaldırdığı bir
+yorum, sahibinin kendi gönderisiyle ilgili kararıdır; bu kuralları çiğnemediği sürece moderatörler tarafından
+incelenmez.
+İtirazını en geç <strong>7 gün</strong> içinde yanıtlarız.</p>
+<h3>8. Zor bir dönemden geçiyorsan</h3>
+<p>Kendine zarar vermeyi düşünüyorsan ya da başka biri tehlikedeyse lütfen bununla yalnız kalma:</p>
+<ul>
+<li><strong>Biri hemen tehlikedeyse bulunduğun yerdeki acil yardım hattını ara</strong> (Türkiye&#39;de acil çağrı numarası 112).</li>
+<li>Güvendiğin biriyle konuş: ailenden biri, bir arkadaşın, öğretmenin ya da okulundaki rehber öğretmen.</li>
+<li>Üniversite öğrencisiysen kampüsündeki psikolojik danışmanlık birimine (PDR) başvurabilirsin.</li>
+<li>Türkiye dışındaysan bulunduğun ülkedeki doğrulanmış hatları <strong>findahelpline.com</strong> adresinden bulabilirsin.</li>
+</ul>
+<p>WishSay bir kriz hizmeti değildir; moderatörler acil yardım sağlayamaz.</p>
+<h3>9. Değişiklikler</h3>
+<p>Bu politikayı güncelleyebiliriz. Önemli bir değişiklik olursa uygulama içinden haber veririz.</p>
+<p>Soruların için: <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong></p>
+    </article>
+    <p class="back"><a href="#main">Başa dön</a></p>
+  </section>
+
+<section class="page-section" id="support">
+<p class="section-lang"><a href="/wishsay-legal/en/#support" hreflang="en" lang="en" aria-label="Bu bölümün İngilizcesi">English</a></p>
+  <h2>Destek</h2>
+  <p class="lead">Sorunu ya da önerini yaz: info@velzon.tr. Hesabınla ilgili yazışmalarda kayıtlı e-posta adresinden gönder.</p>
+
+  <div class="panel">
+    <h3>Bize ulaş</h3>
+    <p class="big-mail"><a href="mailto:info@velzon.tr">info@velzon.tr</a></p>
+    <p>Hata bildirirken mümkünse ekran görüntüsü, cihaz modeli ve uygulama sürümünü ekle. KVKK kapsamındaki başvuruları en geç 30 gün içinde yanıtlarız.</p>
+  </div>
+
+  <h3>Sık sorulanlar</h3>
+  <div class="faq">
+    <details open>
+      <summary>Hesabımı nasıl silerim?</summary>
+      <p>Uygulamada Ayarlar → Hesap → Hesabımı sil. 30 gün içinde geri yükleyebilirsin; sonrasında kalıcı olarak silinir. <a href="#account-deletion">Adımlar ve silinen veriler</a></p>
+    </details>
+    <details>
+      <summary>Anonim paylaşım gerçekten anonim mi?</summary>
+      <p>Anonim gönderide ve yorumda adın gösterilmez, takma ad kullanılır. Gerçek kimliği moderatörler de görmez; yalnızca hukuka uygun bir talebe yanıt için “hukuk” rolü görebilir. <a href="#privacy">Gizlilik politikası</a></p>
+    </details>
+    <details>
+      <summary>Etiketlenmek istemiyorum.</summary>
+      <p>Ayarlar → “Etiketlenmeme izin ver” anahtarını kapat. Bunun dışında bir gönderide seni etiketleyen kişiyi şikâyet edebilirsin.</p>
+    </details>
+    <details>
+      <summary>Çeviri çalışmıyor.</summary>
+      <p>İlk çeviride dil modeli indirilir. İndirme bitince çeviri cihazında çalışır; Wi-Fi ile tekrar dene.</p>
+    </details>
+    <details>
+      <summary>Bildirim gelmiyor.</summary>
+      <p>Bildirimler şu an uygulama içinde görünür; telefon bildirimleri yayınla birlikte gelecek.</p>
+    </details>
+    <details>
+      <summary>Şikâyetim ne zaman sonuçlanır?</summary>
+      <p>İnceleme sonucunu bildirimle haber veririz. Karara 7 gün içinde itiraz edebilirsin. <a href="#content-policy">İçerik politikası</a></p>
+    </details>
+    <details>
+      <summary>Hesabım askıya alındı.</summary>
+      <p>Askıya alma bildiriminde sebep ve itiraz adresi yazar. İtirazını 7 gün içinde yanıtlarız.</p>
+    </details>
+  </div>
+
+  <div class="callout">
+    <h3>Acil bir durumdaysan</h3>
+    <p>WishSay bir kriz hizmeti değildir; moderatörler acil yardım sağlayamaz. Biri hemen tehlikedeyse bulunduğun yerdeki acil yardım hattını ara (Türkiye’de 112). Üniversite öğrencisiysen kampüsündeki psikolojik danışmanlık birimine (PDR) başvurabilirsin. Türkiye dışındaysan bulunduğun ülkedeki doğrulanmış hatları findahelpline.com adresinden bulabilirsin.</p>
+  </div>
+  <p class="back"><a href="#main">Başa dön</a></p>
+</section>
+
+<section class="page-section" id="account-deletion">
+<p class="section-lang"><a href="/wishsay-legal/en/#account-deletion" hreflang="en" lang="en" aria-label="Bu bölümün İngilizcesi">English</a></p>
+  <h2>Hesabını sil</h2>
+  <p class="lead">Hesabını iki yoldan silebilirsin: uygulamadan ya da e-postayla. İkisi de aynı sonucu verir.</p>
+
+  <div class="split">
+    <div class="panel">
+      <h3>Uygulamadan</h3>
+      <ol class="ordered">
+        <li>Ayarlar’ı aç.</li>
+        <li>Hesap bölümüne gir.</li>
+        <li>“Hesabımı sil”e dokun ve onayla.</li>
+        <li>Silme talebini e-postana bildiririz.</li>
+      </ol>
+    </div>
+    <div class="panel">
+      <h3>E-postayla</h3>
+      <p>Hesabına kayıtlı e-posta adresinden info@velzon.tr adresine “Hesap silme talebi” konulu bir e-posta gönder. Kimliğini doğrulamamız gerekebilir.</p>
+      <p><a class="btn btn-secondary" href="mailto:info@velzon.tr?subject=Hesap%20silme%20talebi">info@velzon.tr</a></p>
+    </div>
+  </div>
+
+  <h3>Ne olur?</h3>
+  <ul class="check-list">
+    <li>Hesabın hemen kapanır, oturumların sonlanır.</li>
+    <li>30 gün içinde geri yüklersen her şey yerine gelir.</li>
+    <li>30 gün sonunda e-posta adresin, takma adların ve içeriğin (gönderi ve yorum metinleri, resimler, beğeniler, kaydettiklerin) silinir. Cevap zincirleri anlamlı kalsın diye içeriği boşaltılmış yer tutucular kalır; bunlar seni tanımlamaz.</li>
+    <li>İşlem kayıtları yasal yükümlülük nedeniyle 2 yıl (730 gün), onay kayıtları hesabının silinmesinden sonra 2 yıl saklanır.</li>
+    <li>Şikâyet ve moderasyon kayıtları 730 gün saklanır; süre dolunca şikâyet kayıtları silinir.</li>
+  </ul>
+  <p>Ayrıntılar ve saklama süreleri: <a href="#privacy">Gizlilik politikası §6</a></p>
+  <p class="callout-inline">Hesabını geri yüklemek için 30 gün içinde aynı e-postayla giriş yapman yeterli.</p>
+  <p class="back"><a href="#main">Başa dön</a></p>
+</section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="brand-line"><img src="/wishsay-legal/img/icon-64.png" alt="" width="22" height="22"> WishSay</p>
+      <p>Dileklerini paylaştığın sakin yer.</p>
+      <p class="muted small">Velzon Bilişim Teknolojileri Ticaret Limited Şirketi · Eskişehir</p>
+    </div>
+    <nav aria-label="Bölümler">
+      <h2>Bölümler</h2>
+      <ul>
+        <li><a href="#privacy">Gizlilik</a></li>
+        <li><a href="#content-policy">İçerik kuralları</a></li>
+        <li><a href="#support">Destek</a></li>
+        <li><a href="#account-deletion">Hesabımı sil</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>İletişim</h2>
+      <p><a href="mailto:info@velzon.tr">info@velzon.tr</a></p>
+      <p class="muted small">Reklam yok, izleme yok, çerez yok.</p>
+      <p class="small"><span class="pill">13+</span> © 2026 Velzon</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
