@@ -748,7 +748,7 @@ ol {
   <header class="page-head">
     <p class="eyebrow">WishSay · Legal</p>
     <h1>Privacy, content rules and support</h1>
-    <p class="lead">Privacy, content rules, support and account deletion information required by the stores, on one page. The privacy and content texts stay drafts until legal review is complete.</p>
+    <p class="lead">Privacy, content rules, support and account deletion information required by the stores, on one page.</p>
     <nav class="toc" aria-label="On this page">
       <a href="#privacy">Privacy</a>
       <a href="#content-policy">Content rules</a>
@@ -760,22 +760,17 @@ ol {
   <section class="legal-section" id="privacy">
 <p class="section-lang"><a href="/wishsay-legal/#privacy" hreflang="tr" lang="tr" aria-label="This section in Turkish">Türkçe</a></p>
     <article class="legal">
-<blockquote class="draft">
-<p><strong>DRAFT — requires legal review before publication</strong></p>
-</blockquote>
 <h2>WishSay Privacy Policy</h2>
-<p><em>Last updated: 10 October 2026</em></p>
+<p><em>Last updated: 29 October 2026</em></p>
 <p>This policy explains what personal data WishSay collects, why, who can see it and what rights you have. It is
 written to meet the Turkish Personal Data Protection Law No. 6698 (&quot;KVKK&quot;) and the EU General Data Protection
 Regulation (&quot;GDPR&quot;). Under KVKK, this text also serves as our information notice (aydınlatma metni) under
-Article 10. [LEGAL REVIEW: confirm whether a separate KVKK information notice is required]</p>
+Article 10.</p>
 <h3>1. Data controller</h3>
 <p><strong>Velzon Bilişim Teknolojileri Ticaret Limited Şirketi</strong>
 Yeşiltepe Mah. İsmet İnönü-2 Blv. A.Üniv. Rektörlük ve Bilgisayar Araştırma Merkezi No: 2, 26210 Tepebaşı / Eskişehir, Türkiye
 Trade Registry No: 57212 · MERSIS No: 924113500200001 · Tax ID: 9241135002
-Email: <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong>
-[VERBİS REGISTRATION — to be confirmed if required]
-[EU REPRESENTATIVE UNDER GDPR ART. 27 — to be confirmed if required]</p>
+Email: <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong></p>
 <h3>2. What data we collect and why</h3>
 <p>We only collect what we need to run WishSay. We do <strong>not</strong> ask for your real name, phone number or location.
 Adding images to a post is entirely optional (see &quot;Post images&quot; below).</p>
@@ -800,7 +795,7 @@ Adding images to a post is entirely optional (see &quot;Post images&quot; below)
 <tr>
 <td><strong>Your posts</strong></td>
 <td>Text of each expectation (up to 500 characters), the language of the text (detected automatically on our server, see below), whether it is anonymous, its anonymous alias (e.g. &quot;Anonim #4F2&quot;), status, creation and edit times, number of likes. <strong>The author of every post is always recorded, including anonymous posts</strong></td>
-<td>To show your posts on the board and to moderate them</td>
+<td>To show your posts in the feed and to moderate them</td>
 </tr>
 <tr>
 <td><strong>Your post images</strong></td>
@@ -942,9 +937,9 @@ query used.</li>
 </ul>
 <p>We also store the source port because mobile carriers share one IP address between many users at the same time;
 the IP address alone may not be enough to match an action to the right person. These records are kept only for
-write actions; viewing the board or reading posts is not recorded in them.</p>
-<p>[SERVER LOGS KEPT SEPARATELY BY THE HOSTING INFRASTRUCTURE (e.g. reverse proxy access logs) — to be confirmed once
-the hosting setup is final]</p>
+write actions; viewing the feed or reading posts is not recorded in them.</p>
+<p>Our hosting infrastructure also keeps reverse proxy access logs (IP address, source port, User-Agent and time)
+for 2 years. These logs are used only for security, troubleshooting and responding to lawful requests.</p>
 <h3>3. Legal bases</h3>
 <div class="table-wrap"><table>
 <thead>
@@ -990,9 +985,8 @@ the hosting setup is final]</p>
 <td>6(1)(f)</td>
 </tr>
 </tbody></table></div>
-<p>[LEGAL REVIEW: WishSay&#39;s status under Law No. 5651 (e.g. hosting provider, &quot;yer sağlayıcı&quot;) and the scope and
-duration of the resulting traffic-data retention obligation; whether the legal bases above are correct for the
-activity and consent records — to be confirmed]</p>
+<p>WishSay acts as a <strong>hosting provider</strong> (&quot;yer sağlayıcı&quot;) under Turkish Law No. 5651. Access records that qualify as
+traffic data are kept for 2 years and used to respond to lawful requests from competent authorities.</p>
 <h3>4. Who can see what</h3>
 <p>WishSay is only available to logged-in users.</p>
 <div class="table-wrap"><table>
@@ -1113,17 +1107,18 @@ logged.</p>
 requires it, or when there is a serious risk to someone&#39;s life or safety.</p>
 <h3>5. Hosting and data transfers</h3>
 <p>Your data is stored on servers provided by <strong>[HOSTING PROVIDER]</strong> in <strong>[HOSTING COUNTRY / REGION]</strong>.
-[IF DATA IS STORED OR ACCESSED OUTSIDE TURKEY OR THE EEA: transfer mechanism under KVKK Art. 9 and GDPR Chapter V
-— to be decided]
+If data is transferred abroad, we sign the Turkish Personal Data Protection Authority&#39;s <strong>standard contract</strong> under
+KVKK Art. 9 and notify the Authority within five business days.
 Post images are stored on the same production server, in an S3-compatible object store that we run ourselves
-(MinIO); the server&#39;s location and the legal mechanism for transfers abroad are the ones stated in this section
-[to be finalised with W-066]. Images are not sent to any cloud image or content-screening service.
-We do not share your data with advertisers or analytics companies.
-[OTHER PROCESSORS — an email delivery service (SMTP provider) is used to send verification codes; its name and
+(MinIO); the server&#39;s location and the legal mechanism for transfers abroad are the ones stated in this section.
+Images are not sent to any cloud image or content-screening service.
+We do not share your data with advertisers or analytics companies. The only SDK telemetry in the app is the Google
+ML Kit behaviour described under &quot;On-device translation&quot; below.
+<strong>Other processors:</strong> an email delivery service (SMTP provider) is used to send verification codes; its name and
 location will be listed with W-034. It only receives your email address and an email that contains nothing but the
-code.]</p>
+code. We sign a data processing agreement with the provider and obtain its sub-processor list.</p>
 <h4>On-device translation</h4>
-<p>The &quot;Translate&quot; feature translates post and comment text on your device only, using Google ML Kit; the text being translated is never sent to us, to Google or to any other third party. The first time you translate a language, its language model (about 30 MB) is downloaded from Google&#39;s servers; during that download Google receives your IP address and standard connection information. You can delete downloaded models, and limit downloads to Wi-Fi, under Settings &gt; Translation models. Translations are provided by Google and their accuracy is not guaranteed.</p>
+<p>The &quot;Translate&quot; feature translates post and comment text on your device only, using Google ML Kit; the text being translated is never sent to us, to Google or to any other third party. The first time you translate a language, its language model (about 30 MB) is downloaded from Google&#39;s servers; during that download Google receives your IP address and standard connection information. Google ML Kit may also send the translation SDK&#39;s installation identifier, device and app version, language configuration, and usage, performance and error metrics to Google LLC (USA) for diagnostics and usage analytics; the text you translate and the translation result are not sent to Google for this purpose. You can delete downloaded models, and limit downloads to Wi-Fi, under Settings &gt; Translation models. Translations are provided by Google and their accuracy is not guaranteed.</p>
 <h3>6. Retention</h3>
 <div class="table-wrap"><table>
 <thead>
@@ -1178,7 +1173,7 @@ deleted posts and comments and old session records are deleted by an automatic j
 period has ended. For activity records, this does not depend on
 whether your account is still open. Your consent records, however, are not deleted while your account is active,
 because we must be able to prove what you agreed to for as long as we process your data; their period starts on
-the date the deletion of your account is completed (at the end of the 30-day restore period). [KVKK DATA RETENTION AND DESTRUCTION POLICY — to be prepared if required]</p>
+the date the deletion of your account is completed (at the end of the 30-day restore period). Copies in backups are removed from the backup cycle within 30 days at the latest; deletion and anonymisation follow the periods in this section.</p>
 <h3>7. Your rights</h3>
 <p><strong>Under KVKK Article 11</strong> you have the right to:</p>
 <ul>
@@ -1203,8 +1198,8 @@ information (Settings &gt; Sensitive data consent), and delete your account.</li
 <li>To have content about you removed, use the report reason &quot;Contains my personal / sensitive information&quot; or
 write to us (see section 2).</li>
 <li>For anything else, contact <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong> or write to <strong>Yeşiltepe Mah. İsmet İnönü-2 Blv. A.Üniv. Rektörlük ve Bilgisayar Araştırma Merkezi No: 2, 26210 Tepebaşı / Eskişehir, Türkiye</strong>. We may need to
-confirm your identity. We will reply within 30 days at the latest, as required by KVKK. [APPLICATION METHOD UNDER
-THE KVKK COMMUNIQUÉ ON APPLICATION PROCEDURES — to be confirmed]</li>
+confirm your identity. We will reply within 30 days at the latest, as required by KVKK. You can apply in writing
+or by email to <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong>, in line with the KVKK rules on application procedures.</li>
 <li>If you are not satisfied with our answer, you can complain to the Turkish Personal Data Protection Authority
 (KVKK) or, in the EU/EEA, to your local data protection authority.</li>
 </ul>
@@ -1251,8 +1246,7 @@ anonymised, for the duration of the retention period your account and your posts
 request from the authorities. Only the authorised personnel described in section 4 can access these records, and
 they are deleted automatically when the period ends.</p>
 <p>If you want any of the other data above erased as well, contact <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong>. Activity and consent records,
-however, cannot be erased before their retention period ends, because of our legal obligation. [LEGAL REVIEW:
-response to erasure requests under KVKK Art. 7 / GDPR Art. 17(3)(b)]</p>
+however, cannot be erased before their retention period ends, because of our legal obligation.</p>
 <h3>9. Children</h3>
 <p>WishSay is only for people aged <strong>13 or older</strong>. When you sign up you must confirm that you are at least 13. We do
 not knowingly collect data from children under 13. If we learn that an account belongs to someone under 13, we
@@ -1282,7 +1276,8 @@ this chain; only the ban on changes and deletions applies to them.</li>
 <li>Exporting activity and consent records is available only to accounts with a dedicated &quot;legal&quot; role; moderators
 cannot access these records.</li>
 </ul>
-<p>[TRANSPORT ENCRYPTION (HTTPS), BACKUPS AND OTHER MEASURES — to be described once the production setup is final]</p>
+<p>Data sent between the app and our servers is encrypted with TLS (HTTPS). Backups are kept encrypted and are deleted
+within a 30-day backup cycle. Server access is limited to authorised personnel using SSH keys, and access is logged.</p>
 <p>No system is completely secure. If a breach affects your data, we will notify you and the authorities as required
 by law.</p>
 <h3>11. Contact</h3>
@@ -1299,13 +1294,10 @@ the top. If the changes are significant, we will let you know in the app before 
   <section class="legal-section" id="content-policy">
 <p class="section-lang"><a href="/wishsay-legal/#content-policy" hreflang="tr" lang="tr" aria-label="This section in Turkish">Türkçe</a></p>
     <article class="legal">
-<blockquote class="draft">
-<p><strong>DRAFT — requires legal review before publication</strong></p>
-</blockquote>
 <h2>WishSay Content Policy</h2>
-<p><em>Last updated: 10 October 2026</em></p>
+<p><em>Last updated: 29 October 2026</em></p>
 <p>WishSay is a place to share short &quot;expectations&quot;: what you hope for, look forward to, or expect from life, the
-world or yourself. Posts appear on a shared 3D board. To keep the board a good place for everyone, including teens,
+world or yourself. Posts appear in a shared feed. To keep the feed a good place for everyone, including teens,
 please follow these rules.</p>
 <h3>1. What&#39;s welcome</h3>
 <ul>
@@ -1329,7 +1321,7 @@ similar sensitive matters in a way that can identify them.</li>
 <li><strong>Encouraging self-harm or suicide:</strong> promoting, instructing or egging someone on. Talking about how you feel
 is okay; see section 8 for help.</li>
 <li><strong>Violence:</strong> glorifying, promoting or describing violence in a way that celebrates it.</li>
-<li><strong>Spam:</strong> ads, repeated posts, links to sell things, or flooding the board.</li>
+<li><strong>Spam:</strong> ads, repeated posts, links to sell things, or flooding the feed.</li>
 <li><strong>Impersonation:</strong> pretending to be another person, brand or WishSay staff.</li>
 <li><strong>Pressuring or shaming a real person:</strong> using an expectation to put pressure on, guilt, or publicly shame
 someone (&quot;I expect @x to apologise to me in front of everyone&quot;, &quot;I expect [name] to finally admit she lied&quot;).
@@ -1407,7 +1399,7 @@ it. Only reports from accounts that are at least 24 hours old count towards this
 accounts still reach the moderators.</li>
 <li>Moderators review reports and decide whether the post or comment stays hidden or comes back. A report on a post
 also covers its images: moderators can remove an image and keep the post.</li>
-<li>You can also <strong>block</strong> a user. Their posts and comments disappear from your board and yours disappear from theirs,
+<li>You can also <strong>block</strong> a user. Their posts and comments disappear from your feed and yours disappear from theirs,
 and you cannot reply to each other&#39;s comments.</li>
 <li>If you &quot;block the author&quot; of an <strong>anonymous</strong> post, only that person&#39;s <strong>anonymous</strong> posts and comments are hidden
 from you. Their profile, named posts and place in search do not change, and they do not notice anything, so the
