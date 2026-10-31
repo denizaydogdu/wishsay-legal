@@ -496,6 +496,12 @@ ol {
   word-break: break-word;
 }
 
+/* W-092: licences/credits line; the long repo path must wrap on a 320 px phone. */
+.credits p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
 .faq {
   display: grid;
   gap: 10px;
@@ -1494,6 +1500,11 @@ incelenmez.
       <summary>Hesabım askıya alındı.</summary>
       <p>Askıya alma bildiriminde sebep ve itiraz adresi yazar. İtirazını 7 gün içinde yanıtlarız.</p>
     </details>
+  </div>
+
+  <div class="panel credits" id="credits">
+    <h3>Lisanslar ve atıflar</h3>
+    <p>Sesli okuma: Ahenk (github.com/ozguradmin/ahenk-turkish-tts), CC BY 4.0. Uygulama açık kaynak bileşenler içerir; lisans metinleri uygulama paketinde yer alır.</p>
   </div>
 
   <div class="callout">

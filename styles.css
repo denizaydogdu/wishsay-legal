@@ -479,6 +479,12 @@ ol {
   word-break: break-word;
 }
 
+/* W-092: licences/credits line; the long repo path must wrap on a 320 px phone. */
+.credits p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
 .faq {
   display: grid;
   gap: 10px;

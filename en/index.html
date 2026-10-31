@@ -496,6 +496,12 @@ ol {
   word-break: break-word;
 }
 
+/* W-092: licences/credits line; the long repo path must wrap on a 320 px phone. */
+.credits p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
 .faq {
   display: grid;
   gap: 10px;
@@ -1482,6 +1488,11 @@ We reply to appeals within <strong>7 days</strong> at the latest.</p>
       <summary>My account was suspended.</summary>
       <p>The suspension notification states the reason and the appeal address. We answer appeals within 7 days.</p>
     </details>
+  </div>
+
+  <div class="panel credits" id="credits">
+    <h3>Licenses and credits</h3>
+    <p>Voice reading: Ahenk (github.com/ozguradmin/ahenk-turkish-tts), CC BY 4.0. The app includes open-source components; their license texts ship inside the app package.</p>
   </div>
 
   <div class="callout">
