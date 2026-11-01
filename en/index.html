@@ -790,7 +790,7 @@ Adding images to a post is entirely optional (see &quot;Post images&quot; below)
 </thead>
 <tbody><tr>
 <td><strong>Account data</strong></td>
-<td>Email address, password (stored only as a BCrypt hash, never in plain text), handle (username), language (Turkish/English), the date you confirmed you are 13 or older, account creation date, the date your email address was verified (the verification code is kept for at most 15 minutes, only as a one-way digest, and deleted once used)</td>
+<td>Email address, password (stored only as a BCrypt hash, never in plain text), handle (username), language (Turkish/English), the date you confirmed you are 13 or older, account creation date, the date your email address was verified (the verification code is kept for at most 15 minutes, only as a one-way digest, and deleted once used), the time your password was last changed (if you reset it; the password reset code sent by email is valid for 15 minutes, kept only as a one-way digest, and deleted once used or when a new code is requested)</td>
 <td>To create and secure your account, let you log in, show the app in your language, and check the minimum age</td>
 </tr>
 <tr>
@@ -922,6 +922,9 @@ per IP address or email address).</li>
 <li><strong>Email verification:</strong> that a verification code was sent, and successful and failed verification attempts (the
 email address entered and the reason; the code itself is never recorded). If someone tries to open a new account
 with your email address, that attempt and the requested handle are recorded and you get an email about it.</li>
+<li><strong>Password reset:</strong> that a reset code was requested, a successful reset (and the sessions it ended) and failed
+reset attempts with the reason; the code itself and the password are never recorded. These records are kept only
+for an existing account and, like other activity records, for 730 days (see section 6).</li>
 <li><strong>Settings changes:</strong> the old and new values of your language, &quot;allow tagging&quot; and &quot;post anonymously by default&quot;
 settings.</li>
 <li><strong>Posts:</strong> the text posted, whether it is anonymous, its anonymous alias, language and the people tagged; when a
@@ -1030,12 +1033,12 @@ traffic data are kept for 2 years and used to respond to lawful requests from co
 </tr>
 <tr>
 <td>Your comments</td>
-<td>Visible comments on posts they can see, but not if you blocked them or they blocked you. Deleted, removed and hidden comments show no text and no author; a deleted comment with replies stays as a &quot;[deleted]&quot; placeholder</td>
+<td>Visible comments on posts they can see; people you blocked or who blocked you cannot see your <strong>named</strong> comments (your anonymous comments are not affected by such a block, so the block does not reveal who you are). Deleted, removed and hidden comments show no text and no author; a deleted comment with replies stays as a &quot;[deleted]&quot; placeholder</td>
 <td>Yes, reported ones including hidden ones</td>
 </tr>
 <tr>
 <td>Your posts</td>
-<td>Only published posts, and not by people you blocked or who blocked you</td>
+<td>Only published posts; people you blocked or who blocked you cannot see your <strong>named</strong> posts (your anonymous posts are not affected by such a block)</td>
 <td>Yes, including hidden ones</td>
 </tr>
 <tr>
@@ -1070,7 +1073,7 @@ traffic data are kept for 2 years and used to respond to lawful requests from co
 </tr>
 <tr>
 <td>Who you blocked</td>
-<td>No. When you &quot;block the author&quot; of an anonymous post, only that person&#39;s <strong>anonymous</strong> posts and comments are hidden from you; their profile, named posts and place in search do not change, and they do not notice anything. So the block does not reveal who wrote the anonymous post</td>
+<td>No. When you block an account, their named posts, named comments and profile are hidden from you; their anonymous content is not affected. When you &quot;block the author&quot; of an anonymous post, only that person&#39;s <strong>anonymous</strong> posts and comments are hidden from you; their profile, named posts and place in search do not change, and they do not notice anything. So the block does not reveal who wrote the anonymous post</td>
 <td><strong>No.</strong> The block list does not appear in moderation screens or in a legal export</td>
 </tr>
 <tr>
@@ -1112,17 +1115,24 @@ logged.</p>
 <p>We may share data with courts, public prosecutors, law enforcement or other competent authorities when the law
 requires it, or when there is a serious risk to someone&#39;s life or safety.</p>
 <h3>5. Hosting and data transfers</h3>
-<p>Your data is stored on servers provided by <strong>[HOSTING PROVIDER]</strong> in <strong>[HOSTING COUNTRY / REGION]</strong>.
+<p>Your data is stored on servers of a hosting provider located outside Türkiye. The provider&#39;s name and the country
+and region of the servers will be added to this section before the service goes live; until then you can ask us
+at <a href="mailto:info@velzon.tr">info@velzon.tr</a>. For your information: a provider within the European Union (EU) is preferred; this is not a
+commitment, and the actual provider and country will be written in this section as stated above.
 If data is transferred abroad, we sign the Turkish Personal Data Protection Authority&#39;s <strong>standard contract</strong> under
 KVKK Art. 9 and notify the Authority within five business days.
-Post images are stored on the same production server, in an S3-compatible object store that we run ourselves
-(MinIO); the server&#39;s location and the legal mechanism for transfers abroad are the ones stated in this section.
-Images are not sent to any cloud image or content-screening service.
+Post images, activity records and backups are kept with the same hosting provider and in the same region; images
+are stored in an S3-compatible object store, and the legal mechanism above applies to transfers abroad. If backups
+are ever kept with another provider, that provider&#39;s name and country will also be written in this section. Images
+are not sent to any cloud image or content-screening service.
 We do not share your data with advertisers or analytics companies. The only SDK telemetry in the app is the Google
 ML Kit behaviour described under &quot;On-device translation&quot; below.
-<strong>Other processors:</strong> an email delivery service (SMTP provider) is used to send verification codes; its name and
-location will be listed with W-034. It only receives your email address and an email that contains nothing but the
-code. We sign a data processing agreement with the provider and obtain its sub-processor list.</p>
+<strong>Other processors:</strong> emails containing email verification and password reset codes are sent from <a href="mailto:info@velzon.tr">info@velzon.tr</a>
+through the Google Workspace (Google) email service. Google may process these emails in its data centres, including
+in the USA and the EU. It only receives your email address and an email that contains nothing but the code or an account-security notice (for example, that someone tried to register with your address). The
+KVKK Art. 9 safeguard above (the Authority&#39;s standard contract and notification to the Authority) applies to this
+transfer as well; the processor relationship with Google is based on Google&#39;s data processing terms, and the
+sub-processor list is the one Google publishes.</p>
 <h4>On-device translation</h4>
 <p>The &quot;Translate&quot; feature translates post and comment text on your device only, using Google ML Kit; the text being translated is never sent to us, to Google or to any other third party. The first time you translate a language, its language model (about 30 MB) is downloaded from Google&#39;s servers; during that download Google receives your IP address and standard connection information. Google ML Kit may also send the translation SDK&#39;s installation identifier, device and app version, language configuration, and usage, performance and error metrics to Google LLC (USA) for diagnostics and usage analytics; the text you translate and the translation result are not sent to Google for this purpose. Downloaded language models stay on your device and are deleted when you delete the app. Translations are provided by Google and their accuracy is not guaranteed.</p>
 <h3>6. Retention</h3>
@@ -1406,11 +1416,14 @@ it. Only reports from accounts that are at least 24 hours old count towards this
 accounts still reach the moderators.</li>
 <li>Moderators review reports and decide whether the post or comment stays hidden or comes back. A report on a post
 also covers its images: moderators can remove an image and keep the post.</li>
-<li>You can also <strong>block</strong> a user. Their posts and comments disappear from your feed and yours disappear from theirs,
-and you cannot reply to each other&#39;s comments.</li>
-<li>If you &quot;block the author&quot; of an <strong>anonymous</strong> post, only that person&#39;s <strong>anonymous</strong> posts and comments are hidden
-from you. Their profile, named posts and place in search do not change, and they do not notice anything, so the
-block does not reveal who the author is.</li>
+<li>You can also <strong>report an account</strong> from its profile.</li>
+<li>You can also <strong>block</strong> an account (from its profile, or with &quot;Block author&quot; on a named post or comment). Their
+named posts, named comments and profile are hidden from you and yours from them, and you cannot reply to each
+other&#39;s named comments. To protect anonymity, <strong>anonymous</strong> content is not affected by this block.</li>
+<li>If you use &quot;Block author&quot; on an <strong>anonymous</strong> post or comment, only that person&#39;s <strong>anonymous</strong> posts and comments
+are hidden from you. Their profile, named posts and place in search do not change, and they do not notice
+anything, so the block does not reveal who the author is.</li>
+<li>You can see and remove your blocks in <strong>Settings &gt; Blocked accounts</strong>.</li>
 </ul>
 <p>Please don&#39;t report posts or comments just because you disagree with them. False or mass reports are themselves a violation.</p>
 <h3>6. What happens if the rules are broken</h3>

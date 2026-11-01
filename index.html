@@ -790,7 +790,7 @@ E-posta: <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong></p>
 </thead>
 <tbody><tr>
 <td><strong>Hesap bilgileri</strong></td>
-<td>E-posta adresi, şifre (açık hâliyle asla saklanmaz, yalnızca BCrypt özeti tutulur), kullanıcı adı, dil (Türkçe/İngilizce), 13 yaşından büyük olduğunu onayladığın tarih, hesabın açılış tarihi, e-posta adresinin doğrulandığı tarih (doğrulama kodu en fazla 15 dakika, yalnızca geri çevrilemez bir özet olarak tutulur ve kullanılınca silinir)</td>
+<td>E-posta adresi, şifre (açık hâliyle asla saklanmaz, yalnızca BCrypt özeti tutulur), kullanıcı adı, dil (Türkçe/İngilizce), 13 yaşından büyük olduğunu onayladığın tarih, hesabın açılış tarihi, e-posta adresinin doğrulandığı tarih (doğrulama kodu en fazla 15 dakika, yalnızca geri çevrilemez bir özet olarak tutulur ve kullanılınca silinir), şifrenin en son değiştirildiği zaman (şifreni sıfırlarsan; e-postayla gönderilen şifre sıfırlama kodu 15 dakika geçerlidir, yalnızca geri çevrilemez bir özet olarak tutulur, kullanılınca ya da yeni kod istenince silinir)</td>
 <td>Hesabını açmak ve korumak, giriş yapmanı sağlamak, uygulamayı kendi dilinde göstermek ve yaş sınırını kontrol etmek</td>
 </tr>
 <tr>
@@ -921,6 +921,9 @@ ve başarısızlık sebebi kaydedilir; bu adres bir hesaba ait olmasa bile. Şif
 <li><strong>E-posta doğrulama:</strong> doğrulama kodunun gönderilmesi, başarılı ve başarısız doğrulama denemeleri (girilen e-posta
 adresi ve sebebi; kodun kendisi hiçbir zaman kaydedilmez). Biri senin e-posta adresinle yeni hesap açmaya
 çalışırsa bu deneme ve istenen kullanıcı adı kaydedilir, sana da bir bilgilendirme e-postası gönderilir.</li>
+<li><strong>Şifre sıfırlama:</strong> sıfırlama kodunun istenmesi, başarılı sıfırlama (ve bunun sonucunda kapatılan oturumlar) ile
+başarısız sıfırlama denemeleri ve sebebi; kodun kendisi ve şifre hiçbir zaman kaydedilmez. Bu kayıtlar yalnızca
+kayıtlı bir hesap için tutulur ve diğer işlem kayıtları gibi 730 gün saklanır (bkz. 6. bölüm).</li>
 <li><strong>Ayar değişiklikleri:</strong> dil, &quot;etiketlenmeye izin ver&quot; ve &quot;varsayılan olarak anonim paylaş&quot; ayarlarının eski ve
 yeni değerleri.</li>
 <li><strong>Gönderiler:</strong> paylaşılan metin, anonim olup olmadığı, anonim takma adı, dili ve etiketlenen kişiler; bir gönderi
@@ -1030,12 +1033,12 @@ kayıtları 2 yıl saklanır ve yetkili makamların hukuka uygun taleplerine yan
 </tr>
 <tr>
 <td>Yorumların</td>
-<td>Görebildikleri gönderilerdeki görünür yorumlar; engellediğin ya da seni engelleyen kişiler göremez. Silinen, kaldırılan ve gizlenen yorumlarda metin ve yazar gösterilmez; cevabı olan silinmiş yorum &quot;[silindi]&quot; yer tutucusu olarak kalır</td>
+<td>Görebildikleri gönderilerdeki görünür yorumlar; engellediğin ya da seni engelleyen kişiler <strong>isimli</strong> yorumlarını göremez (anonim yorumların bu engelden etkilenmez, böylece engelleme kimliğini açığa çıkarmaz). Silinen, kaldırılan ve gizlenen yorumlarda metin ve yazar gösterilmez; cevabı olan silinmiş yorum &quot;[silindi]&quot; yer tutucusu olarak kalır</td>
 <td>Evet, şikâyet edilenler, gizlenmiş olanlar dahil</td>
 </tr>
 <tr>
 <td>Gönderilerin</td>
-<td>Yalnızca yayımlanmış olanlar; engellediğin ya da seni engelleyen kişiler göremez</td>
+<td>Yalnızca yayımlanmış olanlar; engellediğin ya da seni engelleyen kişiler <strong>isimli</strong> gönderilerini göremez (anonim gönderilerin bu engelden etkilenmez)</td>
 <td>Evet, gizlenmiş olanlar dahil</td>
 </tr>
 <tr>
@@ -1070,7 +1073,7 @@ kayıtları 2 yıl saklanır ve yetkili makamların hukuka uygun taleplerine yan
 </tr>
 <tr>
 <td>Kimi engellediğin</td>
-<td>Hayır. Anonim bir gönderide &quot;yazarı engelle&quot; dediğinde yalnızca o kişinin <strong>anonim</strong> gönderileri ve yorumları senden gizlenir; profili, isimli gönderileri ve aramadaki yeri değişmez, kendisi de bir şey fark etmez. Böylece engelleme, anonim gönderiyi kimin yazdığını ele vermez</td>
+<td>Hayır. Bir hesabı engellediğinde onun isimli gönderileri, isimli yorumları ve profili senden gizlenir; anonim içerikleri etkilenmez. Anonim bir gönderide &quot;yazarı engelle&quot; dediğinde yalnızca o kişinin <strong>anonim</strong> gönderileri ve yorumları senden gizlenir; profili, isimli gönderileri ve aramadaki yeri değişmez, kendisi de bir şey fark etmez. Böylece engelleme, anonim gönderiyi kimin yazdığını ele vermez</td>
 <td><strong>Hayır.</strong> Engelleme listesi moderasyon ekranlarında ve hukuki dışa aktarımda görünmez</td>
 </tr>
 <tr>
@@ -1112,18 +1115,24 @@ erişimler kaydedilir.</p>
 <p>Kanunun gerektirdiği durumlarda ya da birinin hayatı veya güvenliği için ciddi bir risk olduğunda verileri
 mahkemeler, savcılıklar, kolluk kuvvetleri veya diğer yetkili makamlarla paylaşabiliriz.</p>
 <h3>5. Barındırma ve veri aktarımı</h3>
-<p>Verilerin <strong>[BARINDIRMA SAĞLAYICISI]</strong> tarafından sağlanan, <strong>[BARINDIRMA ÜLKESİ / BÖLGESİ]</strong> konumundaki
-sunucularda saklanır.
+<p>Verilerin yurt dışında bulunan bir barındırma sağlayıcısının sunucularında saklanır. Sağlayıcının adı ile
+sunucuların bulunduğu ülke ve bölge, hizmet canlıya alınmadan önce bu bölüme eklenir; o zamana kadar
+<a href="mailto:info@velzon.tr">info@velzon.tr</a> adresinden sorabilirsin. Bilgi olarak: Avrupa Birliği (AB) içinde bir sağlayıcı tercih edilir; bu bir
+taahhüt değildir, kesin sağlayıcı ve ülke yukarıda söylendiği gibi bu bölüme yazılır.
 Verilerin yurt dışına aktarılması hâlinde, KVKK&#39;nın 9. maddesi kapsamında Kişisel Verileri Koruma Kurulu&#39;nun
 <strong>standart sözleşmesi</strong> imzalanır ve aktarım beş iş günü içinde Kurul&#39;a bildirilir.
-Gönderi resimleri de aynı canlı sunucuda, kendi işlettiğimiz S3 uyumlu bir nesne deposunda (MinIO) saklanır;
-sunucunun konumu ve yurt dışı aktarım için kullanılan hukuki araç bu bölümde belirtilen yerdir. Resimler bir bulut
-görsel hizmetine veya içerik tarama hizmetine gönderilmez.
+Gönderi resimleri, işlem kayıtları ve yedekler de aynı barındırma sağlayıcısında ve aynı bölgede tutulur; resimler
+S3 uyumlu bir nesne deposunda saklanır ve yurt dışı aktarım için yukarıdaki hukuki araç geçerlidir. Yedekler ileride
+başka bir sağlayıcıda tutulursa o sağlayıcının adı ve ülkesi de bu bölüme yazılır. Resimler bir bulut görsel
+hizmetine veya içerik tarama hizmetine gönderilmez.
 Verilerini reklamcılarla veya analiz şirketleriyle paylaşmayız. Uygulamadaki tek SDK telemetrisi, aşağıdaki
 &quot;Cihaz içi çeviri&quot; bölümünde anlatılan Google ML Kit davranışıdır.
-<strong>Diğer veri işleyenler:</strong> e-posta gönderim hizmeti (SMTP sağlayıcısı) doğrulama kodlarını göndermek için kullanılıyor;
-sağlayıcının adı ve konumu W-034 ile listelenecek. Bu hizmete yalnızca e-posta adresin ve içinde yalnızca kodun
-bulunduğu e-posta iletilir. Sağlayıcıyla veri işleyen sözleşmesi imzalanır ve alt işleyen listesi alınır.</p>
+<strong>Diğer veri işleyenler:</strong> e-posta doğrulama ve şifre sıfırlama kodlarını içeren e-postalar, Google Workspace
+(Google) e-posta hizmeti üzerinden <a href="mailto:info@velzon.tr">info@velzon.tr</a> adresinden gönderilir. Google bu e-postaları ABD ve AB dahil olmak
+üzere kendi veri merkezlerinde işleyebilir. Bu hizmete yalnızca e-posta adresin ve içinde yalnızca kodun ya da hesap güvenliği bildiriminin (ör. adresinle yeniden kayıt denendiği bilgisi) bulunduğu
+e-posta iletilir. Bu aktarım için de yukarıdaki KVKK 9. madde güvencesi (Kurul&#39;un standart sözleşmesi ve Kurul&#39;a
+bildirim) uygulanır; Google ile veri işleyen ilişkisi Google&#39;ın veri işleme şartlarına dayanır ve alt işleyen
+listesi Google&#39;ın yayımladığı listedir.</p>
 <h4>Cihaz içi çeviri</h4>
 <p>Uygulamadaki &quot;Çevir&quot; özelliği, gönderi ve yorum metinlerini Google ML Kit ile yalnızca cihazınızda çevirir; çevrilen metin ne bize ne Google&#39;a ne de başka bir üçüncü tarafa gönderilir. Bir dili ilk kez çevirdiğinizde ilgili dil modeli (yaklaşık 30 MB) Google sunucularından indirilir; bu indirme sırasında IP adresiniz ve standart bağlantı bilgileri Google&#39;a ulaşır. Google ML Kit ayrıca çeviri SDK&#39;sının kurulum kimliğini, cihaz ve uygulama sürümünü, dil yapılandırmasını ve kullanım, performans ile hata metriklerini tanılama ve kullanım analitiği amacıyla Google LLC&#39;ye (ABD) gönderebilir; çevirdiğiniz metin ve çeviri sonucu bu kapsamda Google&#39;a gönderilmez. İndirilen dil modelleri cihazınızda kalır ve uygulamayı sildiğinizde silinir. Çeviriler Google tarafından sağlanır ve doğruluğu garanti edilmez.</p>
 <h3>6. Saklama süreleri</h3>
@@ -1416,11 +1425,14 @@ moderatörlere ulaşır.</li>
 <li>Moderatörler şikâyetleri inceler ve gönderinin ya da yorumun gizli kalmasına veya geri gelmesine karar verir.
 Bir gönderi hakkındaki şikâyet resimlerini de kapsar: moderatörler gönderiyi bırakıp yalnızca bir resmi
 kaldırabilir.</li>
-<li>Bir kullanıcıyı <strong>engelleyebilirsin</strong> de. Onun gönderileri ve yorumları senin akışından, seninkiler de onunkinden
-kaybolur; birbirinizin yorumlarına cevap veremezsiniz.</li>
-<li><strong>Anonim</strong> bir gönderide &quot;yazarı engelle&quot; dersen yalnızca o kişinin <strong>anonim</strong> gönderileri ve yorumları senden
-gizlenir. Profili, isimli gönderileri ve aramadaki yeri değişmez, kendisi de bir şey fark etmez; böylece engelleme,
-yazarın kim olduğunu açığa çıkarmaz.</li>
+<li>Bir hesabı da profilinden <strong>şikâyet edebilirsin</strong>.</li>
+<li>Bir hesabı <strong>engelleyebilirsin</strong> de (profilinden ya da isimli bir gönderi veya yorumdaki &quot;Yazarı engelle&quot; ile).
+Onun isimli gönderileri, isimli yorumları ve profili senden, seninkiler de ondan gizlenir; birbirinizin isimli
+yorumlarına cevap veremezsiniz. Anonimliği korumak için <strong>anonim</strong> içerikler bu engelden etkilenmez.</li>
+<li><strong>Anonim</strong> bir gönderide veya yorumda &quot;Yazarı engelle&quot; dersen yalnızca o kişinin <strong>anonim</strong> gönderileri ve
+yorumları senden gizlenir. Profili, isimli gönderileri ve aramadaki yeri değişmez, kendisi de bir şey fark etmez;
+böylece engelleme, yazarın kim olduğunu açığa çıkarmaz.</li>
+<li>Engellerini <strong>Ayarlar &gt; Engellenenler</strong>&#39;den görebilir ve kaldırabilirsin.</li>
 </ul>
 <p>Lütfen bir gönderiyi veya yorumu sadece fikrine katılmadığın için şikâyet etme. Asılsız ya da toplu şikâyetler de kural
 ihlalidir.</p>
