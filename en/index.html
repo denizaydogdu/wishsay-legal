@@ -795,7 +795,7 @@ Adding images to a post is entirely optional (see &quot;Post images&quot; below)
 </tr>
 <tr>
 <td><strong>Settings</strong></td>
-<td>&quot;Allow tagging&quot;, &quot;post anonymously by default&quot;, account role (user, moderator or legal)</td>
+<td>&quot;Allow tagging&quot;, &quot;post anonymously by default&quot;, &quot;private account&quot;, account role (user, moderator or legal)</td>
 <td>To apply your choices and give moderators their tools</td>
 </tr>
 <tr>
@@ -809,14 +809,19 @@ Adding images to a post is entirely optional (see &quot;Post images&quot; below)
 <td>To show the image with your post, to protect users from inappropriate images, and to answer requests from competent authorities</td>
 </tr>
 <tr>
+<td><strong>Your profile photo</strong></td>
+<td>The profile photo you choose to upload (re-encoded as a square with location and camera data removed, plus a small preview), file hash, size, the automated screening score, moderation status, upload and deletion times (see &quot;Your profile photo&quot; below)</td>
+<td>To show your photo on your profile and next to your named posts and comments, and to protect users from inappropriate images</td>
+</tr>
+<tr>
 <td><strong>Your comments</strong></td>
 <td>Text of each comment and reply (up to 500 characters), the language of the text (detected automatically), the post it belongs to, which comment it answers, whether it is anonymous, its comment alias (e.g. &quot;Anonim #4C6&quot;, see section 4), status (visible, deleted by you, removed by the post owner, hidden), creation and edit times, number of likes. <strong>The author of every comment is always recorded, including anonymous comments.</strong> For posts: whether comments are open</td>
 <td>To show comments and replies under posts, to let post owners manage comments on their posts, and to moderate them</td>
 </tr>
 <tr>
 <td><strong>Interactions</strong></td>
-<td>Likes you give (on posts and comments), tags (who tagged whom, and whether it was approved, declined or later withdrawn), reports you file on posts or comments (reason and optional note), users you block and authors whose anonymous content you hid through an anonymous post</td>
-<td>To run likes, tagging, reporting and blocking</td>
+<td>Likes you give (on posts and comments), tags (who tagged whom, and whether it was approved, declined or later withdrawn), reports you file on posts or comments (reason and optional note), users you block and authors whose anonymous content you hid through an anonymous post, friend requests (who sent one to whom, pending or declined) and your friendships, the visibility you choose for each post (&quot;Everyone&quot;, &quot;Friends&quot; or &quot;Only me&quot;)</td>
+<td>To run likes, tagging, reporting, blocking and friends, and to show your post only to the people you chose</td>
 </tr>
 <tr>
 <td><strong>Outcomes, celebrations and bookmarks</strong></td>
@@ -881,6 +886,24 @@ nothing that identifies you. An image on an anonymous post is anonymous too, but
 you are.</li>
 <li>Images that are not added to a post within 24 hours of uploading are deleted automatically.</li>
 </ul>
+<p><strong>Your profile photo (optional):</strong> If you upload one, its location and camera data are removed, it is
+re-encoded as a square, and it is shown only on your profile and next to your named posts and comments (with a
+private account, only your friends see it), never on your anonymous content. It is checked automatically on our
+server for inappropriate images; a photo flagged as possibly inappropriate is visible only to you until a moderator
+approves it. You can change or remove it at any time; a removed photo is deleted from the server. Moderators can
+remove a photo that breaks the community rules. The upload record (file hash, size, scan score, IP address and
+source port) is kept in the activity log for the same period as other content.</p>
+<p><strong>Friends and private account (optional):</strong> You can send other users a friend request; the
+friendship starts when they accept. Only you can see your friend list; your profile shows no friend count. Requests,
+acceptances, declines, withdrawals and unfriending are written to the activity log (with IP address and source port)
+and kept for the same period as other records; a declined request is not disclosed to its sender. Blocking someone
+deletes your friendship and requests with them. Deleting your account deletes your friendships and requests too.
+With a <strong>private account</strong>, only your friends see your profile, your named posts and your profile photo; your named
+comments stay visible under the posts you commented on. <strong>Your anonymous posts and comments are not affected by the
+private account or by friendships and stay public</strong>, so nobody in your circle of friends can guess that they are
+yours. A declined request is kept until one of the two accounts is deleted, so that the same request cannot be
+sent again and again (see section 6). The legal basis for these features is the performance of our service
+(contract) with you (see section 3).</p>
 <p><strong>What we don&#39;t do:</strong> WishSay has no ads, no third-party analytics or tracking tools, and does not send push
 notifications. We do not sell your data.</p>
 <h4>Explicit consent for sensitive information</h4>
@@ -936,7 +959,10 @@ comments on a post off or on; and being refused because of too many comments in 
 <li><strong>Liking and unliking (posts and comments), reports</strong> (reason and note), <strong>approving and declining tags, blocking and unblocking, and
 marking notifications as read.</strong> Repeated requests that change nothing (e.g. liking the same post a second time)
 are not recorded.</li>
-<li><strong>Moderation:</strong> a moderator hiding or restoring a post or a comment.</li>
+<li><strong>Friends and private account:</strong> sending, accepting, declining and withdrawing a friend request, and unfriending;
+turning the private account setting on and off.</li>
+<li><strong>Profile photo:</strong> uploading it (file hash, size, scan score and storage key), replacing it and removing it.</li>
+<li><strong>Moderation:</strong> a moderator hiding or restoring a post or a comment, or approving or removing a profile photo.</li>
 <li><strong>Tags:</strong> approving, declining and withdrawing a tag.</li>
 <li><strong>Account deletion:</strong> when you request it, your email address, handle, language, account role, and account
 creation and age-confirmation dates, and the date the account will be deleted; when you restore it within 30
@@ -959,7 +985,7 @@ for 2 years. These logs are used only for security, troubleshooting and respondi
 </tr>
 </thead>
 <tbody><tr>
-<td>Creating and running your account, showing your posts, likes, tags, notifications</td>
+<td>Creating and running your account, showing your posts, likes, tags, notifications; showing your profile photo; running friend requests, friendships, the private account and post visibility (&quot;Everyone&quot;, &quot;Friends&quot;, &quot;Only me&quot;)</td>
 <td>5(2)(c): necessary for the performance of a contract</td>
 <td>6(1)(b): performance of a contract</td>
 </tr>
@@ -1038,13 +1064,18 @@ traffic data are kept for 2 years and used to respond to lawful requests from co
 </tr>
 <tr>
 <td>Your posts</td>
-<td>Only published posts; people you blocked or who blocked you cannot see your <strong>named</strong> posts (your anonymous posts are not affected by such a block)</td>
-<td>Yes, including hidden ones</td>
+<td>Only published posts, and according to the visibility you chose for each post: only your friends see posts you shared with &quot;Friends&quot;, and only you see posts you shared with &quot;Only me&quot;; with a private account, only your friends see your named posts (your anonymous posts are not affected by the private account or by friendships and stay public). People you blocked or who blocked you cannot see your <strong>named</strong> posts (your anonymous posts are not affected by such a block)</td>
+<td>Yes, including hidden ones, but not your &quot;Only me&quot; posts</td>
 </tr>
 <tr>
 <td>Your post images</td>
 <td>Everyone who can see the post. An image waiting for review is only shown to you</td>
 <td>Yes, including images waiting for review and their screening score</td>
+</tr>
+<tr>
+<td>Your profile photo</td>
+<td>On your profile and next to your named posts and comments; with a private account, only your friends. <strong>Never</strong> shown on your anonymous content. A photo waiting for review is only shown to you</td>
+<td>Like other users; in addition, photos waiting for review in the review list, with the owner&#39;s handle and the screening score. Not shown to moderators next to anonymous content either</td>
 </tr>
 <tr>
 <td>Who liked a post</td>
@@ -1063,8 +1094,13 @@ traffic data are kept for 2 years and used to respond to lawful requests from co
 </tr>
 <tr>
 <td>Your profile page (opened by tapping your @handle)</td>
-<td>Your handle, the month and year you joined, and <strong>only your named posts</strong> with their number and how many of them are fulfilled. Your anonymous posts are never listed or counted there, also not when you look at your own profile. Not shown to people you blocked or who blocked you</td>
+<td>Your handle, the month and year you joined, and <strong>only your named posts</strong> with their number and how many of them are fulfilled. Your anonymous posts are never listed or counted there, also not when you look at your own profile. Your friend count is not shown. With a <strong>private account</strong>, only your friends see your profile, your named posts and your profile photo; others see only your handle and that the account is private. Not shown to people you blocked or who blocked you</td>
 <td>Yes</td>
+</tr>
+<tr>
+<td>Your friend list</td>
+<td><strong>Never.</strong> Only you can see your friend list; a request you declined is not disclosed to its sender</td>
+<td><strong>No.</strong> Your friend list does not appear in moderation screens; friendship actions appear only in the activity records (see the last row)</td>
 </tr>
 <tr>
 <td>Who reported a post or comment</td>
@@ -1152,6 +1188,14 @@ sub-processor list is the one Google publishes.</p>
 <td>As long as the post exists. The image files are removed from storage at once when you delete the post, when a moderator rejects the image, when it is not added to a post within 24 hours, and when the deletion of your account is completed. No file of a deleted image is kept; only its fingerprint (SHA-256), storage key, sizes, screening score and moderation decision are kept for legal purposes for 730 days (2 years)</td>
 </tr>
 <tr>
+<td>Your profile photo</td>
+<td>Until you replace or remove it, a moderator removes it, or the deletion of your account is completed; then the photo file is removed from storage. As for post images, only its fingerprint, storage key, sizes, screening score and moderation decision are kept for legal purposes for 730 days (2 years)</td>
+</tr>
+<tr>
+<td>Friendships and friend requests</td>
+<td>Until you unfriend, the request is withdrawn or accepted, one of you blocks the other, or one of the accounts is deleted. <strong>Declined requests</strong> are kept until one of the two accounts is deleted, so that the same request cannot be sent again and again. The related activity records are kept for 730 days (2 years)</td>
+</tr>
+<tr>
 <td>Refresh tokens</td>
 <td>Valid for 30 days; the records are deleted automatically 30 days after they expired or were revoked</td>
 </tr>
@@ -1228,6 +1272,7 @@ or by email to <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></stron
 you are no longer shown. Where others replied to one of your comments, an empty &quot;[deleted]&quot; placeholder remains so
 the replies still make sense.</li>
 <li>Tag requests waiting for your approval are declined.</li>
+<li>Your profile photo is no longer shown to others, and you are removed from friend lists and requests.</li>
 <li>Your @handle is hidden where others mention it in posts, outcome notes and comments (shown as
 &quot;@[etiket kaldırıldı]&quot;) and cannot be found through search.</li>
 <li>Your email address and handle are kept for 30 days, so nobody else can register them meanwhile.</li>
@@ -1246,6 +1291,8 @@ as theirs.</li>
 and their descriptions are erased (image fingerprints and storage keys stay for the period in section 6).</li>
 <li>Your likes, tags (both the ones you are in and the ones on your posts), notifications, blocks (people you blocked
 and people who blocked you) and session records are deleted.</li>
+<li>The file of your profile photo is deleted from storage, and your friendships and friend requests (sent, received
+and declined) are deleted.</li>
 <li>Reports you filed are kept as moderation records, but no longer linked to you.</li>
 </ul>
 <p><strong>What is kept:</strong> your account record remains with an internal ID, the anonymised email and handle, your language
@@ -1323,6 +1370,9 @@ please follow these rules.</p>
 <li>Kind, funny or thoughtful posts in Turkish or English.</li>
 <li>Tagging a friend in a post they&#39;ve agreed to (see section 3).</li>
 </ul>
+<p>For every post you choose who sees it: <strong>Everyone</strong>, <strong>Friends</strong> (only your friends) or <strong>Only me</strong>. An
+anonymous post cannot be shared with &quot;Friends&quot;. On a friends-only post you can tag only your friends. The community
+rules and moderation apply to &quot;Friends&quot; posts too; moderators can review reported content whatever its visibility.</p>
 <h3>2. What&#39;s not allowed</h3>
 <ul>
 <li><strong>Harassment and bullying:</strong> insulting, mocking, humiliating or ganging up on someone.</li>
@@ -1361,6 +1411,8 @@ information can be read; your own documents included.</li>
 An image that looks suspicious is only visible to you until a moderator reviews it; your post is still published.
 Moderators reject and delete unsuitable images and you are notified. Hidden metadata such as location and camera
 details is removed from every image automatically, but what is visible in the picture is not.</p>
+<p><strong>Profile photo.</strong> Your profile photo must follow these community rules and the image rules above too; moderators
+can remove a photo that does not.</p>
 <p>These rules apply to posts and to comments and replies alike. Posting or commenting anonymously does not change
 them. You are anonymous only to other users: WishSay keeps the author of every post and every comment and can
 disclose it to authorities acting on a lawful request. Moderators do not see who wrote anonymous content; where
