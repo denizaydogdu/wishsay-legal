@@ -767,7 +767,7 @@ ol {
 <p class="section-lang"><a href="/wishsay-legal/#privacy" hreflang="tr" lang="tr" aria-label="This section in Turkish">Türkçe</a></p>
     <article class="legal">
 <h2>WishSay Privacy Policy</h2>
-<p><em>Last updated: 31 October 2026</em></p>
+<p><em>Last updated: 7 November 2026</em></p>
 <p>This policy explains what personal data WishSay collects, why, who can see it and what rights you have. It is
 written to meet the Turkish Personal Data Protection Law No. 6698 (&quot;KVKK&quot;) and the EU General Data Protection
 Regulation (&quot;GDPR&quot;). Under KVKK, this text also serves as our information notice (aydınlatma metni) under
@@ -819,6 +819,11 @@ Adding images to a post is entirely optional (see &quot;Post images&quot; below)
 <td>To show comments and replies under posts, to let post owners manage comments on their posts, and to moderate them</td>
 </tr>
 <tr>
+<td><strong>Your private messages</strong></td>
+<td>Text messages you send to friends (up to 2,000 characters), sender and recipient accounts, sent and read times. When you remove a conversation with &quot;Remove from my list&quot;, that preference is kept until a new message arrives or your account is deleted. The text is not copied to the audit log or to notifications</td>
+<td>To let you privately message your friends</td>
+</tr>
+<tr>
 <td><strong>Interactions</strong></td>
 <td>Likes you give (on posts and comments), tags (who tagged whom, and whether it was approved, declined or later withdrawn), reports you file on posts or comments (reason and optional note), users you block and authors whose anonymous content you hid through an anonymous post, friend requests (who sent one to whom, pending or declined) and your friendships, the visibility you choose for each post (&quot;Everyone&quot;, &quot;Friends&quot; or &quot;Only me&quot;)</td>
 <td>To run likes, tagging, reporting, blocking and friends, and to show your post only to the people you chose</td>
@@ -835,7 +840,7 @@ Adding images to a post is entirely optional (see &quot;Post images&quot; below)
 </tr>
 <tr>
 <td><strong>Notifications</strong></td>
-<td>In-app notifications such as tag requests and approvals, comments on your posts and replies to your comments, and whether you have read them. A notification about an anonymous comment contains only its alias</td>
+<td>In-app notifications such as tag requests and approvals, comments on your posts, replies to your comments and a notification when your post reaches certain like counts (5, 10, 25, 50; it never shows who liked it), and whether you have read them. A notification about an anonymous comment contains only its alias</td>
 <td>To tell you about activity that concerns you</td>
 </tr>
 <tr>
@@ -845,7 +850,7 @@ Adding images to a post is entirely optional (see &quot;Post images&quot; below)
 </tr>
 <tr>
 <td><strong>Activity records (audit log)</strong></td>
-<td>For every write action on WishSay: the user who did it, the type of action and what it was done to, IP address, source port number, device/app information (User-Agent), request ID and the exact server time (UTC, to the microsecond); plus details that depend on the action (see below)</td>
+<td>For write actions other than sending private messages, marking them read (including &quot;mark all as read&quot;) and removing a conversation from your list: the user who did it, the type of action and what it was done to, IP address, source port number, device/app information (User-Agent), request ID and the exact server time (UTC, to the microsecond); plus details that depend on the action (e.g. phrases matched automatically in moderation; see below)</td>
 <td>To meet legal obligations and respond to requests from competent authorities such as courts and public prosecutors; security and abuse prevention</td>
 </tr>
 <tr>
@@ -857,7 +862,9 @@ Adding images to a post is entirely optional (see &quot;Post images&quot; below)
 <p><strong>What you write is up to you.</strong> Please be careful with sensitive information such as health, religion or belief,
 or sex life, about yourself or others, and with anything identifying a real person: posts can be seen by every
 user, and named posts show your handle. The app reminds you of this when you write a post or a comment. Our Content
-Policy forbids sharing other people&#39;s personal information.</p>
+Policy forbids sharing other people&#39;s personal information. While you write, some phrases show a support card on your
+device, and the personal information warning for phone numbers, e-mail addresses, Turkish ID numbers or IBANs also
+runs on your device; none of these checks is sent to our servers.</p>
 <p><strong>Removing information about you.</strong> If a post or comment contains your personal or sensitive information, you can
 ask for it to be removed: report it with the reason &quot;Contains my personal / sensitive information&quot; (these reports
 are flagged for moderators to handle first), or write to <strong><a href="mailto:info@velzon.tr">info@velzon.tr</a></strong>. This works whether or not you have an
@@ -904,6 +911,15 @@ private account or by friendships and stay public</strong>, so nobody in your ci
 yours. A declined request is kept until one of the two accounts is deleted, so that the same request cannot be
 sent again and again (see section 6). The legal basis for these features is the performance of our service
 (contract) with you (see section 3).</p>
+<p><strong>Private messages:</strong> You can only message established friends, not someone with a pending request. Only you and the
+recipient can see a conversation. Unfriending or blocking hides it from both sides but <strong>does not delete</strong> the
+messages: the history returns if you become friends again. When either account&#39;s deletion is completed, messages
+between you are erased. Sending messages, marking them read (including &quot;mark all as read&quot;) and removing a conversation from your list are not recorded in the audit log; message text is not
+included in notifications. You can report or block the account from a conversation.
+When you report from a conversation, you can choose up to 10 messages you received from the other person as evidence.
+A copy of the messages you choose is attached to the report so that only moderators can see it, and is deleted 180
+days after the report is resolved. Messages you do not choose are not sent to moderators. Message text passes an automatic word filter before it is
+sent; the filter shows the text to no one and keeps no separate copy, and a message that breaks the rules is not sent.</p>
 <p><strong>Push notifications (optional):</strong> If you turn on Settings &gt; Notifications, your device&#39;s notification identifier
 (push token) is stored with your account so we can send you push notifications. They are delivered through Google&#39;s
 Firebase Cloud Messaging (as processor) and, on iOS, Apple Push Notification service (APNs). The text is generic and
@@ -1200,6 +1216,14 @@ sub-processor list is the one Google publishes.</p>
 <td>Until you unfriend, the request is withdrawn or accepted, one of you blocks the other, or one of the accounts is deleted. <strong>Declined requests</strong> are kept until one of the two accounts is deleted, so that the same request cannot be sent again and again. The related activity records are kept for 730 days (2 years)</td>
 </tr>
 <tr>
+<td>Private messages</td>
+<td>Until either the sender&#39;s or recipient&#39;s account deletion is completed. Unfriending or blocking only hides the history; it returns if you become friends again. The message text is not kept separately in the audit log</td>
+</tr>
+<tr>
+<td>Copies of messages attached to a report as evidence</td>
+<td>Deleted 180 days after the report is resolved. Deleting the original message, or the reporter&#39;s or the reported person&#39;s account, does not change this period; if the reported account is deleted while the report is still open, the period starts on the deletion date</td>
+</tr>
+<tr>
 <td>Refresh tokens</td>
 <td>Valid for 30 days; the records are deleted automatically 30 days after they expired or were revoked</td>
 </tr>
@@ -1327,7 +1351,8 @@ stored only as SHA-256 hashes.</li>
 <li>If an already-used refresh token is presented again, all of that user&#39;s sessions are ended, to protect against
 stolen sessions.</li>
 <li>When an account is deleted, its existing tokens stop working immediately.</li>
-<li>Posts and comments are checked by an automatic word filter, comments are rate-limited (at most 30 in 10 minutes
+<li>Posts, comments, outcome notes, image descriptions, usernames and private messages are checked by an automatic word
+filter; comments are rate-limited (at most 30 in 10 minutes
 per account), and posts, reports, likes, celebrations, tag requests and searches have per-account limits too (the
 search counters live only in the server&#39;s memory and are not stored). Only reports from accounts that are at least
 24 hours old count towards automatically hiding a post. Moderator tools are restricted to moderator accounts.</li>
@@ -1363,7 +1388,7 @@ reviewing it from time to time to see any changes.</p>
 <p class="section-lang"><a href="/wishsay-legal/#content-policy" hreflang="tr" lang="tr" aria-label="This section in Turkish">Türkçe</a></p>
     <article class="legal">
 <h2>WishSay Content Policy</h2>
-<p><em>Last updated: 29 October 2026</em></p>
+<p><em>Last updated: 7 November 2026</em></p>
 <p>WishSay is a place to share short &quot;expectations&quot;: what you hope for, look forward to, or expect from life, the
 world or yourself. Posts appear in a shared feed. To keep the feed a good place for everyone, including teens,
 please follow these rules.</p>
@@ -1386,7 +1411,8 @@ disability, or similar characteristics.</li>
 <li><strong>Sexual content:</strong> sexually explicit or suggestive posts.</li>
 <li><strong>Anything that sexualises minors.</strong> Zero tolerance. We remove it and may report it to the authorities.</li>
 <li><strong>Doxxing and personal information:</strong> sharing someone&#39;s real full name, address, phone number, school,
-workplace, social media accounts or other private details, including your own.</li>
+workplace, social media accounts or other private details, including your own. Phone numbers cannot be shared in
+public posts, comments or image descriptions; the app warns you before sending.</li>
 <li><strong>Other people&#39;s sensitive information:</strong> writing about someone else&#39;s health, religion or belief, sex life or
 similar sensitive matters in a way that can identify them.</li>
 <li><strong>Encouraging self-harm or suicide:</strong> promoting, instructing or egging someone on. Talking about how you feel
@@ -1398,6 +1424,9 @@ is okay; see section 8 for help.</li>
 someone (&quot;I expect @x to apologise to me in front of everyone&quot;, &quot;I expect [name] to finally admit she lied&quot;).
 Expectations are about your hopes, not a tool to pressure other people.</li>
 </ul>
+<p>In public posts and comments, phrases that may contain threats, violence, praise of terrorism or hatred are flagged
+automatically. Flagged content is only visible to you until a moderator reviews it; the moderator then publishes or
+hides it.</p>
 <p><strong>Images.</strong> You can add up to 4 images to a post (comments cannot have images). All of the rules above apply to
 images too. In addition, the following are not allowed:</p>
 <ul>
